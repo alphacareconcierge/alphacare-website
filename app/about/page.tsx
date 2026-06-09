@@ -27,6 +27,9 @@ export default function AboutPage() {
               A calm, experienced advocate for families who need trusted healthcare
               guidance, continuity, and clear next steps.
             </p>
+            <p className="mt-6 max-w-2xl border-l border-gold pl-5 font-serif text-2xl leading-snug text-ivory">
+              {business.founderStatement}
+            </p>
           </div>
           <div className="border border-gold/45 bg-ivory p-6 shadow-2xl shadow-black/20">
             <Image
