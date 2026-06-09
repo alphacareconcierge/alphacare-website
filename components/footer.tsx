@@ -12,8 +12,8 @@ export function Footer() {
           <div>
             <BrandMark inverted />
             <p className="mt-8 max-w-md text-sm leading-7 text-ivory/72">
-              Healthcare advocacy and care coordination for families navigating
-              aging with clarity, continuity, and calm.
+              Healthcare advocacy, care coordination, and continuity for families
+              navigating aging with clarity and calm.
             </p>
             <DecorativeRule className="mt-8 max-w-xs" />
           </div>
