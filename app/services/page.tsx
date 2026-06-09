@@ -69,7 +69,7 @@ export default function ServicesPage() {
               href="/contact"
               className="mt-8 inline-flex items-center gap-3 border border-gold bg-gold px-6 py-4 text-xs font-bold uppercase tracking-[0.18em] text-navy transition hover:bg-transparent hover:text-ivory"
             >
-              Request a Consultation
+              Start the Conversation
               <ArrowRight size={16} aria-hidden="true" />
             </Link>
           </div>
