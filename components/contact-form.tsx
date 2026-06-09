@@ -129,7 +129,7 @@ export function ContactForm() {
         disabled={status === "submitting"}
         className="inline-flex justify-center border border-gold bg-gold px-6 py-4 text-xs font-bold uppercase tracking-[0.18em] text-navy transition hover:bg-transparent disabled:cursor-wait disabled:opacity-70"
       >
-        {status === "submitting" ? "Submitting" : "Request a Consultation"}
+        {status === "submitting" ? "Submitting" : "Start the Conversation"}
       </button>
       <div aria-live="polite" className="min-h-6 text-sm">
         {status === "success" ? (
