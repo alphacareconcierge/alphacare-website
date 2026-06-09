@@ -35,7 +35,7 @@ export default function HomePage() {
                 href="/contact"
                 className="inline-flex items-center justify-center gap-3 border border-gold bg-gold px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-navy transition hover:bg-transparent hover:text-ivory"
               >
-                Request a Consultation
+                Start the Conversation
                 <ArrowRight size={16} aria-hidden="true" />
               </Link>
               <Link
@@ -132,6 +132,9 @@ export default function HomePage() {
               copy="Every engagement is built around quiet competence, attentive communication, and a clear sense of what families need next."
             />
             <DecorativeRule className="mt-10 max-w-sm" />
+            <p className="mt-8 max-w-xl font-serif text-3xl leading-snug text-navy">
+              {business.founderStatement}
+            </p>
           </div>
           <div className="grid gap-px bg-gold/25 md:grid-cols-2">
             {whyAlphaCare.map((item) => (
@@ -170,7 +173,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <SectionHeading
-              eyebrow="Request a consultation"
+              eyebrow="Start the conversation"
               title="Begin with a private, thoughtful conversation."
               copy="Share a brief overview of your family’s needs and preferred way to connect. AlphaCare will follow up with professionalism and discretion."
             />
