@@ -22,13 +22,13 @@ export function Header() {
           href="/contact"
           className="hidden border border-gold bg-gold px-5 py-3 text-xs font-bold uppercase tracking-[0.18em] text-navy transition hover:bg-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold sm:inline-flex"
         >
-          Request a Consultation
+          Start the Conversation
         </Link>
         <Link
           href="/contact"
           className="inline-flex border border-gold px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-navy transition hover:bg-gold md:hidden"
         >
-          Consult
+          Start
         </Link>
       </div>
       <nav
