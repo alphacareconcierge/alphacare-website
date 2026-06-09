@@ -18,7 +18,9 @@ export const business = {
   website: "alphacareconcierge.com",
   url: "https://alphacareconcierge.com",
   tagline:
-    "Healthcare advocacy and care coordination for families navigating the complexities of aging."
+    "Healthcare advocacy, care coordination, and continuity for families navigating the complexities of aging.",
+  founderStatement:
+    "Founded by Janet Adusei, LPN, AlphaCare combines clinical experience, thoughtful advocacy, and concierge-level organization to help families navigate complex care journeys with clarity and peace of mind."
 };
 
 export const navItems = [
