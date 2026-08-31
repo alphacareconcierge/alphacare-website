@@ -33,24 +33,24 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-[1.375rem]">
-      <label className="type-form-label grid gap-2 text-navy">
+    <form onSubmit={handleSubmit} className="grid">
+      <label className="type-form-label mb-6 grid gap-2 text-navy">
         <span>Your name <span className="text-gold">*</span></span>
         <input
           name="name"
           required
           autoComplete="name"
-          className="type-input h-[2.625rem] border border-divider bg-ivory px-3 text-navy outline-none transition focus:border-gold"
+          className="type-input h-12 border border-divider bg-ivory px-3 text-navy outline-none transition focus:border-gold"
         />
       </label>
-      <label className="type-form-label grid gap-2 text-navy">
+      <label className="type-form-label mb-6 grid gap-2 text-navy">
         <span>Email <span className="text-gold">*</span></span>
         <input
           type="email"
           name="email"
           required
           autoComplete="email"
-          className="type-input h-[2.625rem] border border-divider bg-ivory px-3 text-navy outline-none transition focus:border-gold"
+          className="type-input h-12 border border-divider bg-ivory px-3 text-navy outline-none transition focus:border-gold"
         />
       </label>
       <label className="type-form-label grid gap-2 text-navy">
@@ -59,16 +59,16 @@ export function ContactForm() {
           type="tel"
           name="phone"
           autoComplete="tel"
-          className="type-input h-[2.625rem] border border-divider bg-ivory px-3 text-navy outline-none transition focus:border-gold"
+          className="type-input h-12 border border-divider bg-ivory px-3 text-navy outline-none transition focus:border-gold"
         />
       </label>
-      <fieldset className="grid gap-3">
+      <fieldset className="my-6">
         <legend className="type-form-label text-navy">
           How would you prefer we reach you?
         </legend>
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="mt-3 grid gap-y-4 sm:grid-cols-3 sm:gap-x-8">
           {contactMethods.map((method) => (
-            <label key={method} className="type-form-label flex items-center gap-3 text-navy">
+            <label key={method} className="type-form-label flex items-center gap-2 text-navy">
               <input
                 type="radio"
                 name="preferredContactMethod"
@@ -90,14 +90,14 @@ export function ContactForm() {
           className="type-input min-h-[7.5rem] resize-y border border-divider bg-ivory px-3 py-3 text-navy outline-none transition focus:border-gold"
         />
       </label>
-      <p className="type-helper max-w-[39rem]">
+      <p className="type-helper mt-4 max-w-[39rem]">
         There’s no need to share medical records or sensitive health information here.
         If additional information is needed, we’ll provide a secure way to share it.
       </p>
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="type-cta h-[3.0625rem] w-full rounded-[0.25rem] border border-navy bg-navy text-gold transition hover:bg-navy/95 disabled:cursor-wait disabled:opacity-70"
+        className="type-cta mt-6 h-[3.0625rem] w-full rounded-[0.25rem] border border-navy bg-navy text-gold transition hover:bg-navy/95 disabled:cursor-wait disabled:opacity-70"
       >
         {status === "submitting" ? "Sending" : "Send Message"}
       </button>
