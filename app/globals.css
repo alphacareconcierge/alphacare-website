@@ -20,7 +20,7 @@ body {
 
 @layer components {
   .type-hero {
-    @apply font-serif text-[2.875rem] font-medium leading-[1.06] md:text-[4.25rem];
+    @apply font-serif text-[clamp(2.125rem,8.8vw,2.875rem)] font-medium leading-[1.06] md:text-[4.5rem];
   }
 
   .type-section {

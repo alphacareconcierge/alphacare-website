@@ -9,28 +9,47 @@ import {
   business,
   processSteps,
   services,
-  trustPoints,
   whyAlphaCare
 } from "@/lib/content";
 
 export default function HomePage() {
   return (
     <>
-      <section className="overflow-hidden bg-navy text-ivory">
-        <div className="mx-auto grid min-h-[calc(100vh-6rem)] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="soft-reveal">
-            <p className="type-eyebrow text-gold">
-              Greater Boston Concierge Care Management
-            </p>
-            <h1 className="type-hero mt-7 max-w-4xl">
-              {business.tagline}
+      <section className="relative isolate overflow-hidden bg-navy text-ivory">
+        <Image
+          src="/brand/boston-waterfront-hero.jpg"
+          alt="Boston waterfront skyline at night"
+          fill
+          priority
+          sizes="100vw"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(16,36,63,0.94)_0%,rgba(16,36,63,0.84)_30%,rgba(16,36,63,0.52)_58%,rgba(16,36,63,0.18)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(16,36,63,0.20)_0%,rgba(16,36,63,0.10)_45%,rgba(16,36,63,0.72)_100%)]" />
+        <div className="mx-auto flex min-h-[calc(100vh-5.75rem)] max-w-7xl items-center px-5 py-20 sm:px-8 lg:min-h-[42rem]">
+          <div className="w-full min-w-0 max-w-[22rem] soft-reveal sm:max-w-3xl">
+            <div className="flex items-center gap-5">
+              <p className="type-eyebrow max-w-[18rem] text-gold sm:max-w-none">
+                Greater Boston Concierge Care Management
+              </p>
+              <span className="hidden h-px w-28 bg-gold/70 sm:block" aria-hidden="true" />
+            </div>
+            <h1 className="type-hero mt-8 max-w-4xl">
+              Healthcare
+              <br className="sm:hidden" /> advocacy,
+              <br className="sm:hidden" /> care
+              <br className="sm:hidden" /> coordination,
+              <br className="sm:hidden" /> and continuity
+              <br className="sm:hidden" /> for families
+              <br className="sm:hidden" /> navigating the complexities
+              <br className="sm:hidden" /> of aging.
             </h1>
-            <p className="type-body mt-8 max-w-2xl text-ivory/74">
+            <p className="type-body mt-8 max-w-[21rem] text-ivory/78 sm:max-w-xl">
               AlphaCare provides calm, organized, high-touch support for families
               managing complex healthcare needs, provider communication,
               appointments, and care transitions.
             </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-10">
               <Link
                 href="/contact"
                 className="type-cta inline-flex items-center justify-center gap-3 border border-gold bg-gold px-7 py-4 text-navy transition hover:bg-transparent hover:text-ivory"
@@ -38,52 +57,22 @@ export default function HomePage() {
                 Start the Conversation
                 <ArrowRight size={16} aria-hidden="true" />
               </Link>
-              <Link
-                href="/about"
-                className="type-cta inline-flex items-center justify-center border border-ivory/25 px-7 py-4 text-ivory transition hover:border-gold hover:text-gold"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-          <div className="relative mx-auto w-full max-w-xl soft-reveal">
-            <div className="border border-gold/45 bg-ivory p-5 shadow-2xl shadow-black/25">
-              <Image
-                src="/brand/alphacare-logo.png"
-                alt="AlphaCare Concierge Care Management logo"
-                width={1200}
-                height={1200}
-                priority
-                className="aspect-square w-full object-contain p-8"
-              />
-            </div>
-            <div className="mt-5 grid grid-cols-3 gap-3">
-              {trustPoints.map((point) => {
-                const Icon = point.icon;
-                return (
-                  <div key={point.label} className="border border-ivory/15 px-4 py-4 text-center">
-                    <Icon className="mx-auto text-gold" size={20} aria-hidden="true" />
-                    <p className="type-eyebrow mt-3 text-ivory/72">
-                      {point.label}
-                    </p>
-                  </div>
-                );
-              })}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8">
+      <section className="px-5 py-24 sm:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             eyebrow="Who we help"
             title="For families carrying the invisible work of care."
             copy="When healthcare becomes fragmented, families need more than information. They need a trusted guide who can bring order to appointments, communication, transitions, and next steps."
+            align="center"
           />
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
+          <div className="mt-16 grid gap-10 md:grid-cols-3">
             {audienceCards.map((card) => (
-              <article key={card.title} className="border border-gold/30 bg-white/55 p-8">
+              <article key={card.title} className="border-t border-gold/45 pt-7">
                 <h3 className="type-card text-navy">{card.title}</h3>
                 <p className="type-body-sm mt-5 text-grayblue">{card.copy}</p>
               </article>
@@ -92,22 +81,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white/50 px-5 py-20 sm:px-8">
+      <section className="bg-white/50 px-5 py-24 sm:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
-            eyebrow="Services"
+            eyebrow="How we support your family"
             title="Premium healthcare advocacy, organized around continuity."
             copy="AlphaCare is not a home health agency, nursing agency, medical practice, or transportation company. We are a care coordination and healthcare advocacy partner for families navigating aging."
+            align="center"
           />
-          <div className="mt-12 grid gap-5 lg:grid-cols-5">
+          <div className="mt-16 grid gap-y-12 sm:grid-cols-2 lg:grid-cols-5 lg:gap-y-0">
             {services.map((service) => {
               const Icon = service.icon;
               return (
-                <article key={service.title} className="border border-navy/10 bg-ivory p-6">
+                <article
+                  key={service.title}
+                  className="sm:odd:pr-8 sm:even:border-l sm:even:border-gold/25 sm:even:pl-8 lg:border-l lg:border-gold/25 lg:px-8 lg:first:border-l-0 lg:first:pl-0 lg:last:pr-0"
+                >
+                  <span className="mb-7 block h-px w-full bg-gold/35 lg:hidden" aria-hidden="true" />
                   <Icon className="text-gold" size={26} aria-hidden="true" />
-                  <h3 className="type-card mt-6 text-navy">
+                  <h3 className="type-card mt-7 min-h-[4.5rem] text-navy lg:min-h-[5.25rem]">
                     {service.title}
                   </h3>
+                  <span className="mt-6 block h-px w-8 bg-gold/70" aria-hidden="true" />
                   <p className="type-body-sm mt-4 text-grayblue">{service.preview}</p>
                 </article>
               );
@@ -123,7 +118,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8">
+      <section className="px-5 py-24 sm:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <SectionHeading
@@ -136,9 +131,9 @@ export default function HomePage() {
               {business.founderStatement}
             </p>
           </div>
-          <div className="grid gap-px bg-gold/25 md:grid-cols-2">
+          <div className="grid gap-x-12 gap-y-10 md:grid-cols-2">
             {whyAlphaCare.map((item) => (
-              <article key={item.title} className="bg-ivory p-7">
+              <article key={item.title} className="border-t border-navy/10 pt-6">
                 <h3 className="type-card text-navy">{item.title}</h3>
                 <p className="type-body-sm mt-4 text-grayblue">{item.copy}</p>
               </article>
@@ -147,7 +142,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-navy px-5 py-20 text-ivory sm:px-8">
+      <section className="bg-navy px-5 py-24 text-ivory sm:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             eyebrow="Consultation process"
@@ -155,9 +150,12 @@ export default function HomePage() {
             copy="The process is designed to feel structured, discreet, and reassuring from the first point of contact."
             inverted
           />
-          <div className="mt-12 grid gap-5 lg:grid-cols-5">
+          <div className="mt-16 grid gap-y-10 md:grid-cols-5">
             {processSteps.map((step, index) => (
-              <article key={step.title} className="border border-ivory/15 p-6">
+              <article
+                key={step.title}
+                className="border-t border-ivory/20 pt-6 md:border-l md:border-t-0 md:px-6 md:first:border-l-0 md:first:pl-0 md:last:pr-0"
+              >
                 <p className="type-process-number text-gold">{String(index + 1).padStart(2, "0")}</p>
                 <h3 className="type-eyebrow mt-7 text-ivory">
                   {step.title}
@@ -169,7 +167,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8">
+      <section className="px-5 py-24 sm:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <SectionHeading
