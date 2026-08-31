@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="bg-ivory text-navy">
-      <section className="grid px-6 pb-[5.75rem] pt-[3.75rem] sm:px-12 lg:grid-cols-[46%_54%] lg:px-[19.25rem] lg:pb-[5.3125rem] lg:pt-[3.75rem] min-[2200px]:px-[25.5rem]">
-        <div className="flex items-center py-12 lg:min-h-[39.875rem] lg:pr-[4.5rem]">
+      <section className="grid items-start px-6 pb-[5.75rem] pt-12 sm:px-12 lg:grid-cols-[46%_54%] lg:px-[19.25rem] lg:pb-[5.3125rem] lg:pt-16 min-[2200px]:px-[25.5rem]">
+        <div className="pt-2 lg:pr-[4.5rem] lg:pt-4">
           <div>
             <p className="type-eyebrow text-[0.8125rem]">
               Let&apos;s Begin
@@ -27,7 +27,7 @@ export default function ContactPage() {
           </div>
         </div>
         <div className="border-divider lg:border-l lg:pl-[4.5rem]">
-          <div className="max-w-[52.5rem] lg:pt-[2.125rem]">
+          <div className="max-w-[52.5rem]">
             <ContactForm />
           </div>
         </div>
