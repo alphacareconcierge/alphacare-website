@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
-import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { business } from "@/lib/content";
 import "./globals.css";
@@ -68,7 +67,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <Header />
         <main id="main-content">{children}</main>
-        <Footer />
       </body>
     </html>
   );
