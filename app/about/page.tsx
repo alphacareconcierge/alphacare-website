@@ -60,29 +60,29 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="px-6 pb-[4.375rem] pt-[6.25rem] sm:px-12 lg:px-[4.3125rem]">
-        <h2 className="type-section max-w-[54rem] text-[2.25rem] text-gold sm:text-[2.75rem]">
+      <section className="px-6 py-14 sm:px-12 lg:px-[4.3125rem] lg:py-16">
+        <h2 className="type-section max-w-[54rem] text-[2.25rem] leading-[1.25] text-gold sm:text-[2.75rem]">
           When someone you love needs more care,<br className="hidden md:block" />
           you shouldn’t have to carry every decision alone.
         </h2>
-        <span className="mt-[2.25rem] block h-px w-11 bg-gold" aria-hidden="true" />
-        <p className="type-body mt-[2.5rem] max-w-[52rem] text-navy">
+        <span className="my-4 block h-px w-11 bg-gold" aria-hidden="true" />
+        <p className="type-body max-w-[52rem] text-navy">
           Alpha Care brings clarity, coordination, and a steady presence when families need it most.
         </p>
       </section>
 
-      <section className="px-6 pb-[6rem] sm:px-12 lg:px-[4.3125rem]">
+      <section className="px-6 pb-20 sm:px-12 lg:px-[4.3125rem]">
         <p className="type-eyebrow">
           What Guides Us
         </p>
         <span className="mt-[1.1875rem] block h-px w-8 bg-gold" aria-hidden="true" />
-        <div className="mt-[2.5rem] grid max-w-[58rem] gap-x-[9.375rem] gap-y-[4.25rem] md:grid-cols-2">
+        <div className="mt-8 grid max-w-[58rem] gap-x-16 gap-y-10 md:grid-cols-2">
           {values.map((value) => (
             <article key={value.title}>
               <h3 className="type-card text-[2rem]">
                 {value.title}
               </h3>
-              <p className="type-body mt-[1.125rem] max-w-[17.75rem] text-navy">
+              <p className="type-body mt-2 max-w-[17.75rem] text-navy">
                 {value.copy}
               </p>
             </article>
