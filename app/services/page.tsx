@@ -51,32 +51,32 @@ export default function ServicesPage() {
     <div className="bg-ivory text-navy">
       <section className="grid px-6 pb-[3.875rem] pt-[3.25rem] sm:px-12 lg:grid-cols-[45%_55%] lg:px-[6.375rem] lg:pb-[0.625rem] lg:pt-[1.625rem]">
         <div className="pt-[2.25rem]">
-          <h1 className="type-hero max-w-[34rem] text-[3rem] sm:text-[3.5rem] min-[1400px]:text-[3.875rem]">
+          <h1 className="max-w-[34rem] font-serif text-[clamp(2.25rem,3.5vw,3rem)] font-normal leading-[1.2] text-navy">
             Care does not stop<br />
             at the appointment.
           </h1>
-          <p className="type-body mt-[1.5625rem] max-w-[29rem] text-navy">
+          <p className="mt-[1.5625rem] max-w-[29rem] font-sans text-base font-normal leading-[1.65] text-grayblue">
             What happens during care can create things that still need attention afterward. Alpha Care helps families recognize what those are and understand where to begin.
           </p>
         </div>
         <div className="mt-12 lg:mt-0 lg:max-w-[26rem]">
           <span className="block h-px w-10 bg-gold" aria-hidden="true" />
-          <p className="type-eyebrow mt-5">
+          <p className="mt-5 font-sans text-xs font-semibold uppercase tracking-[0.12em] text-gold">
             How We Can Help
           </p>
           <div className="mt-[1.1875rem]">
             {helpItems.map((item, index) => (
               <article key={item.title} className={`${index > 0 ? "border-t border-divider" : ""} py-[0.625rem] first:pt-0`}>
-                <h2 className="type-card text-[1.375rem]">
+                <h2 className="font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
                   {item.title}
                 </h2>
-                <p className="type-body mt-[0.375rem] text-[0.75rem] leading-[1.65] text-navy">
+                <p className="mt-[0.375rem] font-sans text-sm font-normal leading-[1.6] text-grayblue">
                   {item.copy}
                 </p>
               </article>
             ))}
           </div>
-          <p className="type-editorial mt-[1rem] text-[1.3125rem] italic">
+          <p className="mt-[1rem] font-serif text-[1.1875rem] font-normal italic leading-[1.25] text-navy">
             No predetermined package. We begin by listening.
           </p>
         </div>
@@ -85,7 +85,7 @@ export default function ServicesPage() {
       <section className="grid gap-10 px-6 pb-[3.625rem] pt-2 sm:px-12 lg:grid-cols-[38%_30%_32%] lg:gap-0 lg:px-[6.375rem]">
         <div className="lg:pr-[3.125rem]">
           <span className="block h-px w-10 bg-gold" aria-hidden="true" />
-          <h2 className="type-eyebrow mt-[1.125rem]">
+          <h2 className="mt-[1.125rem] font-sans text-xs font-semibold uppercase tracking-[0.12em] text-gold">
             The Details Matter
           </h2>
           <div className="mt-[1.125rem] grid gap-x-8 gap-y-[1.25rem] md:grid-cols-2">
@@ -93,10 +93,10 @@ export default function ServicesPage() {
               <article key={item.title} className="grid grid-cols-[0.5rem_1fr] gap-4">
                 <span className="mt-[0.5rem] h-1 w-1 rounded-full bg-gold" aria-hidden="true" />
                 <div>
-                  <h3 className="text-[0.75rem] font-semibold uppercase leading-[1.45] tracking-[0.05em] text-navy">
+                  <h3 className="font-sans text-[0.75rem] font-bold uppercase leading-[1.45] tracking-[0.06em] text-navy">
                     {item.title}
                   </h3>
-                  <p className="type-body-sm mt-2 text-navy">
+                  <p className="mt-2 font-sans text-sm font-normal leading-[1.55] text-grayblue">
                     {item.copy}
                   </p>
                 </div>
@@ -106,22 +106,22 @@ export default function ServicesPage() {
         </div>
         <div className="border-divider lg:border-l lg:px-[2.375rem]">
           <span className="block h-px w-10 bg-gold" aria-hidden="true" />
-          <h2 className="type-eyebrow mt-[1.125rem]">
+          <h2 className="mt-[1.125rem] font-sans text-xs font-semibold uppercase tracking-[0.12em] text-gold">
             Our Role
           </h2>
-          <p className="type-body-sm mt-2 text-navy">
+          <p className="mt-2 font-sans text-sm font-normal leading-[1.65] text-grayblue">
             Alpha Care works alongside your family and the professionals already involved in your care. We do not replace the guidance or decisions of your physicians, financial advisors, attorneys, or other trusted experts. Our role is to help you understand, coordinate, and follow through on what needs attention.
           </p>
         </div>
         <div className="border-divider text-center lg:border-l lg:pl-[3.5rem] lg:pt-[1.625rem]">
           <span className="mx-auto block h-px w-14 bg-gold" aria-hidden="true" />
-          <h2 className="type-section mx-auto mt-[2rem] max-w-[23rem] text-[1.875rem]">
+          <h2 className="mx-auto mt-[2rem] max-w-[23rem] font-serif text-[1.625rem] font-normal leading-[1.25] text-navy">
             Tell us what your family is navigating.<br />
-            <em className="font-serif italic">We’ll begin there.</em>
+            <em className="font-serif font-normal italic">We’ll begin there.</em>
           </h2>
           <Link
             href="/contact"
-            className="type-cta mt-[1.5rem] inline-flex h-[2.75rem] min-w-[14.75rem] items-center justify-center rounded-[0.125rem] bg-navy px-7 text-white transition hover:bg-navy/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+            className="mt-[1.5rem] inline-flex h-[2.75rem] min-w-[14.75rem] items-center justify-center rounded-[0.125rem] bg-navy px-7 font-sans text-xs font-semibold uppercase tracking-[0.1em] text-gold transition hover:bg-navy/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
           >
             Contact Alpha Care
           </Link>
