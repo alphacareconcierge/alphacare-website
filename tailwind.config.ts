@@ -9,18 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: "#10243F",
-        gold: "#C6A15B",
-        ivory: "#F8F5EF",
-        grayblue: "#58657A",
-        ink: "#15233A"
+        navy: "#062A52",
+        gold: "#B8751A",
+        ivory: "#F7F2EA",
+        softivory: "#FBF8F3",
+        divider: "#DED2C1",
+        grayblue: "#304661",
+        ink: "#062A52"
       },
       fontFamily: {
         serif: ["var(--font-cormorant)", "Georgia", "serif"],
         sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"]
       },
       boxShadow: {
-        soft: "0 24px 80px rgba(16, 36, 63, 0.10)"
+        soft: "0 16px 48px rgba(6, 42, 82, 0.06)"
       }
     }
   },

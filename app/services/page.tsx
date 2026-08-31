@@ -42,7 +42,7 @@ export default function ServicesPage() {
               return (
                 <article
                   key={service.title}
-                  className="grid gap-6 border border-gold/30 bg-white/60 p-7 md:grid-cols-[4rem_1fr]"
+                  className="grid gap-6 border border-divider bg-softivory p-7 md:grid-cols-[4rem_1fr]"
                 >
                   <div className="flex h-16 w-16 items-center justify-center border border-gold/55 bg-ivory">
                     <Icon className="text-gold" size={27} aria-hidden="true" />

@@ -44,7 +44,7 @@ export function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="grid gap-5 border border-gold/35 bg-white/65 p-6 shadow-soft sm:p-8"
+      className="grid gap-5 border border-divider bg-softivory p-6 shadow-soft sm:p-8"
     >
       <div className="grid gap-5 md:grid-cols-2">
         <label className="type-form-label grid gap-2 text-navy">
@@ -53,7 +53,7 @@ export function ContactForm() {
             name="name"
             required
             autoComplete="name"
-            className="type-input border border-navy/15 bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
+            className="type-input border border-divider bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
           />
         </label>
         <label className="type-form-label grid gap-2 text-navy">
@@ -63,7 +63,7 @@ export function ContactForm() {
             name="email"
             required
             autoComplete="email"
-            className="type-input border border-navy/15 bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
+            className="type-input border border-divider bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
           />
         </label>
       </div>
@@ -74,7 +74,7 @@ export function ContactForm() {
             type="tel"
             name="phone"
             autoComplete="tel"
-            className="type-input border border-navy/15 bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
+            className="type-input border border-divider bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
           />
         </label>
         <label className="type-form-label grid gap-2 text-navy">
@@ -82,7 +82,7 @@ export function ContactForm() {
           <select
             name="relationship"
             required
-            className="type-input border border-navy/15 bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
+            className="type-input border border-divider bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
             defaultValue=""
           >
             <option value="" disabled>
@@ -99,7 +99,7 @@ export function ContactForm() {
         <select
           name="preferredContactMethod"
           required
-          className="type-input border border-navy/15 bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
+          className="type-input border border-divider bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
           defaultValue=""
         >
           <option value="" disabled>
@@ -116,7 +116,7 @@ export function ContactForm() {
           name="message"
           required
           rows={5}
-          className="type-input resize-y border border-navy/15 bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
+          className="type-input resize-y border border-divider bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
         />
       </label>
       <p className="type-body-sm border-l-2 border-gold pl-4 text-grayblue">

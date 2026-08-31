@@ -4,7 +4,7 @@
 
 :root {
   color-scheme: light;
-  background: #f8f5ef;
+  background: #f7f2ea;
 }
 
 html {
@@ -12,25 +12,25 @@ html {
 }
 
 body {
-  background: #f8f5ef;
-  color: #10243f;
+  background: #f7f2ea;
+  color: #062a52;
 }
 
 @layer components {
   .type-hero {
-    @apply font-serif text-[clamp(2.125rem,8.8vw,2.875rem)] font-medium leading-[1.06] md:text-[4.5rem];
+    @apply font-serif text-[clamp(2rem,8vw,2.625rem)] font-medium leading-[1.08] md:text-[3.5rem];
   }
 
   .type-section {
-    @apply font-serif text-[2.5rem] font-medium leading-[1.08] md:text-5xl;
+    @apply font-serif text-[2rem] font-medium leading-[1.12] md:text-[2.25rem];
   }
 
   .type-card {
-    @apply font-serif text-[1.75rem] font-medium leading-tight;
+    @apply font-serif text-[1.5rem] font-medium leading-tight;
   }
 
   .type-editorial {
-    @apply font-serif text-[1.875rem] font-medium leading-snug;
+    @apply font-serif text-[1.625rem] font-medium leading-snug;
   }
 
   .type-body {
@@ -42,11 +42,11 @@ body {
   }
 
   .type-eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.24em];
+    @apply text-[0.8125rem] font-semibold uppercase tracking-[0.14em];
   }
 
   .type-cta {
-    @apply text-[0.78rem] font-semibold uppercase tracking-[0.16em];
+    @apply text-[0.8125rem] font-semibold uppercase tracking-[0.13em];
   }
 
   .type-nav {
@@ -66,7 +66,7 @@ body {
   }
 
   .type-process-number {
-    @apply text-[2.625rem] font-light leading-none;
+    @apply text-[2.25rem] font-light leading-none;
   }
 
   .type-brand-name {
@@ -79,7 +79,7 @@ body {
 }
 
 ::selection {
-  background: rgba(198, 161, 91, 0.35);
+  background: rgba(184, 117, 26, 0.25);
 }
 
 .soft-reveal {
