@@ -20,7 +20,7 @@ export function SectionHeading({
       className={`max-w-3xl ${align === "center" ? "mx-auto text-center" : ""}`}
     >
       {eyebrow ? (
-        <p className="type-eyebrow mb-4 text-gold">
+        <p className="type-eyebrow mb-4">
           {eyebrow}
         </p>
       ) : null}

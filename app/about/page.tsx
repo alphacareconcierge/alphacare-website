@@ -32,19 +32,19 @@ export default function AboutPage() {
     <div className="bg-ivory text-navy">
       <section className="grid border-b border-divider lg:min-h-[36.9375rem] lg:grid-cols-[43.25%_56.75%]">
         <div className="px-6 py-16 sm:px-12 lg:px-[4.1875rem] lg:pb-0 lg:pt-[4.375rem]">
-          <p className="text-[0.8125rem] font-semibold uppercase tracking-[0.12em] text-gold">
+          <p className="type-eyebrow">
             About Alpha Care
           </p>
           <span className="mt-5 block h-px w-8 bg-gold" aria-hidden="true" />
-          <h1 className="mt-[2.3125rem] max-w-[25rem] font-serif text-[2.75rem] font-medium leading-[1.1] text-navy sm:text-[3.5rem] lg:text-[2.625rem] min-[1400px]:text-[3.25rem]">
+          <h1 className="type-hero mt-[2.3125rem] max-w-[25rem] text-[2.75rem] sm:text-[3.5rem] lg:text-[2.625rem] min-[1400px]:text-[3.25rem]">
             <span className="block">Care may involve</span>
             <span className="block">many people.</span>
-            <em className="block font-serif text-[2.35rem] font-medium italic leading-[1.08] sm:text-[3rem] lg:text-[2.1875rem] min-[1400px]:text-[2.625rem]">
+            <em className="block font-serif text-[2.35rem] italic sm:text-[3rem] lg:text-[2.1875rem] min-[1400px]:text-[2.625rem]">
               Families still experience all of it.
             </em>
           </h1>
           <span className="mt-[2.125rem] block h-px w-8 bg-gold" aria-hidden="true" />
-          <p className="mt-[2rem] max-w-[22.5rem] text-[1rem] font-medium leading-[1.9] text-navy">
+          <p className="type-body mt-[2rem] max-w-[22.5rem] text-navy">
             Alpha Care grew from experience in nursing and healthcare operations, alongside the personal experience of navigating complicated care within a family. We saw how easily the work of keeping up with different people, information, and next steps can become part of what a family carries.
           </p>
         </div>
@@ -61,28 +61,28 @@ export default function AboutPage() {
       </section>
 
       <section className="px-6 pb-[4.375rem] pt-[6.25rem] sm:px-12 lg:px-[4.3125rem]">
-        <h2 className="max-w-[54rem] font-serif text-[2.25rem] font-medium leading-[1.28] text-gold sm:text-[2.75rem]">
+        <h2 className="type-section max-w-[54rem] text-[2.25rem] text-gold sm:text-[2.75rem]">
           When someone you love needs more care,<br className="hidden md:block" />
           you shouldn’t have to carry every decision alone.
         </h2>
         <span className="mt-[2.25rem] block h-px w-11 bg-gold" aria-hidden="true" />
-        <p className="mt-[2.5rem] max-w-[52rem] text-[1.125rem] font-medium leading-8 text-navy">
+        <p className="type-body mt-[2.5rem] max-w-[52rem] text-navy">
           Alpha Care brings clarity, coordination, and a steady presence when families need it most.
         </p>
       </section>
 
       <section className="px-6 pb-[6rem] sm:px-12 lg:px-[4.3125rem]">
-        <p className="text-[0.8125rem] font-semibold uppercase tracking-[0.12em] text-gold">
+        <p className="type-eyebrow">
           What Guides Us
         </p>
         <span className="mt-[1.1875rem] block h-px w-8 bg-gold" aria-hidden="true" />
         <div className="mt-[2.5rem] grid max-w-[58rem] gap-x-[9.375rem] gap-y-[4.25rem] md:grid-cols-2">
           {values.map((value) => (
             <article key={value.title}>
-              <h3 className="font-serif text-[2rem] font-medium leading-tight text-navy">
+              <h3 className="type-card text-[2rem]">
                 {value.title}
               </h3>
-              <p className="mt-[1.125rem] max-w-[17.75rem] text-[1rem] font-medium leading-[1.75] text-navy">
+              <p className="type-body mt-[1.125rem] max-w-[17.75rem] text-navy">
                 {value.copy}
               </p>
             </article>

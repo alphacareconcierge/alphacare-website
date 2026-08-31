@@ -34,41 +34,41 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-[1.375rem]">
-      <label className="grid gap-2 text-[0.95rem] font-medium leading-none text-navy">
+      <label className="type-form-label grid gap-2 text-navy">
         <span>Your name <span className="text-gold">*</span></span>
         <input
           name="name"
           required
           autoComplete="name"
-          className="h-[2.625rem] border border-divider bg-ivory px-3 text-base text-navy outline-none transition focus:border-gold"
+          className="type-input h-[2.625rem] border border-divider bg-ivory px-3 text-navy outline-none transition focus:border-gold"
         />
       </label>
-      <label className="grid gap-2 text-[0.95rem] font-medium leading-none text-navy">
+      <label className="type-form-label grid gap-2 text-navy">
         <span>Email <span className="text-gold">*</span></span>
         <input
           type="email"
           name="email"
           required
           autoComplete="email"
-          className="h-[2.625rem] border border-divider bg-ivory px-3 text-base text-navy outline-none transition focus:border-gold"
+          className="type-input h-[2.625rem] border border-divider bg-ivory px-3 text-navy outline-none transition focus:border-gold"
         />
       </label>
-      <label className="grid gap-2 text-[0.95rem] font-medium leading-none text-navy">
+      <label className="type-form-label grid gap-2 text-navy">
         Phone (optional)
         <input
           type="tel"
           name="phone"
           autoComplete="tel"
-          className="h-[2.625rem] border border-divider bg-ivory px-3 text-base text-navy outline-none transition focus:border-gold"
+          className="type-input h-[2.625rem] border border-divider bg-ivory px-3 text-navy outline-none transition focus:border-gold"
         />
       </label>
       <fieldset className="grid gap-3">
-        <legend className="text-[0.95rem] font-medium leading-none text-navy">
+        <legend className="type-form-label text-navy">
           How would you prefer we reach you?
         </legend>
         <div className="grid gap-4 sm:grid-cols-3">
           {contactMethods.map((method) => (
-            <label key={method} className="flex items-center gap-3 text-[0.95rem] font-medium text-navy">
+            <label key={method} className="type-form-label flex items-center gap-3 text-navy">
               <input
                 type="radio"
                 name="preferredContactMethod"
@@ -81,27 +81,27 @@ export function ContactForm() {
           ))}
         </div>
       </fieldset>
-      <label className="grid gap-2 text-[0.95rem] font-medium leading-none text-navy">
+      <label className="type-form-label grid gap-2 text-navy">
         <span>What brings you to Alpha Care? <span className="text-gold">*</span></span>
         <textarea
           name="message"
           required
           rows={5}
-          className="min-h-[7.5rem] resize-y border border-divider bg-ivory px-3 py-3 text-base leading-7 text-navy outline-none transition focus:border-gold"
+          className="type-input min-h-[7.5rem] resize-y border border-divider bg-ivory px-3 py-3 text-navy outline-none transition focus:border-gold"
         />
       </label>
-      <p className="max-w-[39rem] text-[0.875rem] font-medium leading-6 text-navy">
+      <p className="type-helper max-w-[39rem]">
         There’s no need to share medical records or sensitive health information here.
         If additional information is needed, we’ll provide a secure way to share it.
       </p>
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="h-[3.0625rem] w-full rounded-[0.25rem] border border-navy bg-navy text-[1rem] font-semibold uppercase tracking-[0.13em] text-gold transition hover:bg-navy/95 disabled:cursor-wait disabled:opacity-70"
+        className="type-cta h-[3.0625rem] w-full rounded-[0.25rem] border border-navy bg-navy text-gold transition hover:bg-navy/95 disabled:cursor-wait disabled:opacity-70"
       >
         {status === "submitting" ? "Sending" : "Send Message"}
       </button>
-      <div aria-live="polite" className="min-h-6 text-sm leading-6">
+      <div aria-live="polite" className="type-body-sm min-h-6">
         {status === "success" ? (
           <p className="text-navy">Thank you. Alpha Care will follow up with you soon.</p>
         ) : null}

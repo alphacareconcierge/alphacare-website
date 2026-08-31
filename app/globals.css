@@ -18,51 +18,55 @@ body {
 
 @layer components {
   .type-hero {
-    @apply font-serif text-[clamp(2rem,8vw,2.625rem)] font-medium leading-[1.08] md:text-[3.5rem];
+    @apply font-serif font-medium leading-[1.22] text-navy;
   }
 
   .type-section {
-    @apply font-serif text-[2rem] font-medium leading-[1.12] md:text-[2.25rem];
+    @apply font-serif font-medium leading-[1.22] text-navy;
   }
 
   .type-card {
-    @apply font-serif text-[1.5rem] font-medium leading-tight;
+    @apply font-serif font-medium leading-[1.25] text-navy;
   }
 
   .type-editorial {
-    @apply font-serif text-[1.625rem] font-medium leading-snug;
+    @apply font-serif font-medium leading-[1.25] text-navy;
   }
 
   .type-body {
-    @apply text-base font-normal leading-8 text-grayblue md:text-[1.0625rem];
+    @apply font-sans text-[0.9375rem] font-normal leading-[1.7] text-grayblue md:text-base;
   }
 
   .type-body-sm {
-    @apply text-sm font-normal leading-7;
+    @apply font-sans text-[0.875rem] font-normal leading-[1.65] text-grayblue;
   }
 
   .type-eyebrow {
-    @apply text-[0.8125rem] font-semibold uppercase tracking-[0.14em];
+    @apply font-sans text-[0.8125rem] font-semibold uppercase tracking-[0.12em] text-gold;
   }
 
   .type-cta {
-    @apply text-[0.8125rem] font-semibold uppercase tracking-[0.13em];
+    @apply font-sans text-[0.8125rem] font-semibold uppercase tracking-[0.1em];
   }
 
   .type-nav {
-    @apply text-sm font-medium;
+    @apply font-sans text-[0.8125rem] font-medium uppercase tracking-[0.1em];
   }
 
   .type-form-label {
-    @apply text-sm font-medium;
+    @apply font-sans text-[0.9375rem] font-normal leading-none;
   }
 
   .type-input {
-    @apply text-base font-normal leading-6;
+    @apply font-sans text-[0.9375rem] font-normal leading-6;
+  }
+
+  .type-helper {
+    @apply font-sans text-[0.875rem] font-normal italic leading-[1.65] text-[#555];
   }
 
   .type-meta {
-    @apply text-xs font-normal leading-6;
+    @apply font-sans text-xs font-normal leading-6;
   }
 
   .type-process-number {
@@ -70,11 +74,11 @@ body {
   }
 
   .type-brand-name {
-    @apply font-serif text-2xl font-medium uppercase tracking-[0.2em];
+    @apply font-serif font-medium uppercase tracking-[0.15em];
   }
 
   .type-brand-subline {
-    @apply text-xs font-semibold uppercase tracking-[0.24em];
+    @apply font-sans font-medium uppercase tracking-[0.12em];
   }
 }
 

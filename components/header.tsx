@@ -26,10 +26,10 @@ export function Header() {
           />
           <span className="hidden h-[3.75rem] w-px bg-gold/55 sm:block min-[1400px]:h-[4.25rem]" aria-hidden="true" />
           <span className="flex flex-col leading-none">
-            <span className="font-serif text-[1.55rem] font-medium uppercase tracking-[0.16em] text-navy sm:text-[1.75rem] sm:tracking-[0.18em] min-[1400px]:text-[2.375rem]">
+            <span className="type-brand-name text-[1.55rem] text-navy sm:text-[1.75rem] min-[1400px]:text-[2.375rem]">
               Alpha<span className="text-gold">Care</span>
             </span>
-            <span className="mt-3 text-[0.55rem] font-semibold uppercase tracking-[0.22em] text-navy sm:text-[0.5625rem] sm:tracking-[0.31em] min-[1400px]:mt-4 min-[1400px]:text-[0.75rem] min-[1400px]:tracking-[0.34em]">
+            <span className="type-brand-subline mt-3 text-[0.55rem] text-navy sm:text-[0.5625rem] min-[1400px]:mt-4 min-[1400px]:text-[0.75rem]">
               Concierge Care Management
             </span>
           </span>
@@ -43,7 +43,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={`relative pb-5 text-[0.8125rem] font-semibold uppercase tracking-[0.12em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold ${
+              className={`type-nav relative pb-5 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold ${
                 pathname === item.href
                   ? "text-gold after:absolute after:bottom-2 after:left-0 after:h-px after:w-12 after:bg-gold"
                   : "text-navy hover:text-gold"
@@ -56,7 +56,7 @@ export function Header() {
 
         <Link
           href="/contact"
-          className="inline-flex h-[3.125rem] shrink-0 items-center justify-center whitespace-nowrap rounded-[0.3125rem] border border-gold bg-navy px-5 text-[0.6875rem] font-semibold uppercase tracking-[0.11em] text-gold transition hover:bg-navy/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:w-[11.75rem] min-[1400px]:h-[3.75rem] min-[1400px]:w-[16.75rem] min-[1400px]:px-8 min-[1400px]:text-[0.8125rem] min-[1400px]:tracking-[0.13em]"
+          className="type-cta inline-flex h-[3.125rem] shrink-0 items-center justify-center whitespace-nowrap rounded-[0.3125rem] border border-gold bg-navy px-5 text-[0.75rem] text-gold transition hover:bg-navy/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:w-[12.5rem] min-[1400px]:h-[3.75rem] min-[1400px]:w-[16.75rem] min-[1400px]:px-8 min-[1400px]:text-[0.8125rem]"
         >
           Start the Conversation
         </Link>
