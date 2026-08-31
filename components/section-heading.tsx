@@ -20,12 +20,12 @@ export function SectionHeading({
       className={`max-w-3xl ${align === "center" ? "mx-auto text-center" : ""}`}
     >
       {eyebrow ? (
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-gold">
+        <p className="type-eyebrow mb-4 text-gold">
           {eyebrow}
         </p>
       ) : null}
       <h2
-        className={`font-serif text-4xl font-medium leading-tight md:text-5xl ${
+        className={`type-section ${
           inverted ? "text-ivory" : "text-navy"
         }`}
       >
@@ -33,7 +33,7 @@ export function SectionHeading({
       </h2>
       {copy ? (
         <p
-          className={`mt-6 text-base leading-8 md:text-lg ${
+          className={`type-body mt-6 ${
             inverted ? "text-ivory/72" : "text-grayblue"
           }`}
         >

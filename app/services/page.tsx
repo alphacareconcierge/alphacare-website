@@ -16,13 +16,13 @@ export default function ServicesPage() {
     <>
       <section className="bg-navy px-5 py-20 text-ivory sm:px-8">
         <div className="mx-auto max-w-5xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.34em] text-gold">
+          <p className="type-eyebrow text-gold">
             Concierge Care Management
           </p>
-          <h1 className="mt-6 font-serif text-5xl font-medium leading-tight md:text-7xl">
+          <h1 className="type-hero mt-6">
             Healthcare advocacy and coordination for families navigating aging.
           </h1>
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-9 text-ivory/74">
+          <p className="type-body mx-auto mt-8 max-w-3xl text-ivory/74">
             AlphaCare supports families with high-touch guidance across healthcare
             communication, care transitions, appointments, and ongoing family needs.
           </p>
@@ -48,10 +48,10 @@ export default function ServicesPage() {
                     <Icon className="text-gold" size={27} aria-hidden="true" />
                   </div>
                   <div>
-                    <h2 className="font-serif text-4xl font-medium text-navy">
+                    <h2 className="type-card text-navy">
                       {service.title}
                     </h2>
-                    <p className="mt-5 max-w-4xl text-base leading-8 text-grayblue">
+                    <p className="type-body mt-5 max-w-4xl text-grayblue">
                       {service.description}
                     </p>
                   </div>
@@ -60,14 +60,14 @@ export default function ServicesPage() {
             })}
           </div>
           <div className="mt-12 border border-navy/10 bg-navy p-8 text-ivory md:p-10">
-            <p className="max-w-3xl font-serif text-3xl leading-snug">
+            <p className="type-editorial max-w-3xl">
               AlphaCare is a trusted healthcare guide and care coordination
               partner. We do not provide home health, nursing agency, medical
               practice, or transportation services.
             </p>
             <Link
               href="/contact"
-              className="mt-8 inline-flex items-center gap-3 border border-gold bg-gold px-6 py-4 text-xs font-bold uppercase tracking-[0.18em] text-navy transition hover:bg-transparent hover:text-ivory"
+              className="type-cta mt-8 inline-flex items-center gap-3 border border-gold bg-gold px-6 py-4 text-navy transition hover:bg-transparent hover:text-ivory"
             >
               Start the Conversation
               <ArrowRight size={16} aria-hidden="true" />

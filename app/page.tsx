@@ -19,13 +19,13 @@ export default function HomePage() {
       <section className="overflow-hidden bg-navy text-ivory">
         <div className="mx-auto grid min-h-[calc(100vh-6rem)] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="soft-reveal">
-            <p className="text-xs font-semibold uppercase tracking-[0.34em] text-gold">
+            <p className="type-eyebrow text-gold">
               Greater Boston Concierge Care Management
             </p>
-            <h1 className="mt-7 max-w-4xl font-serif text-5xl font-medium leading-[1.04] md:text-7xl">
+            <h1 className="type-hero mt-7 max-w-4xl">
               {business.tagline}
             </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-9 text-ivory/74">
+            <p className="type-body mt-8 max-w-2xl text-ivory/74">
               AlphaCare provides calm, organized, high-touch support for families
               managing complex healthcare needs, provider communication,
               appointments, and care transitions.
@@ -33,14 +33,14 @@ export default function HomePage() {
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 border border-gold bg-gold px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-navy transition hover:bg-transparent hover:text-ivory"
+                className="type-cta inline-flex items-center justify-center gap-3 border border-gold bg-gold px-7 py-4 text-navy transition hover:bg-transparent hover:text-ivory"
               >
                 Start the Conversation
                 <ArrowRight size={16} aria-hidden="true" />
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center border border-ivory/25 px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-ivory transition hover:border-gold hover:text-gold"
+                className="type-cta inline-flex items-center justify-center border border-ivory/25 px-7 py-4 text-ivory transition hover:border-gold hover:text-gold"
               >
                 Learn More
               </Link>
@@ -63,7 +63,7 @@ export default function HomePage() {
                 return (
                   <div key={point.label} className="border border-ivory/15 px-4 py-4 text-center">
                     <Icon className="mx-auto text-gold" size={20} aria-hidden="true" />
-                    <p className="mt-3 text-xs uppercase tracking-[0.18em] text-ivory/72">
+                    <p className="type-eyebrow mt-3 text-ivory/72">
                       {point.label}
                     </p>
                   </div>
@@ -84,8 +84,8 @@ export default function HomePage() {
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {audienceCards.map((card) => (
               <article key={card.title} className="border border-gold/30 bg-white/55 p-8">
-                <h3 className="font-serif text-3xl font-medium text-navy">{card.title}</h3>
-                <p className="mt-5 text-sm leading-7 text-grayblue">{card.copy}</p>
+                <h3 className="type-card text-navy">{card.title}</h3>
+                <p className="type-body-sm mt-5 text-grayblue">{card.copy}</p>
               </article>
             ))}
           </div>
@@ -105,17 +105,17 @@ export default function HomePage() {
               return (
                 <article key={service.title} className="border border-navy/10 bg-ivory p-6">
                   <Icon className="text-gold" size={26} aria-hidden="true" />
-                  <h3 className="mt-6 font-serif text-2xl font-medium text-navy">
+                  <h3 className="type-card mt-6 text-navy">
                     {service.title}
                   </h3>
-                  <p className="mt-4 text-sm leading-7 text-grayblue">{service.preview}</p>
+                  <p className="type-body-sm mt-4 text-grayblue">{service.preview}</p>
                 </article>
               );
             })}
           </div>
           <Link
             href="/services"
-            className="mt-10 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.18em] text-navy hover:text-gold"
+            className="type-cta mt-10 inline-flex items-center gap-3 text-navy hover:text-gold"
           >
             View services
             <ArrowRight size={16} aria-hidden="true" />
@@ -132,15 +132,15 @@ export default function HomePage() {
               copy="Every engagement is built around quiet competence, attentive communication, and a clear sense of what families need next."
             />
             <DecorativeRule className="mt-10 max-w-sm" />
-            <p className="mt-8 max-w-xl font-serif text-3xl leading-snug text-navy">
+            <p className="type-editorial mt-8 max-w-xl text-navy">
               {business.founderStatement}
             </p>
           </div>
           <div className="grid gap-px bg-gold/25 md:grid-cols-2">
             {whyAlphaCare.map((item) => (
               <article key={item.title} className="bg-ivory p-7">
-                <h3 className="font-serif text-3xl font-medium text-navy">{item.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-grayblue">{item.copy}</p>
+                <h3 className="type-card text-navy">{item.title}</h3>
+                <p className="type-body-sm mt-4 text-grayblue">{item.copy}</p>
               </article>
             ))}
           </div>
@@ -158,11 +158,11 @@ export default function HomePage() {
           <div className="mt-12 grid gap-5 lg:grid-cols-5">
             {processSteps.map((step, index) => (
               <article key={step.title} className="border border-ivory/15 p-6">
-                <p className="font-serif text-5xl text-gold">{String(index + 1).padStart(2, "0")}</p>
-                <h3 className="mt-7 text-xs font-bold uppercase tracking-[0.22em] text-ivory">
+                <p className="type-process-number text-gold">{String(index + 1).padStart(2, "0")}</p>
+                <h3 className="type-eyebrow mt-7 text-ivory">
                   {step.title}
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-ivory/70">{step.copy}</p>
+                <p className="type-body-sm mt-4 text-ivory/70">{step.copy}</p>
               </article>
             ))}
           </div>

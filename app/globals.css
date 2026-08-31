@@ -18,6 +18,68 @@ body {
   color: #10243f;
 }
 
+@layer components {
+  .type-hero {
+    @apply font-serif text-[2.875rem] font-medium leading-[1.06] md:text-[4.25rem];
+  }
+
+  .type-section {
+    @apply font-serif text-[2.5rem] font-medium leading-[1.08] md:text-5xl;
+  }
+
+  .type-card {
+    @apply font-serif text-[1.75rem] font-medium leading-tight;
+  }
+
+  .type-editorial {
+    @apply font-serif text-[1.875rem] font-medium leading-snug;
+  }
+
+  .type-body {
+    @apply text-base font-normal leading-8 md:text-[1.0625rem];
+  }
+
+  .type-body-sm {
+    @apply text-sm font-normal leading-7;
+  }
+
+  .type-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.24em];
+  }
+
+  .type-cta {
+    @apply text-[0.78rem] font-semibold uppercase tracking-[0.16em];
+  }
+
+  .type-nav {
+    @apply text-sm font-medium;
+  }
+
+  .type-form-label {
+    @apply text-sm font-medium;
+  }
+
+  .type-input {
+    @apply text-base font-normal leading-6;
+  }
+
+  .type-meta {
+    @apply text-xs font-normal leading-6;
+  }
+
+  .type-process-number {
+    @apply text-[2.625rem] font-light leading-none;
+  }
+
+  .type-brand-name {
+    @apply font-serif text-2xl font-medium uppercase tracking-[0.2em];
+  }
+
+  .type-brand-subline {
+    @apply text-xs font-semibold uppercase tracking-[0.24em];
+  }
+}
+
 ::selection {
   background: rgba(198, 161, 91, 0.35);
 }

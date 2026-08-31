@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Linkedin, Instagram } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import { BrandMark } from "@/components/brand-mark";
 import { DecorativeRule } from "@/components/decorative-rule";
@@ -11,17 +11,17 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
           <div>
             <BrandMark inverted />
-            <p className="mt-8 max-w-md text-sm leading-7 text-ivory/72">
+            <p className="type-body-sm mt-8 max-w-md text-ivory/72">
               Healthcare advocacy, care coordination, and continuity for families
               navigating aging with clarity and calm.
             </p>
             <DecorativeRule className="mt-8 max-w-xs" />
           </div>
           <div>
-            <h2 className="text-xs font-semibold uppercase tracking-[0.28em] text-gold">
+            <h2 className="type-eyebrow text-gold">
               Contact
             </h2>
-            <address className="mt-6 space-y-4 text-sm not-italic text-ivory/78">
+            <address className="type-body-sm mt-6 space-y-4 not-italic text-ivory/78">
               <p className="flex items-center gap-3">
                 <MapPin size={17} aria-hidden="true" />
                 {business.location}
@@ -37,10 +37,10 @@ export function Footer() {
             </address>
           </div>
           <div>
-            <h2 className="text-xs font-semibold uppercase tracking-[0.28em] text-gold">
+            <h2 className="type-eyebrow text-gold">
               Explore
             </h2>
-            <div className="mt-6 grid gap-3 text-sm text-ivory/78">
+            <div className="type-body-sm mt-6 grid gap-3 text-ivory/78">
               {navItems.map((item) => (
                 <Link key={item.href} href={item.href} className="hover:text-gold">
                   {item.label}
@@ -53,17 +53,9 @@ export function Footer() {
                 Terms of Use
               </Link>
             </div>
-            <div className="mt-8 flex gap-3" aria-label="Social links reserved for future use">
-              <span className="flex h-10 w-10 items-center justify-center border border-ivory/20 text-ivory/45">
-                <Linkedin size={17} aria-hidden="true" />
-              </span>
-              <span className="flex h-10 w-10 items-center justify-center border border-ivory/20 text-ivory/45">
-                <Instagram size={17} aria-hidden="true" />
-              </span>
-            </div>
           </div>
         </div>
-        <div className="mt-12 flex flex-col gap-3 border-t border-ivory/12 pt-6 text-xs text-ivory/55 sm:flex-row sm:items-center sm:justify-between">
+        <div className="type-meta mt-12 flex flex-col gap-3 border-t border-ivory/12 pt-6 text-ivory/55 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} {business.name}. All rights reserved.</p>
           <p>{business.website}</p>
         </div>

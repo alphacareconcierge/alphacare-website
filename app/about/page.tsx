@@ -17,17 +17,17 @@ export default function AboutPage() {
       <section className="bg-navy px-5 py-20 text-ivory sm:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.34em] text-gold">
+            <p className="type-eyebrow text-gold">
               Founder & Healthcare Advocate
             </p>
-            <h1 className="mt-6 font-serif text-5xl font-medium leading-tight md:text-7xl">
+            <h1 className="type-hero mt-6">
               Janet Adusei, LPN
             </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-9 text-ivory/74">
+            <p className="type-body mt-8 max-w-2xl text-ivory/74">
               A calm, experienced advocate for families who need trusted healthcare
               guidance, continuity, and clear next steps.
             </p>
-            <p className="mt-6 max-w-2xl border-l border-gold pl-5 font-serif text-2xl leading-snug text-ivory">
+            <p className="type-editorial mt-6 max-w-2xl border-l border-gold pl-5 text-ivory">
               {business.founderStatement}
             </p>
           </div>
@@ -49,7 +49,7 @@ export default function AboutPage() {
             eyebrow="About AlphaCare"
             title="Advocacy shaped by healthcare experience and family trust."
           />
-          <div className="space-y-7 text-base leading-8 text-grayblue">
+          <div className="type-body space-y-7 text-grayblue">
             <p>
               AlphaCare Concierge Care Management was founded by {business.founder},
               a Licensed Practical Nurse with a practical understanding of healthcare
@@ -69,7 +69,7 @@ export default function AboutPage() {
               discretion, and attentive follow-through to each engagement.
             </p>
             <DecorativeRule className="max-w-sm" />
-            <p className="font-serif text-3xl leading-snug text-navy">
+            <p className="type-editorial text-navy">
               The work is personal, but the approach is precise: clarify the concern,
               protect the family’s voice, and keep the next step visible.
             </p>

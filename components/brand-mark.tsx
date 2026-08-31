@@ -23,14 +23,14 @@ export function BrandMark({ compact = false, inverted = false }: BrandMarkProps)
       />
       <span className="flex flex-col leading-none">
         <span
-          className={`font-serif text-xl uppercase tracking-[0.24em] sm:text-2xl ${
+          className={`type-brand-name ${
             inverted ? "text-ivory" : "text-navy"
           }`}
         >
           AlphaCare
         </span>
         <span
-          className={`mt-2 text-[0.62rem] font-semibold uppercase tracking-[0.34em] ${
+          className={`type-brand-subline mt-2 ${
             inverted ? "text-ivory/70" : "text-grayblue"
           }`}
         >

@@ -15,13 +15,13 @@ export default function ContactPage() {
     <>
       <section className="bg-navy px-5 py-20 text-ivory sm:px-8">
         <div className="mx-auto max-w-5xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.34em] text-gold">
+          <p className="type-eyebrow text-gold">
             Confidential inquiry
           </p>
-          <h1 className="mt-6 font-serif text-5xl font-medium leading-tight md:text-7xl">
+          <h1 className="type-hero mt-6">
             Begin with a discreet consultation request.
           </h1>
-          <p className="mt-8 max-w-3xl text-lg leading-9 text-ivory/74">
+          <p className="type-body mt-8 max-w-3xl text-ivory/74">
             AlphaCare responds with compassion, professionalism, and careful
             attention to privacy. Share only a brief overview here; sensitive
             details will be gathered through a secure process after initial contact.
@@ -37,7 +37,7 @@ export default function ContactPage() {
               title="Professional support for families ready for clarity."
               copy="For urgent medical concerns, call emergency services or your healthcare provider. For care coordination and healthcare advocacy support, AlphaCare welcomes your inquiry."
             />
-            <address className="mt-10 space-y-4 text-base not-italic leading-7 text-grayblue">
+            <address className="type-body mt-10 space-y-4 not-italic text-grayblue">
               <p>{business.location}</p>
               <a className="block text-navy hover:text-gold" href={`mailto:${business.email}`}>
                 {business.email}

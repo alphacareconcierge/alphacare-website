@@ -47,42 +47,42 @@ export function ContactForm() {
       className="grid gap-5 border border-gold/35 bg-white/65 p-6 shadow-soft sm:p-8"
     >
       <div className="grid gap-5 md:grid-cols-2">
-        <label className="grid gap-2 text-sm font-semibold text-navy">
+        <label className="type-form-label grid gap-2 text-navy">
           Name
           <input
             name="name"
             required
             autoComplete="name"
-            className="border border-navy/15 bg-ivory px-4 py-3 font-normal text-navy outline-none transition focus:border-gold"
+            className="type-input border border-navy/15 bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
           />
         </label>
-        <label className="grid gap-2 text-sm font-semibold text-navy">
+        <label className="type-form-label grid gap-2 text-navy">
           Email
           <input
             type="email"
             name="email"
             required
             autoComplete="email"
-            className="border border-navy/15 bg-ivory px-4 py-3 font-normal text-navy outline-none transition focus:border-gold"
+            className="type-input border border-navy/15 bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
           />
         </label>
       </div>
       <div className="grid gap-5 md:grid-cols-2">
-        <label className="grid gap-2 text-sm font-semibold text-navy">
+        <label className="type-form-label grid gap-2 text-navy">
           Phone <span className="font-normal text-grayblue">(optional)</span>
           <input
             type="tel"
             name="phone"
             autoComplete="tel"
-            className="border border-navy/15 bg-ivory px-4 py-3 font-normal text-navy outline-none transition focus:border-gold"
+            className="type-input border border-navy/15 bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
           />
         </label>
-        <label className="grid gap-2 text-sm font-semibold text-navy">
+        <label className="type-form-label grid gap-2 text-navy">
           Relationship to Client
           <select
             name="relationship"
             required
-            className="border border-navy/15 bg-ivory px-4 py-3 font-normal text-navy outline-none transition focus:border-gold"
+            className="type-input border border-navy/15 bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
             defaultValue=""
           >
             <option value="" disabled>
@@ -94,12 +94,12 @@ export function ContactForm() {
           </select>
         </label>
       </div>
-      <label className="grid gap-2 text-sm font-semibold text-navy">
+      <label className="type-form-label grid gap-2 text-navy">
         Preferred Contact Method
         <select
           name="preferredContactMethod"
           required
-          className="border border-navy/15 bg-ivory px-4 py-3 font-normal text-navy outline-none transition focus:border-gold"
+          className="type-input border border-navy/15 bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
           defaultValue=""
         >
           <option value="" disabled>
@@ -110,16 +110,16 @@ export function ContactForm() {
           ))}
         </select>
       </label>
-      <label className="grid gap-2 text-sm font-semibold text-navy">
+      <label className="type-form-label grid gap-2 text-navy">
         Brief Description of Needs
         <textarea
           name="message"
           required
           rows={5}
-          className="resize-y border border-navy/15 bg-ivory px-4 py-3 font-normal text-navy outline-none transition focus:border-gold"
+          className="type-input resize-y border border-navy/15 bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
         />
       </label>
-      <p className="border-l-2 border-gold pl-4 text-sm leading-6 text-grayblue">
+      <p className="type-body-sm border-l-2 border-gold pl-4 text-grayblue">
         Please do not include detailed medical information or protected health
         information (PHI) in this form. Sensitive information will be collected
         through a secure process after initial contact.
@@ -127,11 +127,11 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex justify-center border border-gold bg-gold px-6 py-4 text-xs font-bold uppercase tracking-[0.18em] text-navy transition hover:bg-transparent disabled:cursor-wait disabled:opacity-70"
+        className="type-cta inline-flex justify-center border border-gold bg-gold px-6 py-4 text-navy transition hover:bg-transparent disabled:cursor-wait disabled:opacity-70"
       >
         {status === "submitting" ? "Submitting" : "Start the Conversation"}
       </button>
-      <div aria-live="polite" className="min-h-6 text-sm">
+      <div aria-live="polite" className="type-body-sm min-h-6">
         {status === "success" ? (
           <p className="text-navy">Thank you. AlphaCare will follow up with you soon.</p>
         ) : null}
