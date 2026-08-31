@@ -4,7 +4,7 @@
 
 :root {
   color-scheme: light;
-  background: #f7f2ea;
+  background: #faf7f2;
 }
 
 html {
@@ -12,8 +12,8 @@ html {
 }
 
 body {
-  background: #f7f2ea;
-  color: #062a52;
+  background: #faf7f2;
+  color: #0c1d33;
 }
 
 @layer components {
@@ -34,7 +34,7 @@ body {
   }
 
   .type-body {
-    @apply text-base font-normal leading-8 md:text-[1.0625rem];
+    @apply text-base font-normal leading-8 text-grayblue md:text-[1.0625rem];
   }
 
   .type-body-sm {
@@ -79,7 +79,7 @@ body {
 }
 
 ::selection {
-  background: rgba(184, 117, 26, 0.25);
+  background: rgba(186, 131, 56, 0.25);
 }
 
 .soft-reveal {

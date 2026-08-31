@@ -10,10 +10,10 @@ export function Header() {
 
   return (
     <header className="z-50 border-b border-divider bg-ivory">
-      <div className="relative h-auto min-h-[7.125rem] px-5 py-5 lg:h-[7.125rem] lg:px-8 lg:py-0">
+      <div className="flex min-h-[5.75rem] flex-col gap-5 px-5 py-5 lg:h-[5.75rem] lg:flex-row lg:items-center lg:justify-between lg:gap-6 lg:px-9 lg:py-0 min-[1400px]:h-[7.625rem] min-[1400px]:px-8">
         <Link
           href="/"
-          className="flex items-center gap-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold sm:gap-8 lg:absolute lg:left-8 lg:top-[1.625rem]"
+          className="flex shrink-0 items-center gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold sm:gap-5 min-[1400px]:gap-7"
           aria-label="Alpha Care home"
         >
           <Image
@@ -22,21 +22,21 @@ export function Header() {
             width={88}
             height={107}
             priority
-            className="h-auto w-[4.25rem] object-contain sm:w-[5.25rem]"
+            className="h-auto w-[4.25rem] object-contain lg:w-[4.25rem] min-[1400px]:w-[5.5rem]"
           />
-          <span className="hidden h-[4.25rem] w-px bg-gold/55 sm:block" aria-hidden="true" />
+          <span className="hidden h-[3.75rem] w-px bg-gold/55 sm:block min-[1400px]:h-[4.25rem]" aria-hidden="true" />
           <span className="flex flex-col leading-none">
-            <span className="font-serif text-[1.55rem] font-medium uppercase tracking-[0.16em] text-navy sm:text-[2.375rem] sm:tracking-[0.18em]">
+            <span className="font-serif text-[1.55rem] font-medium uppercase tracking-[0.16em] text-navy sm:text-[1.75rem] sm:tracking-[0.18em] min-[1400px]:text-[2.375rem]">
               Alpha<span className="text-gold">Care</span>
             </span>
-            <span className="mt-3 text-[0.55rem] font-semibold uppercase tracking-[0.22em] text-navy sm:mt-4 sm:text-[0.75rem] sm:tracking-[0.34em]">
+            <span className="mt-3 text-[0.55rem] font-semibold uppercase tracking-[0.22em] text-navy sm:text-[0.5625rem] sm:tracking-[0.31em] min-[1400px]:mt-4 min-[1400px]:text-[0.75rem] min-[1400px]:tracking-[0.34em]">
               Concierge Care Management
             </span>
           </span>
         </Link>
 
         <nav
-          className="mt-7 flex flex-wrap items-center gap-x-9 gap-y-4 lg:absolute lg:left-[43.5rem] lg:top-[3.1875rem] lg:mt-0 lg:gap-x-[3.875rem]"
+          className="flex flex-wrap items-center gap-x-9 gap-y-4 lg:flex-nowrap lg:gap-x-9 min-[1400px]:gap-x-[4.25rem]"
           aria-label="Primary navigation"
         >
           {navItems.map((item) => (
@@ -56,7 +56,7 @@ export function Header() {
 
         <Link
           href="/contact"
-          className="mt-4 inline-flex h-[3.5rem] items-center justify-center whitespace-nowrap rounded-[0.625rem] border border-gold bg-navy px-7 text-[0.8125rem] font-semibold uppercase tracking-[0.13em] text-gold transition hover:bg-navy/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold sm:px-8 lg:absolute lg:right-8 lg:top-[1.8125rem] lg:mt-0 lg:w-[16.125rem]"
+          className="inline-flex h-[3.125rem] shrink-0 items-center justify-center whitespace-nowrap rounded-[0.3125rem] border border-gold bg-navy px-5 text-[0.6875rem] font-semibold uppercase tracking-[0.11em] text-gold transition hover:bg-navy/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:w-[11.75rem] min-[1400px]:h-[3.75rem] min-[1400px]:w-[16.75rem] min-[1400px]:px-8 min-[1400px]:text-[0.8125rem] min-[1400px]:tracking-[0.13em]"
         >
           Start the Conversation
         </Link>

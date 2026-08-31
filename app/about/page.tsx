@@ -1,81 +1,94 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { DecorativeRule } from "@/components/decorative-rule";
-import { SectionHeading } from "@/components/section-heading";
-import { business } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "About Janet Adusei, LPN",
+  title: "About Alpha Care",
   description:
-    "Meet Janet Adusei, LPN, founder of AlphaCare Concierge Care Management and healthcare advocate serving families in the Greater Boston Area.",
+    "Learn about Alpha Care Concierge Care Management and the steady advocacy, coordination, and judgment that guide families through complicated care.",
   alternates: { canonical: "/about" }
 };
 
+const values = [
+  {
+    title: "Listen Carefully",
+    copy: "We take time to understand what is happening, what matters most, and what may be easy to miss."
+  },
+  {
+    title: "Use Good Judgment",
+    copy: "We consider the circumstances carefully before recommending a path forward."
+  },
+  {
+    title: "Look Ahead",
+    copy: "We pay attention to what may need follow-up so families can be better prepared."
+  },
+  {
+    title: "Handle With Care",
+    copy: "We approach every family’s circumstances with discretion, respect, and responsibility."
+  }
+];
+
 export default function AboutPage() {
   return (
-    <>
-      <section className="bg-navy px-5 py-20 text-ivory sm:px-8">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
-          <div>
-            <p className="type-eyebrow text-gold">
-              Founder & Healthcare Advocate
-            </p>
-            <h1 className="type-hero mt-6">
-              Janet Adusei, LPN
-            </h1>
-            <p className="type-body mt-8 max-w-2xl text-ivory/74">
-              A calm, experienced advocate for families who need trusted healthcare
-              guidance, continuity, and clear next steps.
-            </p>
-            <p className="type-editorial mt-6 max-w-2xl border-l border-gold pl-5 text-ivory">
-              {business.founderStatement}
-            </p>
-          </div>
-          <div className="border border-gold/45 bg-ivory p-6 shadow-2xl shadow-black/20">
-            <Image
-              src="/brand/business-card-mockup.png"
-              alt="AlphaCare business card branding"
-              width={1624}
-              height={1000}
-              className="w-full object-cover"
-            />
-          </div>
+    <div className="bg-ivory text-navy">
+      <section className="grid border-b border-divider lg:min-h-[36.9375rem] lg:grid-cols-[43.25%_56.75%]">
+        <div className="px-6 py-16 sm:px-12 lg:px-[4.1875rem] lg:pb-0 lg:pt-[4.375rem]">
+          <p className="text-[0.8125rem] font-semibold uppercase tracking-[0.12em] text-gold">
+            About Alpha Care
+          </p>
+          <span className="mt-5 block h-px w-8 bg-gold" aria-hidden="true" />
+          <h1 className="mt-[2.3125rem] max-w-[25rem] font-serif text-[2.75rem] font-medium leading-[1.1] text-navy sm:text-[3.5rem] lg:text-[2.625rem] min-[1400px]:text-[3.25rem]">
+            <span className="block">Care may involve</span>
+            <span className="block">many people.</span>
+            <em className="block font-serif text-[2.35rem] font-medium italic leading-[1.08] sm:text-[3rem] lg:text-[2.1875rem] min-[1400px]:text-[2.625rem]">
+              Families still experience all of it.
+            </em>
+          </h1>
+          <span className="mt-[2.125rem] block h-px w-8 bg-gold" aria-hidden="true" />
+          <p className="mt-[2rem] max-w-[22.5rem] text-[1rem] font-medium leading-[1.9] text-navy">
+            Alpha Care grew from experience in nursing and healthcare operations, alongside the personal experience of navigating complicated care within a family. We saw how easily the work of keeping up with different people, information, and next steps can become part of what a family carries.
+          </p>
+        </div>
+        <div className="relative min-h-[24rem] lg:min-h-0">
+          <Image
+            src="/brand/alphacare-about-still-life.jpg"
+            alt="White hydrangeas in a ceramic vase beside books and a brass dish"
+            fill
+            priority
+            sizes="(min-width: 1024px) 57vw, 100vw"
+            className="object-cover"
+          />
         </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.72fr_1fr]">
-          <SectionHeading
-            eyebrow="About AlphaCare"
-            title="Advocacy shaped by healthcare experience and family trust."
-          />
-          <div className="type-body space-y-7 text-grayblue">
-            <p>
-              AlphaCare Concierge Care Management was founded by {business.founder},
-              a Licensed Practical Nurse with a practical understanding of healthcare
-              environments, family communication, and the strain that aging-related
-              decisions can place on loved ones.
-            </p>
-            <p>
-              Janet created AlphaCare for families who need a steady healthcare
-              advocate: someone who can listen carefully, organize concerns, support
-              provider communication, and help families move forward with greater
-              confidence.
-            </p>
-            <p>
-              The AlphaCare philosophy is rooted in continuity. Families should not
-              have to reconstruct the story at every turn or navigate healthcare
-              complexity alone. With a concierge approach, AlphaCare brings calm,
-              discretion, and attentive follow-through to each engagement.
-            </p>
-            <DecorativeRule className="max-w-sm" />
-            <p className="type-editorial text-navy">
-              The work is personal, but the approach is precise: clarify the concern,
-              protect the family’s voice, and keep the next step visible.
-            </p>
-          </div>
+      <section className="px-6 pb-[4.375rem] pt-[6.25rem] sm:px-12 lg:px-[4.3125rem]">
+        <h2 className="max-w-[54rem] font-serif text-[2.25rem] font-medium leading-[1.28] text-gold sm:text-[2.75rem]">
+          When someone you love needs more care,<br className="hidden md:block" />
+          you shouldn’t have to carry every decision alone.
+        </h2>
+        <span className="mt-[2.25rem] block h-px w-11 bg-gold" aria-hidden="true" />
+        <p className="mt-[2.5rem] max-w-[52rem] text-[1.125rem] font-medium leading-8 text-navy">
+          Alpha Care brings clarity, coordination, and a steady presence when families need it most.
+        </p>
+      </section>
+
+      <section className="px-6 pb-[6rem] sm:px-12 lg:px-[4.3125rem]">
+        <p className="text-[0.8125rem] font-semibold uppercase tracking-[0.12em] text-gold">
+          What Guides Us
+        </p>
+        <span className="mt-[1.1875rem] block h-px w-8 bg-gold" aria-hidden="true" />
+        <div className="mt-[2.5rem] grid max-w-[58rem] gap-x-[9.375rem] gap-y-[4.25rem] md:grid-cols-2">
+          {values.map((value) => (
+            <article key={value.title}>
+              <h3 className="font-serif text-[2rem] font-medium leading-tight text-navy">
+                {value.title}
+              </h3>
+              <p className="mt-[1.125rem] max-w-[17.75rem] text-[1rem] font-medium leading-[1.75] text-navy">
+                {value.copy}
+              </p>
+            </article>
+          ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }

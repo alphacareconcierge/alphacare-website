@@ -2,15 +2,6 @@
 
 import { FormEvent, useState } from "react";
 
-const relationshipOptions = [
-  "Adult child",
-  "Spouse or partner",
-  "Sibling",
-  "Extended family",
-  "Professional advisor",
-  "Other"
-];
-
 const contactMethods = ["Email", "Phone", "Either"];
 
 export function ContactForm() {
@@ -42,102 +33,81 @@ export function ContactForm() {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="grid gap-5 border border-divider bg-softivory p-6 shadow-soft sm:p-8"
-    >
-      <div className="grid gap-5 md:grid-cols-2">
-        <label className="type-form-label grid gap-2 text-navy">
-          Name
-          <input
-            name="name"
-            required
-            autoComplete="name"
-            className="type-input border border-divider bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
-          />
-        </label>
-        <label className="type-form-label grid gap-2 text-navy">
-          Email
-          <input
-            type="email"
-            name="email"
-            required
-            autoComplete="email"
-            className="type-input border border-divider bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
-          />
-        </label>
-      </div>
-      <div className="grid gap-5 md:grid-cols-2">
-        <label className="type-form-label grid gap-2 text-navy">
-          Phone <span className="font-normal text-grayblue">(optional)</span>
-          <input
-            type="tel"
-            name="phone"
-            autoComplete="tel"
-            className="type-input border border-divider bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
-          />
-        </label>
-        <label className="type-form-label grid gap-2 text-navy">
-          Relationship to Client
-          <select
-            name="relationship"
-            required
-            className="type-input border border-divider bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
-            defaultValue=""
-          >
-            <option value="" disabled>
-              Select one
-            </option>
-            {relationshipOptions.map((option) => (
-              <option key={option}>{option}</option>
-            ))}
-          </select>
-        </label>
-      </div>
-      <label className="type-form-label grid gap-2 text-navy">
-        Preferred Contact Method
-        <select
-          name="preferredContactMethod"
+    <form onSubmit={handleSubmit} className="grid gap-[1.375rem]">
+      <label className="grid gap-2 text-[0.95rem] font-medium leading-none text-navy">
+        <span>Your name <span className="text-gold">*</span></span>
+        <input
+          name="name"
           required
-          className="type-input border border-divider bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
-          defaultValue=""
-        >
-          <option value="" disabled>
-            Select one
-          </option>
-          {contactMethods.map((method) => (
-            <option key={method}>{method}</option>
-          ))}
-        </select>
+          autoComplete="name"
+          className="h-[2.625rem] border border-divider bg-ivory px-3 text-base text-navy outline-none transition focus:border-gold"
+        />
       </label>
-      <label className="type-form-label grid gap-2 text-navy">
-        Brief Description of Needs
+      <label className="grid gap-2 text-[0.95rem] font-medium leading-none text-navy">
+        <span>Email <span className="text-gold">*</span></span>
+        <input
+          type="email"
+          name="email"
+          required
+          autoComplete="email"
+          className="h-[2.625rem] border border-divider bg-ivory px-3 text-base text-navy outline-none transition focus:border-gold"
+        />
+      </label>
+      <label className="grid gap-2 text-[0.95rem] font-medium leading-none text-navy">
+        Phone (optional)
+        <input
+          type="tel"
+          name="phone"
+          autoComplete="tel"
+          className="h-[2.625rem] border border-divider bg-ivory px-3 text-base text-navy outline-none transition focus:border-gold"
+        />
+      </label>
+      <fieldset className="grid gap-3">
+        <legend className="text-[0.95rem] font-medium leading-none text-navy">
+          How would you prefer we reach you?
+        </legend>
+        <div className="grid gap-4 sm:grid-cols-3">
+          {contactMethods.map((method) => (
+            <label key={method} className="flex items-center gap-3 text-[0.95rem] font-medium text-navy">
+              <input
+                type="radio"
+                name="preferredContactMethod"
+                value={method}
+                required
+                className="h-5 w-5 appearance-none rounded-full border border-divider bg-ivory checked:border-gold checked:bg-[radial-gradient(circle_at_center,#BA8338_0_35%,transparent_39%)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+              />
+              {method}
+            </label>
+          ))}
+        </div>
+      </fieldset>
+      <label className="grid gap-2 text-[0.95rem] font-medium leading-none text-navy">
+        <span>What brings you to Alpha Care? <span className="text-gold">*</span></span>
         <textarea
           name="message"
           required
           rows={5}
-          className="type-input resize-y border border-divider bg-ivory px-4 py-3 text-navy outline-none transition focus:border-gold"
+          className="min-h-[7.5rem] resize-y border border-divider bg-ivory px-3 py-3 text-base leading-7 text-navy outline-none transition focus:border-gold"
         />
       </label>
-      <p className="type-body-sm border-l-2 border-gold pl-4 text-grayblue">
-        Please do not include detailed medical information or protected health
-        information (PHI) in this form. Sensitive information will be collected
-        through a secure process after initial contact.
+      <p className="max-w-[39rem] text-[0.875rem] font-medium leading-6 text-navy">
+        There’s no need to share medical records or sensitive health information here.
+        If additional information is needed, we’ll provide a secure way to share it.
       </p>
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="type-cta inline-flex justify-center border border-gold bg-gold px-6 py-4 text-navy transition hover:bg-transparent disabled:cursor-wait disabled:opacity-70"
+        className="h-[3.0625rem] w-full rounded-[0.25rem] border border-navy bg-navy text-[1rem] font-semibold uppercase tracking-[0.13em] text-gold transition hover:bg-navy/95 disabled:cursor-wait disabled:opacity-70"
       >
-        {status === "submitting" ? "Submitting" : "Start the Conversation"}
+        {status === "submitting" ? "Sending" : "Send Message"}
       </button>
-      <div aria-live="polite" className="type-body-sm min-h-6">
+      <div aria-live="polite" className="min-h-6 text-sm leading-6">
         {status === "success" ? (
-          <p className="text-navy">Thank you. AlphaCare will follow up with you soon.</p>
+          <p className="text-navy">Thank you. Alpha Care will follow up with you soon.</p>
         ) : null}
         {status === "error" ? (
           <p className="text-red-700">
-            Your inquiry could not be sent. Please email hello@alphacareconcierge.com.
+            Your message could not be sent. Please email hello@alphacareconcierge.com.
           </p>
         ) : null}
       </div>

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const requiredFields = ["name", "email", "relationship", "preferredContactMethod", "message"];
+const requiredFields = ["name", "email", "preferredContactMethod", "message"];
 
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
