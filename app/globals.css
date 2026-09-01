@@ -9,11 +9,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background: #faf7f2;
   color: #0c1d33;
+  overflow-x: hidden;
 }
 
 @layer components {

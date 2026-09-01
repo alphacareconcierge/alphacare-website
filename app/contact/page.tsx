@@ -17,11 +17,11 @@ export default function ContactPage() {
             <p className="type-eyebrow text-[0.8125rem]">
               Let&apos;s Begin
             </p>
-            <h1 className="type-hero mt-[1.75rem] text-[3rem] sm:text-[3.75rem] lg:max-w-[42rem]">
+            <h1 className="type-hero mt-[1.75rem] max-w-full break-words text-[2.125rem] min-[420px]:text-[2.5rem] sm:text-[3.75rem] lg:max-w-[42rem]">
               Tell us what’s happening.<br />
               <em className="font-serif italic">We’ll start there.</em>
             </h1>
-            <p className="type-body mt-[1.5rem] max-w-[25rem] text-navy">
+            <p className="type-body mt-[1.5rem] max-w-full text-navy sm:max-w-[25rem]">
               You don’t need to know exactly what kind of help you need. Share what’s weighing on your family, and we’ll begin by listening.
             </p>
           </div>

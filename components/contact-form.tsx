@@ -3,15 +3,87 @@
 import { FormEvent, useState } from "react";
 
 const contactMethods = ["Email", "Phone", "Either"];
+type FieldName = "name" | "email" | "message" | "preferredContactMethod";
+type FieldErrors = Partial<Record<FieldName, string>>;
+
+const baseFieldClass =
+  "type-input border border-divider bg-softivory text-navy outline-none transition focus:border-gold focus:ring-1 focus:ring-gold";
+const errorFieldClass = "border-[#A63A3A] focus:border-[#A63A3A] focus:ring-[#A63A3A]";
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function validateField(name: FieldName, value: FormDataEntryValue | null) {
+  const text = typeof value === "string" ? value.trim() : "";
+
+  if (name === "name" && !text) {
+    return "Please enter your name.";
+  }
+
+  if (name === "email") {
+    if (!text) {
+      return "Please enter your email address so we can reach you.";
+    }
+    if (!emailPattern.test(text)) {
+      return "Please enter a valid email address.";
+    }
+  }
+
+  if (name === "message" && !text) {
+    return "Please share a brief note about what brings you to Alpha Care.";
+  }
+
+  if (name === "preferredContactMethod" && !text) {
+    return "Please select how you would prefer we reach you.";
+  }
+
+  return "";
+}
+
+function validateForm(formData: FormData) {
+  const nextErrors: FieldErrors = {};
+  (["name", "email", "message", "preferredContactMethod"] as FieldName[]).forEach((field) => {
+    const message = validateField(field, formData.get(field));
+    if (message) {
+      nextErrors[field] = message;
+    }
+  });
+  return nextErrors;
+}
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errors, setErrors] = useState<FieldErrors>({});
+
+  function fieldClass(field: FieldName, className: string) {
+    return `${baseFieldClass} ${errors[field] ? errorFieldClass : ""} ${className}`;
+  }
+
+  function handleBlur(field: FieldName, value: FormDataEntryValue | null) {
+    const message = validateField(field, value);
+    setErrors((current) => {
+      const next = { ...current };
+      if (message) {
+        next[field] = message;
+      } else {
+        delete next[field];
+      }
+      return next;
+    });
+  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setStatus("submitting");
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const nextErrors = validateForm(formData);
+
+    if (Object.keys(nextErrors).length > 0) {
+      setErrors(nextErrors);
+      setStatus("idle");
+      return;
+    }
+
+    setErrors({});
+    setStatus("submitting");
     const payload = Object.fromEntries(formData.entries());
 
     try {
@@ -32,16 +104,34 @@ export function ContactForm() {
     }
   }
 
+  if (status === "success") {
+    return (
+      <div className="border border-divider bg-softivory px-6 py-10 text-center" aria-live="polite">
+        <h2 className="font-serif text-[1.875rem] font-normal leading-[1.25] text-navy">
+          Thank you. We’ve received your note.
+        </h2>
+        <span className="mx-auto my-4 block h-px w-12 bg-gold" aria-hidden="true" />
+        <p className="type-body mx-auto max-w-[30rem]">
+          We will review what you’ve shared and reach out via your preferred method shortly. Take care.
+        </p>
+      </div>
+    );
+  }
+
   return (
-    <form onSubmit={handleSubmit} className="grid">
+    <form onSubmit={handleSubmit} noValidate className="grid">
       <label className="type-form-label mb-6 grid gap-2 text-navy">
         <span>Your name <span className="text-gold">*</span></span>
         <input
           name="name"
           required
           autoComplete="name"
-          className="type-input h-12 border border-divider bg-ivory px-3 text-navy outline-none transition focus:border-gold"
+          aria-invalid={errors.name ? "true" : "false"}
+          aria-describedby={errors.name ? "name-error" : undefined}
+          onBlur={(event) => handleBlur("name", event.currentTarget.value)}
+          className={fieldClass("name", "h-12 px-3")}
         />
+        {errors.name ? <span id="name-error" className="text-xs text-[#A63A3A]">{errors.name}</span> : null}
       </label>
       <label className="type-form-label mb-6 grid gap-2 text-navy">
         <span>Email <span className="text-gold">*</span></span>
@@ -50,8 +140,12 @@ export function ContactForm() {
           name="email"
           required
           autoComplete="email"
-          className="type-input h-12 border border-divider bg-ivory px-3 text-navy outline-none transition focus:border-gold"
+          aria-invalid={errors.email ? "true" : "false"}
+          aria-describedby={errors.email ? "email-error" : undefined}
+          onBlur={(event) => handleBlur("email", event.currentTarget.value)}
+          className={fieldClass("email", "h-12 px-3")}
         />
+        {errors.email ? <span id="email-error" className="text-xs text-[#A63A3A]">{errors.email}</span> : null}
       </label>
       <label className="type-form-label grid gap-2 text-navy">
         Phone (optional)
@@ -59,7 +153,7 @@ export function ContactForm() {
           type="tel"
           name="phone"
           autoComplete="tel"
-          className="type-input h-12 border border-divider bg-ivory px-3 text-navy outline-none transition focus:border-gold"
+          className={`${baseFieldClass} h-12 px-3`}
         />
       </label>
       <fieldset className="my-6">
@@ -68,18 +162,30 @@ export function ContactForm() {
         </legend>
         <div className="mt-3 grid gap-y-4 sm:grid-cols-3 sm:gap-x-8">
           {contactMethods.map((method) => (
-            <label key={method} className="type-form-label flex items-center gap-2 text-navy">
+            <label key={method} className="type-form-label flex min-h-11 items-center gap-2 text-navy">
               <input
                 type="radio"
                 name="preferredContactMethod"
                 value={method}
                 required
+                onBlur={(event) => {
+                  const form = event.currentTarget.form;
+                  handleBlur("preferredContactMethod", form ? new FormData(form).get("preferredContactMethod") : null);
+                }}
+                onChange={() => setErrors((current) => {
+                  const next = { ...current };
+                  delete next.preferredContactMethod;
+                  return next;
+                })}
                 className="h-5 w-5 appearance-none rounded-full border border-divider bg-ivory checked:border-gold checked:bg-[radial-gradient(circle_at_center,#BA8338_0_35%,transparent_39%)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
               />
               {method}
             </label>
           ))}
         </div>
+        {errors.preferredContactMethod ? (
+          <p className="mt-2 text-xs text-[#A63A3A]">{errors.preferredContactMethod}</p>
+        ) : null}
       </fieldset>
       <label className="type-form-label grid gap-2 text-navy">
         <span>What brings you to Alpha Care? <span className="text-gold">*</span></span>
@@ -87,30 +193,36 @@ export function ContactForm() {
           name="message"
           required
           rows={5}
-          className="type-input min-h-[7.5rem] resize-y border border-divider bg-ivory px-3 py-3 text-navy outline-none transition focus:border-gold"
+          aria-invalid={errors.message ? "true" : "false"}
+          aria-describedby={errors.message ? "message-error" : undefined}
+          onBlur={(event) => handleBlur("message", event.currentTarget.value)}
+          className={fieldClass("message", "min-h-[7.5rem] resize-y px-3 py-3")}
         />
+        {errors.message ? <span id="message-error" className="text-xs text-[#A63A3A]">{errors.message}</span> : null}
       </label>
       <p className="type-helper mt-4 max-w-[39rem]">
         There’s no need to share medical records or sensitive health information here.
         If additional information is needed, we’ll provide a secure way to share it.
       </p>
+      {status === "error" ? (
+        <div className="mt-6 border border-[#A63A3A]/50 bg-softivory px-4 py-3 text-sm leading-6 text-[#A63A3A]" role="alert">
+          Something went wrong while sending your message. Please try again or reach out directly.
+        </div>
+      ) : null}
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="type-cta mt-6 h-[3.0625rem] w-full rounded-[0.25rem] border border-navy bg-navy text-gold transition hover:bg-navy/95 disabled:cursor-wait disabled:opacity-70"
+        className="type-cta mt-6 inline-flex h-[3.0625rem] w-full items-center justify-center gap-3 rounded-[0.25rem] border border-navy bg-navy text-gold transition hover:bg-navy/95 disabled:cursor-wait disabled:opacity-85"
       >
-        {status === "submitting" ? "Sending" : "Send Message"}
+        {status === "submitting" ? (
+          <>
+            <span className="h-4 w-4 animate-spin rounded-full border border-gold/35 border-t-gold" aria-hidden="true" />
+            Sending...
+          </>
+        ) : (
+          "Send Message"
+        )}
       </button>
-      <div aria-live="polite" className="type-body-sm min-h-6">
-        {status === "success" ? (
-          <p className="text-navy">Thank you. Alpha Care will follow up with you soon.</p>
-        ) : null}
-        {status === "error" ? (
-          <p className="text-red-700">
-            Your message could not be sent. Please email hello@alphacareconcierge.com.
-          </p>
-        ) : null}
-      </div>
     </form>
   );
 }

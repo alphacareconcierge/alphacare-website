@@ -36,7 +36,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="relative min-h-[22rem] overflow-hidden lg:min-h-0">
+        <div className="relative mx-6 mb-8 aspect-[4/3] min-h-0 overflow-hidden rounded-[0.375rem] sm:mx-12 lg:m-0 lg:aspect-auto lg:min-h-0 lg:rounded-none">
           <Image
             src="/brand/alphacare-lighthouse-hero.jpg"
             alt="Lighthouse and coastal home overlooking the water"
@@ -49,7 +49,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-divider px-6 pb-[1.1875rem] pt-[1.1875rem] text-center">
-        <h2 className="type-section text-[1.625rem] text-gold">
+        <h2 className="type-section text-2xl text-gold sm:text-[1.625rem]">
           Care rarely happens in one place.
         </h2>
         <span className="mx-auto mt-2 block h-px w-10 bg-gold" aria-hidden="true" />
@@ -59,7 +59,7 @@ export default function HomePage() {
       </section>
 
       <section className="px-6 pb-[1.75rem] pt-[1.1875rem] text-center">
-        <h2 className="type-section text-[1.625rem] text-gold">
+        <h2 className="type-section text-2xl text-gold sm:text-[1.625rem]">
           Good care management is often quiet work.
         </h2>
         <span className="mx-auto mt-2 block h-px w-10 bg-gold" aria-hidden="true" />

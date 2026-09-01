@@ -60,13 +60,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="px-6 py-14 sm:px-12 lg:px-[4.3125rem] lg:py-16">
-        <h2 className="type-section max-w-[54rem] text-[2.25rem] leading-[1.25] text-gold sm:text-[2.75rem]">
+      <section className="px-6 py-14 text-center sm:px-12 md:text-left lg:px-[4.3125rem] lg:py-16">
+        <h2 className="type-section mx-auto max-w-[54rem] text-2xl leading-[1.25] text-gold sm:text-[2.25rem] md:mx-0 lg:text-[2.75rem]">
           When someone you love needs more care,<br className="hidden md:block" />
           you shouldn’t have to carry every decision alone.
         </h2>
-        <span className="my-4 block h-px w-11 bg-gold" aria-hidden="true" />
-        <p className="type-body max-w-[52rem] text-navy">
+        <span className="mx-auto my-4 block h-px w-11 bg-gold md:mx-0" aria-hidden="true" />
+        <p className="type-body mx-auto max-w-[52rem] text-navy md:mx-0">
           Alpha Care brings clarity, coordination, and a steady presence when families need it most.
         </p>
       </section>
@@ -76,7 +76,7 @@ export default function AboutPage() {
           What Guides Us
         </p>
         <span className="mt-[1.1875rem] block h-px w-8 bg-gold" aria-hidden="true" />
-        <div className="mt-8 grid max-w-[58rem] gap-x-16 gap-y-10 md:grid-cols-2">
+        <div className="mt-8 grid max-w-[58rem] gap-x-16 gap-y-6 md:grid-cols-2 md:gap-y-10">
           {values.map((value) => (
             <article key={value.title}>
               <h3 className="type-card text-[2rem]">

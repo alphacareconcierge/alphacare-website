@@ -104,7 +104,7 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
-        <div className="border-divider lg:border-l lg:px-[2.375rem]">
+        <div className="border-divider border-t pt-8 lg:border-l lg:border-t-0 lg:px-[2.375rem] lg:pt-0">
           <span className="block h-px w-10 bg-gold" aria-hidden="true" />
           <h2 className="mt-[1.125rem] font-sans text-xs font-semibold uppercase tracking-[0.12em] text-gold">
             Our Role
@@ -113,7 +113,7 @@ export default function ServicesPage() {
             Alpha Care works alongside your family and the professionals already involved in your care. We do not replace the guidance or decisions of your physicians, financial advisors, attorneys, or other trusted experts. Our role is to help you understand, coordinate, and follow through on what needs attention.
           </p>
         </div>
-        <div className="border-divider text-center lg:border-l lg:pl-[3.5rem] lg:pt-[1.625rem]">
+        <div className="border-divider border-t pt-8 text-center lg:border-l lg:border-t-0 lg:pl-[3.5rem] lg:pt-[1.625rem]">
           <span className="mx-auto block h-px w-14 bg-gold" aria-hidden="true" />
           <h2 className="mx-auto mt-[2rem] max-w-[23rem] font-serif text-[1.625rem] font-normal leading-[1.25] text-navy">
             Tell us what your family is navigating.<br />
