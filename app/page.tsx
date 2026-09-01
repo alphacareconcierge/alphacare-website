@@ -49,23 +49,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-divider px-6 py-20 text-center sm:px-12 sm:py-24">
-        <p className="mx-auto max-w-2xl font-serif text-[1.625rem] font-light italic leading-[1.3] text-navy sm:text-[1.875rem]">
+      <section className="border-b border-divider px-6 py-10 text-center sm:px-12 md:py-12">
+        <p className="mx-auto max-w-xl font-serif text-[clamp(1.25rem,2vw,1.5rem)] font-light italic leading-[1.45] text-navy">
           Good care management is quiet work—bringing order to complexity so your family can simply focus on what matters most.
         </p>
-        <span className="mx-auto mt-6 block h-px w-8 bg-gold" aria-hidden="true" />
+        <span className="mx-auto mb-0 mt-4 block h-px w-8 bg-gold" aria-hidden="true" />
       </section>
 
-      <section className="px-6 py-16 text-center sm:px-12 sm:py-20">
-        <h2 className="font-serif text-[1.5rem] font-normal leading-[1.25] text-navy sm:text-[1.75rem]">
+      <section className="px-6 pb-14 pt-8 text-center sm:px-12 md:pb-16 md:pt-10">
+        <h2 className="mb-3 font-serif text-[clamp(1.25rem,1.8vw,1.5rem)] font-normal leading-[1.25] text-navy">
           A thoughtful partner in navigating care.
         </h2>
-        <p className="mx-auto mt-4 max-w-lg font-sans text-[0.9375rem] font-normal leading-[1.7] text-grayblue">
+        <p className="mx-auto mb-6 max-w-md font-sans text-sm font-normal leading-[1.6] text-grayblue md:text-base">
           Whether you are coordinating care from a distance or managing an unexpected transition, we begin by listening to what your family is experiencing.
         </p>
         <Link
           href="/contact"
-          className="type-cta mt-8 inline-flex min-h-11 items-center justify-center rounded-[0.25rem] bg-navy px-7 py-3 text-gold transition hover:bg-navy/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+          className="type-cta mt-2 inline-flex min-h-11 items-center justify-center rounded-[0.25rem] bg-navy px-7 py-3 text-gold transition hover:bg-navy/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
         >
           Start the Conversation
         </Link>
