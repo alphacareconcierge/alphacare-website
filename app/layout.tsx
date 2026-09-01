@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import type { Viewport } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
 import { Header } from "@/components/header";
 import { business } from "@/lib/content";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-cormorant",
+  variable: "--font-playfair",
   display: "swap",
   weight: ["400", "500", "600"],
   style: ["normal", "italic"]
@@ -16,17 +17,17 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-  weight: ["400", "500", "600", "700"]
+  weight: ["400", "500", "600"]
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(business.url),
   title: {
-    default: `${business.name} | Healthcare Advocacy in Greater Boston`,
-    template: `%s | ${business.name}`
+    default: "AlphaCare | Concierge Care Management",
+    template: "%s"
   },
   description:
-    "Premium healthcare advocacy, care coordination, and concierge care management for families navigating aging in the Greater Boston Area.",
+    "AlphaCare provides private concierge care management, healthcare advocacy, and family coordination throughout Greater Boston.",
   keywords: [
     "Healthcare Advocacy",
     "Care Coordination",
@@ -36,9 +37,19 @@ export const metadata: Metadata = {
     "Greater Boston Area",
     "AlphaCare Concierge Care Management"
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" }
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }]
+  },
   openGraph: {
-    title: business.name,
-    description: business.tagline,
+    title: "AlphaCare | Concierge Care Management",
+    description:
+      "AlphaCare provides private concierge care management, healthcare advocacy, and family coordination throughout Greater Boston.",
     url: business.url,
     siteName: business.name,
     images: [
@@ -57,9 +68,13 @@ export const metadata: Metadata = {
   }
 };
 
+export const viewport: Viewport = {
+  themeColor: "#FAF7F2"
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body className="font-sans antialiased">
         <a
           href="#main-content"

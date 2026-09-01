@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Our Services | AlphaCare Concierge Care Management",
   description:
-    "Alpha Care helps families with healthcare advocacy, care coordination, care transitions, and family communication in the Greater Boston Area.",
+    "Explore AlphaCare’s bespoke healthcare advocacy, care coordination, transitions support, and family communication services.",
   alternates: { canonical: "/services" }
 };
 
@@ -93,7 +93,7 @@ export default function ServicesPage() {
               <article key={item.title} className="grid grid-cols-[0.5rem_1fr] gap-4">
                 <span className="mt-[0.5rem] h-1 w-1 rounded-full bg-gold" aria-hidden="true" />
                 <div>
-                  <h3 className="font-sans text-[0.75rem] font-bold uppercase leading-[1.45] tracking-[0.06em] text-navy">
+                  <h3 className="font-sans text-[0.75rem] font-semibold uppercase leading-[1.45] tracking-[0.06em] text-navy">
                     {item.title}
                   </h3>
                   <p className="mt-2 font-sans text-sm font-normal leading-[1.55] text-grayblue">

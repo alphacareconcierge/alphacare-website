@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "About Alpha Care",
+  title: "About Us | AlphaCare Concierge Care Management",
   description:
-    "Learn about Alpha Care Concierge Care Management and the steady advocacy, coordination, and judgment that guide families through complicated care.",
+    "Learn about AlphaCare’s philosophy of care, healthcare operations expertise, and our commitment to discretion, judgment, and thoughtful advocacy.",
   alternates: { canonical: "/about" }
 };
 
@@ -79,7 +79,7 @@ export default function AboutPage() {
         <div className="mt-8 grid max-w-[58rem] gap-x-16 gap-y-6 md:grid-cols-2 md:gap-y-10">
           {values.map((value) => (
             <article key={value.title}>
-              <h3 className="type-card text-[2rem]">
+              <h3 className="type-card text-[2rem] font-normal">
                 {value.title}
               </h3>
               <p className="type-body mt-2 max-w-[17.75rem] text-navy">

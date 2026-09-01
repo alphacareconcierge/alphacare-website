@@ -84,7 +84,10 @@ export function ContactForm() {
 
     setErrors({});
     setStatus("submitting");
-    const payload = Object.fromEntries(formData.entries());
+    const payload = {
+      ...Object.fromEntries(formData.entries()),
+      preferredMethod: formData.get("preferredContactMethod")
+    };
 
     try {
       const response = await fetch("/api/contact", {
@@ -217,7 +220,7 @@ export function ContactForm() {
         {status === "submitting" ? (
           <>
             <span className="h-4 w-4 animate-spin rounded-full border border-gold/35 border-t-gold" aria-hidden="true" />
-            Sending...
+            SENDING...
           </>
         ) : (
           "Send Message"

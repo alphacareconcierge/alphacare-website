@@ -28,7 +28,7 @@ body {
   }
 
   .type-card {
-    @apply font-serif font-medium leading-[1.25] text-navy;
+    @apply font-serif font-normal leading-[1.25] text-navy;
   }
 
   .type-editorial {

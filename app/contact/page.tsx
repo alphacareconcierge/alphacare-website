@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact | AlphaCare Concierge Care Management",
   description:
-    "Contact Alpha Care to begin a confidential conversation about healthcare advocacy and care coordination support.",
+    "Start the conversation with AlphaCare. Share what your family is navigating, and we’ll begin by listening.",
   alternates: { canonical: "/contact" }
 };
 
