@@ -190,16 +190,17 @@ export function ContactForm() {
           <p className="mt-2 text-xs text-[#A63A3A]">{errors.preferredContactMethod}</p>
         ) : null}
       </fieldset>
-      <label className="type-form-label grid gap-2 text-navy">
-        <span>What brings you to Alpha Care? <span className="text-gold">*</span></span>
+      <label className="grid gap-2 font-sans text-sm font-medium text-navy">
+        <span>How can we best support your family? <span className="text-gold">*</span></span>
         <textarea
           name="message"
           required
           rows={5}
+          placeholder="Feel free to share what is on your mind, what care needs have come up, or simply where you would like to begin..."
           aria-invalid={errors.message ? "true" : "false"}
           aria-describedby={errors.message ? "message-error" : undefined}
           onBlur={(event) => handleBlur("message", event.currentTarget.value)}
-          className={fieldClass("message", "min-h-[7.5rem] resize-y px-3 py-3")}
+          className={fieldClass("message", "min-h-[7.5rem] resize-y px-3 py-3 placeholder:text-sm placeholder:text-grayblue/50")}
         />
         {errors.message ? <span id="message-error" className="text-xs text-[#A63A3A]">{errors.message}</span> : null}
       </label>
