@@ -18,7 +18,7 @@ const config: Config = {
         ink: "#0C1D33"
       },
       fontFamily: {
-        serif: ["var(--font-playfair)", "Georgia", "serif"],
+        serif: ["var(--font-cormorant)", "Georgia", "serif"],
         sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"]
       },
       boxShadow: {
