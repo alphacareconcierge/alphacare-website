@@ -35,15 +35,14 @@ export default function ContactPage() {
 
       <section className="px-6 pb-[5.75rem] text-center sm:px-12">
         <div className="mx-auto max-w-[48rem]">
-          <h2 className="type-card text-[2rem]">
+          <h2 className="mb-2 font-serif text-[1.5rem] font-normal leading-[1.25] text-navy">
             What happens next
           </h2>
-          <p className="type-body-sm mx-auto mt-[1.125rem] max-w-[33rem] text-navy">
-            We’ll review your message and contact you using the method you prefer. The first conversation is simply a chance to understand what’s happening and whether Alpha Care may be the right fit.
+          <p className="mx-auto max-w-lg text-center font-sans text-[0.9375rem] font-normal leading-[1.65] text-grayblue">
+            We will review what you’ve shared and get in touch via your selected preference. This initial conversation gives us a chance to walk through what you’re facing together and explore the right path forward.
           </p>
-          <div className="mx-auto mt-[1.5rem] h-px max-w-[33.5rem] bg-divider" aria-hidden="true" />
-          <p className="type-body-sm mx-auto mt-[1rem] max-w-[42rem] text-navy">
-            <em className="italic text-gold">Professional referrals are welcome.</em> Attorneys, physicians, financial advisors, and other professionals may use this form to introduce a client or family.
+          <p className="mx-auto mt-4 max-w-[42rem] text-center font-sans text-[0.8125rem] font-normal italic leading-[1.65] text-gold">
+            Professional referrals are welcome. Attorneys, physicians, financial advisors, and other trusted professionals may use this form to introduce a client or family.
           </p>
         </div>
       </section>
