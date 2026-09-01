@@ -204,9 +204,8 @@ export function ContactForm() {
         />
         {errors.message ? <span id="message-error" className="text-xs text-[#A63A3A]">{errors.message}</span> : null}
       </label>
-      <p className="type-helper mt-4 max-w-[39rem]">
-        There’s no need to share medical records or sensitive health information here.
-        If additional information is needed, we’ll provide a secure way to share it.
+      <p className="mb-5 mt-2 max-w-[39rem] font-sans text-[0.8125rem] font-normal italic leading-[1.5] text-grayblue/75">
+        Your privacy is important to us. A general overview is all that’s needed to begin—we will provide a dedicated, secure channel if clinical details are ever helpful later.
       </p>
       {status === "error" ? (
         <div className="mt-6 border border-[#A63A3A]/50 bg-softivory px-4 py-3 text-sm leading-6 text-[#A63A3A]" role="alert">
@@ -216,7 +215,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="type-cta mt-6 inline-flex h-[3.0625rem] w-full items-center justify-center gap-3 rounded-[0.25rem] border border-navy bg-navy text-gold transition hover:bg-navy/95 disabled:cursor-wait disabled:opacity-85"
+        className="type-cta mt-0 inline-flex h-[3.0625rem] w-full items-center justify-center gap-3 rounded-[0.25rem] border border-navy bg-navy text-gold transition hover:bg-navy/95 disabled:cursor-wait disabled:opacity-85"
       >
         {status === "submitting" ? (
           <>
