@@ -14,7 +14,8 @@ export default function HomePage() {
             <span className="mt-[1.625rem] block h-px w-[2.8125rem] bg-gold" aria-hidden="true" />
 
             <h1 className="type-hero mt-[1.25rem] max-w-[21rem] text-[2.375rem] sm:max-w-[39.25rem] lg:text-[2.375rem] min-[1400px]:text-[2.6875rem]">
-              <span className="block">When care becomes complicated,</span>
+              <span className="block">When care becomes</span>
+              <span className="block">complicated,</span>
               <em className="block font-serif italic">
                 it helps to have someone beside you.
               </em>
@@ -23,7 +24,7 @@ export default function HomePage() {
             <span className="mt-[1.8125rem] block h-px w-[2.8125rem] bg-gold" aria-hidden="true" />
 
             <p className="type-body mt-[1.5625rem] max-w-[21rem] text-navy sm:max-w-[31.5rem]">
-              Alpha Care works with families to understand what is happening, keep important information connected, and navigate decisions as needs change. We provide advocacy and coordination so you can spend less time managing care—and more time being family.
+              When health needs evolve, keeping track of recommendations, appointments, and next steps can quickly become overwhelming. AlphaCare brings clarity and dedicated oversight to the process—helping families stay informed, aligned, and confident in every decision.
             </p>
 
             <Link
@@ -48,24 +49,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-divider px-6 pb-[1.1875rem] pt-[1.1875rem] text-center">
-        <h2 className="type-section text-2xl text-gold sm:text-[1.625rem]">
-          Care rarely happens in one place.
-        </h2>
-        <span className="mx-auto mt-2 block h-px w-10 bg-gold" aria-hidden="true" />
-        <p className="type-body mx-auto mt-[0.875rem] max-w-[48.875rem] text-navy">
-          A hospital discharge may lead to new medications, follow-up appointments, questions for several clinicians, changes at home, and decisions that continue long after everyone has left the hospital. Alpha Care helps keep important information connected, follows what still needs attention, and helps families understand what has changed and what comes next.
+      <section className="border-b border-divider px-6 py-20 text-center sm:px-12 sm:py-24">
+        <p className="mx-auto max-w-2xl font-serif text-[1.625rem] font-light italic leading-[1.3] text-navy sm:text-[1.875rem]">
+          Good care management is quiet work—bringing order to complexity so your family can simply focus on what matters most.
         </p>
+        <span className="mx-auto mt-6 block h-px w-8 bg-gold" aria-hidden="true" />
       </section>
 
-      <section className="px-6 pb-[1.75rem] pt-[1.1875rem] text-center">
-        <h2 className="type-section text-2xl text-gold sm:text-[1.625rem]">
-          Good care management is often quiet work.
+      <section className="px-6 py-16 text-center sm:px-12 sm:py-20">
+        <h2 className="font-serif text-[1.5rem] font-normal leading-[1.25] text-navy sm:text-[1.75rem]">
+          A thoughtful partner in navigating care.
         </h2>
-        <span className="mx-auto mt-2 block h-px w-10 bg-gold" aria-hidden="true" />
-        <p className="type-body mx-auto mt-[0.875rem] max-w-[47.5rem] text-navy">
-          It is noticing what changed, making sure the right people have the right information, following what still needs attention, and helping families make informed decisions as circumstances evolve.
+        <p className="mx-auto mt-4 max-w-lg font-sans text-[0.9375rem] font-normal leading-[1.7] text-grayblue">
+          Whether you are coordinating care from a distance or managing an unexpected transition, we begin by listening to what your family is experiencing.
         </p>
+        <Link
+          href="/contact"
+          className="type-cta mt-8 inline-flex min-h-11 items-center justify-center rounded-[0.25rem] bg-navy px-7 py-3 text-gold transition hover:bg-navy/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+        >
+          Start the Conversation
+        </Link>
       </section>
     </div>
   );
