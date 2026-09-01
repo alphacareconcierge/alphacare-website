@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s"
   },
   description:
-    "AlphaCare provides private concierge care management, healthcare advocacy, and family coordination throughout Greater Boston.",
+    "AlphaCare provides private concierge care management, healthcare advocacy, and family coordination throughout Greater Boston and Massachusetts.",
   keywords: [
     "Healthcare Advocacy",
     "Care Coordination",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AlphaCare | Concierge Care Management",
     description:
-      "AlphaCare provides private concierge care management, healthcare advocacy, and family coordination throughout Greater Boston.",
+      "AlphaCare provides private concierge care management, healthcare advocacy, and family coordination throughout Greater Boston and Massachusetts.",
     url: business.url,
     siteName: business.name,
     images: [

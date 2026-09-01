@@ -8,8 +8,8 @@ export default function HomePage() {
       <section className="grid overflow-hidden border-b border-gold/45 lg:h-[34rem] lg:grid-cols-[45.45%_54.55%] min-[1400px]:h-[35.75rem]">
         <div className="px-6 py-16 sm:px-12 lg:px-0 lg:py-0">
           <div className="lg:ml-[4.1875rem] lg:pt-16 min-[1400px]:pt-[5.25rem]">
-            <p className="type-eyebrow max-w-[20rem] sm:max-w-none">
-              Greater Boston Concierge Care Management
+            <p className="max-w-[20rem] font-sans text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-gold sm:max-w-none">
+              Private Concierge Care Management
             </p>
             <span className="mt-[1.625rem] block h-px w-[2.8125rem] bg-gold" aria-hidden="true" />
 
