@@ -10,20 +10,20 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    title: "Listen Carefully",
-    copy: "We take time to understand what is happening, what matters most, and what may be easy to miss."
+    title: "Listen Without Rushing",
+    copy: "Every family’s circumstances are unique. We start by taking the time to understand what matters most to your loved one and what your family is experiencing day to day."
   },
   {
-    title: "Use Good Judgment",
-    copy: "We consider the circumstances carefully before recommending a path forward."
+    title: "A Calm, Steady Presence",
+    copy: "Healthcare decisions can be difficult and unpredictable. We serve as a thoughtful partner beside you, helping you think through choices and navigate complex moments with clarity."
   },
   {
-    title: "Look Ahead",
-    copy: "We pay attention to what may need follow-up so families can be better prepared."
+    title: "Attentive Follow-Through",
+    copy: "From keeping track of care instructions to helping organize communications, we stay focused on the day-to-day details so your family doesn't have to manage them alone."
   },
   {
-    title: "Handle With Care",
-    copy: "We approach every family’s circumstances with discretion, respect, and responsibility."
+    title: "Respect & Advocacy",
+    copy: "We keep your loved one at the center of everything we do, honoring their wishes, protecting their privacy, and ensuring their voice is always respected."
   }
 ];
 
@@ -37,15 +37,14 @@ export default function AboutPage() {
           </p>
           <span className="mt-5 block h-px w-8 bg-gold" aria-hidden="true" />
           <h1 className="type-hero mt-[2.3125rem] max-w-[25rem] text-[2.75rem] sm:text-[3.5rem] lg:text-[2.625rem] min-[1400px]:text-[3.25rem]">
-            <span className="block">Care may involve</span>
-            <span className="block">many people.</span>
+            <span className="block">Care may involve many people.</span>
             <em className="block font-serif text-[2.35rem] italic sm:text-[3rem] lg:text-[2.1875rem] min-[1400px]:text-[2.625rem]">
               Families still experience all of it.
             </em>
           </h1>
           <span className="mt-[2.125rem] block h-px w-8 bg-gold" aria-hidden="true" />
           <p className="type-body mt-[2rem] max-w-[22.5rem] text-navy">
-            Alpha Care grew from experience in nursing and healthcare operations, alongside the personal experience of navigating complicated care within a family. We saw how easily the work of keeping up with different people, information, and next steps can become part of what a family carries.
+            Complex care rarely fails in the clinical room—it fractures in the quiet spaces between appointments, providers, and family members. Founded by experienced clinicians, AlphaCare provides the steady oversight and dedicated coordination needed to lift that logistical weight, bringing clarity to the details families carry.
           </p>
         </div>
         <div className="relative min-h-[24rem] lg:min-h-0">
@@ -60,29 +59,33 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="px-6 py-14 text-center sm:px-12 md:text-left lg:px-[4.3125rem] lg:py-16">
-        <h2 className="type-section mx-auto max-w-[54rem] text-2xl leading-[1.25] text-gold sm:text-[2.25rem] md:mx-0 lg:text-[2.75rem]">
-          When someone you love needs more care,<br className="hidden md:block" />
-          you shouldn’t have to carry every decision alone.
+      <section className="px-6 py-14 text-center sm:px-12 lg:px-[4.3125rem] lg:py-16">
+        <h2 className="mx-auto max-w-3xl font-serif text-[1.375rem] font-light italic leading-[1.35] text-navy sm:text-[1.625rem]">
+          When someone you love needs more care, you shouldn&apos;t have to carry every decision alone.
         </h2>
-        <span className="mx-auto my-4 block h-px w-11 bg-gold md:mx-0" aria-hidden="true" />
-        <p className="type-body mx-auto max-w-[52rem] text-navy md:mx-0">
-          Alpha Care brings clarity, coordination, and a steady presence when families need it most.
+        <span className="mx-auto my-4 block h-px w-11 bg-gold" aria-hidden="true" />
+        <p className="mx-auto mt-3 max-w-[52rem] font-sans text-[0.9375rem] font-normal leading-[1.7] text-grayblue">
+          AlphaCare brings clarity, coordination, and a steady presence when families need it most.
         </p>
       </section>
 
-      <section className="px-6 pb-20 sm:px-12 lg:px-[4.3125rem]">
-        <p className="type-eyebrow">
-          What Guides Us
-        </p>
-        <span className="mt-[1.1875rem] block h-px w-8 bg-gold" aria-hidden="true" />
-        <div className="mt-8 grid max-w-[58rem] gap-x-16 gap-y-6 md:grid-cols-2 md:gap-y-10">
+      <section className="grid gap-10 px-6 pb-20 sm:px-12 lg:grid-cols-[42%_58%] lg:gap-16 lg:px-[4.3125rem]">
+        <div>
+          <p className="type-eyebrow">
+            What Guides Us
+          </p>
+          <span className="mt-[1.1875rem] block h-px w-8 bg-gold" aria-hidden="true" />
+          <h2 className="type-section mt-8 max-w-[28rem] text-[2rem] font-normal leading-[1.25] text-navy sm:text-[2.5rem]">
+            How we work beside your family <em className="font-serif italic">matters just as much</em> as the logistics we manage.
+          </h2>
+        </div>
+        <div>
           {values.map((value) => (
-            <article key={value.title}>
-              <h3 className="type-card text-[2rem] font-normal">
+            <article key={value.title} className="mt-6 border-t border-[#E3DBCF] pt-6 first:mt-0">
+              <h3 className="type-card text-[1.625rem] font-normal">
                 {value.title}
               </h3>
-              <p className="type-body mt-2 max-w-[17.75rem] text-navy">
+              <p className="type-body mt-2 text-grayblue">
                 {value.copy}
               </p>
             </article>
