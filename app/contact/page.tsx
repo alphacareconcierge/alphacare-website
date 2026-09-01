@@ -41,8 +41,8 @@ export default function ContactPage() {
           <p className="mx-auto max-w-lg text-center font-sans text-[0.9375rem] font-normal leading-[1.65] text-grayblue">
             We will review what you’ve shared and get in touch via your selected preference. This initial conversation gives us a chance to walk through what you’re facing together and explore the right path forward.
           </p>
-          <p className="mx-auto mt-4 max-w-[42rem] text-center font-sans text-[0.8125rem] font-normal italic leading-[1.65] text-gold">
-            Professional referrals are welcome. Attorneys, physicians, financial advisors, and other trusted professionals may use this form to introduce a client or family.
+          <p className="mx-auto mt-4 max-w-[42rem] text-center font-sans text-[0.8125rem] font-normal italic leading-[1.6] text-gold">
+            We frequently collaborate with trusted advisors, physicians, and family representatives. You are welcome to use this form to initiate an introduction on behalf of a client.
           </p>
         </div>
       </section>
