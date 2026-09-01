@@ -48,7 +48,7 @@ body {
   }
 
   .type-cta {
-    @apply font-sans text-[0.8125rem] font-semibold uppercase tracking-[0.1em];
+    @apply font-sans text-xs font-semibold uppercase tracking-[0.11em];
   }
 
   .type-nav {

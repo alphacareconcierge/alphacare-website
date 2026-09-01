@@ -215,7 +215,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="type-cta mt-0 inline-flex h-[3.0625rem] w-full items-center justify-center gap-3 rounded-[0.25rem] border border-navy bg-navy text-gold transition hover:bg-navy/95 disabled:cursor-wait disabled:opacity-85"
+        className="type-cta mt-0 inline-flex min-h-11 w-full items-center justify-center gap-3 rounded-[0.1875rem] border border-gold bg-navy px-7 py-3 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] disabled:cursor-wait disabled:opacity-85"
       >
         {status === "submitting" ? (
           <>

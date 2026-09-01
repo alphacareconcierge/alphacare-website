@@ -29,7 +29,7 @@ export default function HomePage() {
 
             <Link
               href="/services"
-              className="type-cta mt-5 inline-flex h-[3.5rem] items-center justify-center gap-5 rounded-[0.625rem] bg-navy px-[1.375rem] text-gold transition hover:bg-navy/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold sm:min-w-[18.375rem] min-[1400px]:mt-[2.1875rem]"
+              className="type-cta mt-5 inline-flex min-h-11 items-center justify-center gap-5 rounded-[0.1875rem] border border-gold bg-navy px-7 py-3 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold sm:min-w-[18.375rem] min-[1400px]:mt-[2.1875rem]"
             >
               Discover How We Help
               <ArrowRight size={22} strokeWidth={1.5} aria-hidden="true" />
@@ -65,7 +65,7 @@ export default function HomePage() {
         </p>
         <Link
           href="/contact"
-          className="type-cta mt-2 inline-flex min-h-11 items-center justify-center rounded-[0.25rem] bg-navy px-7 py-3 text-gold transition hover:bg-navy/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+          className="type-cta mt-2 inline-flex min-h-11 items-center justify-center rounded-[0.1875rem] border border-gold bg-navy px-7 py-3 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
         >
           Start the Conversation
         </Link>

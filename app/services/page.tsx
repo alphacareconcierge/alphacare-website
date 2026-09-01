@@ -126,7 +126,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="mt-[1.5rem] inline-flex h-[2.75rem] min-w-[14.75rem] items-center justify-center rounded-[0.125rem] bg-navy px-7 font-sans text-xs font-semibold uppercase tracking-[0.1em] text-gold transition hover:bg-navy/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+            className="type-cta mt-[1.5rem] inline-flex min-h-11 min-w-[14.75rem] items-center justify-center rounded-[0.1875rem] border border-gold bg-navy px-7 py-3 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
           >
             Contact AlphaCare
           </Link>
