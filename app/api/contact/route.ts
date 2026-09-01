@@ -41,9 +41,9 @@ export async function POST(request: Request) {
     return getString(payload, field).length === 0;
   });
   const preferredMethod =
-    getString(payload, "preferredMethod") || getString(payload, "preferredContactMethod");
+    getString(payload, "preferredMethod") || getString(payload, "preferredContactMethod") || "Either";
 
-  if (missingField || !preferredMethod) {
+  if (missingField) {
     return NextResponse.json({ error: "Missing required field" }, { status: 400 });
   }
 
@@ -80,9 +80,9 @@ export async function POST(request: Request) {
       </div>
     </div>`;
 
-  const { error } = await resend.emails.send({
-    to: "hello@alphacareconcierge.com",
-    from: "AlphaCare Website <onboarding@resend.dev>",
+  const { data, error } = await resend.emails.send({
+    to: ["hello@alphacareconcierge.com"],
+    from: "AlphaCare Inquiries <onboarding@resend.dev>",
     replyTo: email,
     subject: `New Inquiry from ${name} | AlphaCare Concierge`,
     html
@@ -92,5 +92,5 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Unable to submit inquiry" }, { status: 502 });
   }
 
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({ success: true, data });
 }
