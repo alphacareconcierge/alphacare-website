@@ -122,7 +122,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="grid">
+    <form onSubmit={handleSubmit} noValidate className="mt-8 grid">
       <label className="type-form-label mb-6 grid gap-2 text-navy">
         <span>Your name <span className="text-gold">*</span></span>
         <input
