@@ -29,6 +29,22 @@ function formatRow(label: string, value: string) {
     </tr>`;
 }
 
+function formatResendError(error: unknown) {
+  if (!error) {
+    return "Unknown Resend error";
+  }
+
+  if (error instanceof Error) {
+    return error.message;
+  }
+
+  try {
+    return JSON.stringify(error);
+  } catch {
+    return String(error);
+  }
+}
+
 const acknowledgementHtml = `
   <div style="display: none; max-height: 0; overflow: hidden; opacity: 0; color: transparent; line-height: 1px;">
     Your message reached us directly. Take a quiet breath—we are here beside you.
@@ -68,6 +84,44 @@ const acknowledgementHtml = `
       </div>
     </div>
   </div>`;
+
+async function sendClientAcknowledgement(resend: Resend, email: string) {
+  const acknowledgementConfig = {
+    to: [email],
+    subject: "We have your note | AlphaCare Concierge",
+    html: acknowledgementHtml
+  };
+  const preferredFrom = "AlphaCare Concierge <inquiries@alphacareconcierge.com>";
+  const fallbackFrom = "AlphaCare Concierge <onboarding@resend.dev>";
+
+  try {
+    const { error } = await resend.emails.send({
+      ...acknowledgementConfig,
+      from: preferredFrom
+    });
+
+    if (!error) {
+      return;
+    }
+
+    console.error(`AlphaCare client acknowledgement failed from ${preferredFrom}: ${formatResendError(error)}`);
+  } catch (error) {
+    console.error(`AlphaCare client acknowledgement threw from ${preferredFrom}: ${formatResendError(error)}`);
+  }
+
+  try {
+    const { error } = await resend.emails.send({
+      ...acknowledgementConfig,
+      from: fallbackFrom
+    });
+
+    if (error) {
+      console.error(`AlphaCare client acknowledgement fallback failed from ${fallbackFrom}: ${formatResendError(error)}`);
+    }
+  } catch (error) {
+    console.error(`AlphaCare client acknowledgement fallback threw from ${fallbackFrom}: ${formatResendError(error)}`);
+  }
+}
 
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
@@ -129,19 +183,11 @@ export async function POST(request: Request) {
   });
 
   if (error) {
+    console.error(`AlphaCare admin inquiry failed: ${formatResendError(error)}`);
     return NextResponse.json({ error: "Unable to submit inquiry" }, { status: 502 });
   }
 
-  const { error: acknowledgementError } = await resend.emails.send({
-    to: [email],
-    from: "AlphaCare Concierge <inquiries@alphacareconcierge.com>",
-    subject: "We have your note | AlphaCare Concierge",
-    html: acknowledgementHtml
-  });
-
-  if (acknowledgementError) {
-    return NextResponse.json({ error: "Unable to send acknowledgement" }, { status: 502 });
-  }
+  await sendClientAcknowledgement(resend, email);
 
   return NextResponse.json({ success: true, data });
 }

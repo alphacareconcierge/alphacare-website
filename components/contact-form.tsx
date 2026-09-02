@@ -114,14 +114,9 @@ export function ContactForm() {
           Thank you for reaching out.
         </h2>
         <span className="mx-auto my-4 block h-px w-12 bg-[#E7E0D6]" aria-hidden="true" />
-        <div className="mx-auto max-w-[30rem] space-y-4 font-sans text-[0.90625rem] font-light leading-[1.8] text-[#383431]">
-          <p>
-            Navigating care decisions and healthcare transitions requires clarity, time, and deliberate coordination. We have received what you shared and are reviewing the details with complete discretion.
-          </p>
-          <p>
-            We will connect with you via your preferred method shortly to discuss how we can assist your family.
-          </p>
-        </div>
+        <p className="mx-auto max-w-[30rem] font-sans text-[0.90625rem] font-light leading-[1.8] text-[#383431]">
+          Navigating care decisions and healthcare transitions requires clarity, time, and deliberate coordination. We have received what you shared and are reviewing the details with complete discretion. We will connect with you via your preferred method shortly to discuss how we can assist your family.
+        </p>
       </div>
     );
   }
