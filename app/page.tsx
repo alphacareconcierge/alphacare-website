@@ -8,7 +8,7 @@ export default function HomePage() {
       <section className="grid overflow-hidden border-b border-gold/45 lg:h-[34rem] lg:grid-cols-[45.45%_54.55%] min-[1400px]:h-[35.75rem]">
         <div className="px-6 py-16 sm:px-12 lg:px-0 lg:py-0">
           <div className="lg:ml-[4.1875rem] lg:pt-16 min-[1400px]:pt-[5.25rem]">
-            <p className="max-w-[20rem] font-sans text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-gold sm:max-w-none">
+            <p className="max-w-[20rem] font-sans text-[0.65625rem] font-medium uppercase tracking-[0.16em] text-gold sm:max-w-none">
               PRIVATE CONCIERGE CARE MANAGEMENT
             </p>
             <span className="mt-[1.625rem] block h-px w-[2.8125rem] bg-gold" aria-hidden="true" />
@@ -22,7 +22,7 @@ export default function HomePage() {
 
             <span className="mt-[1.8125rem] block h-px w-[2.8125rem] bg-gold" aria-hidden="true" />
 
-            <p className="type-body mt-[1.5625rem] max-w-[21rem] text-navy sm:max-w-[31.5rem]">
+            <p className="type-body mt-[1.5625rem] max-w-[21rem] sm:max-w-[31.5rem]">
               When health needs evolve, keeping track of recommendations, appointments, and next steps can quickly become overwhelming. AlphaCare brings clarity and dedicated oversight to the process—helping families stay informed, aligned, and confident in every decision.
             </p>
 
@@ -59,7 +59,7 @@ export default function HomePage() {
         <h2 className="mb-3 font-serif text-[clamp(1.25rem,1.8vw,1.5rem)] font-normal leading-[1.25] text-navy">
           A thoughtful partner in navigating care.
         </h2>
-        <p className="mx-auto mb-6 max-w-md font-sans text-sm font-normal leading-[1.6] text-grayblue md:text-base">
+        <p className="mx-auto mb-6 max-w-md font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
           Whether you are coordinating care from a distance or managing an unexpected transition, we begin by listening to what your family is experiencing.
         </p>
         <Link

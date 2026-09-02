@@ -51,20 +51,20 @@ export default function ServicesPage() {
     <div className="bg-ivory text-navy">
       <section className="grid px-6 pb-[3.875rem] pt-[3.25rem] sm:px-12 lg:grid-cols-[45%_55%] lg:px-[6.375rem] lg:pb-[0.625rem] lg:pt-[1.625rem]">
         <div className="pt-[2.25rem]">
-          <p className="mb-4 font-sans text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-gold">
+          <p className="mb-4 font-sans text-[0.65625rem] font-medium uppercase tracking-[0.16em] text-gold">
             How We Can Help
           </p>
           <h1 className="max-w-[34rem] font-serif text-[clamp(2rem,3.2vw,2.6rem)] font-light leading-[1.25] text-navy">
             Care does not stop<br />
             at the appointment.
           </h1>
-          <p className="mt-[1.5625rem] max-w-md font-sans text-[0.9375rem] font-normal leading-[1.75] text-grayblue">
+          <p className="mt-[1.5625rem] max-w-md font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
             A single consultation or hospital discharge often sets off a complex sequence of instructions, follow-ups, and daily adjustments. AlphaCare provides attentive oversight and practical coordination to help families navigate each step with clarity.
           </p>
         </div>
         <div className="mt-12 lg:mt-0 lg:max-w-[26rem]">
           <span className="block h-px w-10 bg-gold" aria-hidden="true" />
-          <p className="mt-5 font-sans text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-gold">
+          <p className="mt-5 font-sans text-[0.65625rem] font-medium uppercase tracking-[0.16em] text-gold">
             How We Can Help
           </p>
           <div className="mt-[1.1875rem]">
@@ -73,13 +73,13 @@ export default function ServicesPage() {
                 <h2 className="mb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
                   {item.title}
                 </h2>
-                <p className="font-sans text-[0.9375rem] font-normal leading-[1.7] text-grayblue">
+                <p className="max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
                   {item.copy}
                 </p>
               </article>
             ))}
           </div>
-          <p className="mt-6 font-sans text-sm font-normal italic leading-[1.6] text-navy">
+          <p className="mt-6 max-w-2xl font-sans text-[0.9375rem] font-light italic leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
             Tailored support shaped around your family&apos;s unique circumstances.
           </p>
         </div>
@@ -88,7 +88,7 @@ export default function ServicesPage() {
       <section className="grid gap-10 px-6 pb-[3.625rem] pt-2 sm:px-12 lg:grid-cols-[38%_30%_32%] lg:gap-0 lg:px-[6.375rem]">
         <div className="lg:pr-[3.125rem]">
           <span className="block h-px w-10 bg-gold" aria-hidden="true" />
-          <h2 className="mb-6 mt-[1.125rem] font-sans text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-gold">
+          <h2 className="mb-6 mt-[1.125rem] font-sans text-[0.65625rem] font-medium uppercase tracking-[0.16em] text-gold">
             The Details Matter
           </h2>
           <div className="grid gap-x-8 gap-y-[1.25rem] md:grid-cols-2">
@@ -99,7 +99,7 @@ export default function ServicesPage() {
                   <h3 className="font-sans text-[0.75rem] font-semibold uppercase leading-[1.45] tracking-[0.08em] text-navy">
                     {item.title}
                   </h3>
-                  <p className="mt-2 font-sans text-sm font-normal leading-[1.6] text-grayblue">
+                  <p className="mt-2 max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
                     {item.copy}
                   </p>
                 </div>
@@ -109,10 +109,10 @@ export default function ServicesPage() {
         </div>
         <div className="border-divider border-t pt-8 lg:border-l lg:border-t-0 lg:px-[2.375rem] lg:pt-0">
           <span className="block h-px w-10 bg-gold" aria-hidden="true" />
-          <h2 className="mb-6 mt-[1.125rem] font-sans text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-gold">
+          <h2 className="mb-6 mt-[1.125rem] font-sans text-[0.65625rem] font-medium uppercase tracking-[0.16em] text-gold">
             Our Role
           </h2>
-          <p className="font-sans text-sm font-normal leading-[1.75] text-grayblue">
+          <p className="max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
             AlphaCare works alongside your family and existing care network. We do not replace the medical diagnosis, clinical judgment, or legal advice of your physicians, attorneys, or financial advisors. Our purpose is to provide dedicated coordination, clear communication, and steady advocacy to support you along the way.
           </p>
         </div>

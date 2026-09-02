@@ -204,7 +204,7 @@ export function ContactForm() {
         />
         {errors.message ? <span id="message-error" className="text-xs text-[#A63A3A]">{errors.message}</span> : null}
       </label>
-      <p className="my-3 max-w-[39rem] font-sans text-[0.8125rem] font-normal italic leading-[1.5] text-grayblue/75">
+      <p className="my-3 max-w-2xl font-sans text-[0.9375rem] font-light italic leading-[1.85] tracking-[0.015em] text-[#3D3B39]/75">
         Your privacy is important to us. A general overview is all that’s needed to begin—we will provide a dedicated, secure channel if clinical details are ever helpful later.
       </p>
       {status === "error" ? (
