@@ -11,19 +11,19 @@ export const metadata: Metadata = {
 const values = [
   {
     title: "Listen Without Rushing",
-    copy: "Every family’s circumstances are unique. We start by taking the time to understand what matters most to your loved one and what your family is experiencing day to day."
+    copy: "Taking the time to understand what matters most to your loved one, what brings comfort, and where your family feels the most strain."
   },
   {
     title: "A Calm, Steady Presence",
-    copy: "Healthcare decisions can be difficult and unpredictable. We serve as a thoughtful partner beside you, helping you think through choices and navigate complex moments with clarity."
+    copy: "Healthcare decisions rarely follow a straight line. We provide a grounded perspective beside you, helping you weigh options and move through difficult moments with clarity."
   },
   {
     title: "Attentive Follow-Through",
-    copy: "From keeping track of care instructions to helping organize communications, we stay focused on the day-to-day details so your family doesn't have to manage them alone."
+    copy: "From organizing discharge notes to tracking shifting appointments, we handle the administrative friction so you can focus entirely on being family."
   },
   {
-    title: "Respect & Advocacy",
-    copy: "We keep your loved one at the center of everything we do, honoring their wishes, protecting their privacy, and ensuring their voice is always respected."
+    title: "Dignity & Advocacy",
+    copy: "Keeping your loved one’s personal values at the center of every conversation—honoring their autonomy, safeguarding their privacy, and ensuring their wishes lead the way."
   }
 ];
 
@@ -81,11 +81,11 @@ export default function AboutPage() {
         </div>
         <div>
           {values.map((value) => (
-            <article key={value.title} className="mt-6 border-t border-[#E3DBCF] pt-6 first:mt-0">
-              <h3 className="type-card text-[1.625rem] font-normal">
+            <article key={value.title} className="mb-6 border-b border-[#E3DBCF]/50 pb-6 last:mb-0 last:border-b-0 last:pb-0">
+              <h3 className="font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
                 {value.title}
               </h3>
-              <p className="type-body mt-2 text-grayblue">
+              <p className="mt-1.5 max-w-md font-sans text-sm font-normal leading-[1.65] text-grayblue">
                 {value.copy}
               </p>
             </article>
