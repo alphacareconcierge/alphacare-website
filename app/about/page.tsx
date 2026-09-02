@@ -43,8 +43,8 @@ export default function AboutPage() {
             </em>
           </h1>
           <span className="mt-[2.125rem] block h-px w-8 bg-gold" aria-hidden="true" />
-          <p className="type-body mt-[2rem] max-w-[22.5rem] text-navy">
-            Complex care rarely fails in the clinical room—it fractures in the quiet spaces between appointments, providers, and family members. Founded by experienced clinicians, AlphaCare provides the steady oversight and dedicated coordination needed to lift that logistical weight, bringing clarity to the details families carry.
+          <p className="type-body mt-[2rem] max-w-xl text-grayblue">
+            Complex care rarely breaks down in the exam room—it fractures in the quiet spaces between appointments, providers, and family members. Built on years of direct clinical experience, AlphaCare provides the steady coordination and attentive oversight families need to navigate each step with clarity.
           </p>
         </div>
         <div className="relative min-h-[24rem] lg:min-h-0">
