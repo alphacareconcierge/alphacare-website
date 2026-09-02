@@ -109,13 +109,13 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="border border-divider bg-softivory px-6 py-10 text-center" aria-live="polite">
-        <h2 className="font-serif text-[1.875rem] font-normal leading-[1.25] text-navy">
-          Thank you. We’ve received your note.
+      <div className="border border-[#E3DBCF]/60 bg-ivory p-8 text-center" aria-live="polite">
+        <h2 className="font-serif text-[1.5rem] font-normal leading-[1.25] text-navy">
+          Thank you for reaching out.
         </h2>
-        <span className="mx-auto my-4 block h-px w-12 bg-gold" aria-hidden="true" />
-        <p className="type-body mx-auto max-w-[30rem]">
-          We will review what you’ve shared and reach out via your preferred method shortly. Take care.
+        <span className="mx-auto my-4 block h-px w-12 bg-[#E7E0D6]" aria-hidden="true" />
+        <p className="mx-auto max-w-[30rem] font-sans text-sm font-light leading-[1.75] text-[#383431]">
+          Reaching out during uncertain times takes energy. We review every inquiry personally and will be in touch promptly to see how we can ease the way forward.
         </p>
       </div>
     );
