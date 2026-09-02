@@ -109,14 +109,19 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="border border-[#E3DBCF]/60 bg-ivory p-8 text-center" aria-live="polite">
+      <div className="border border-[#E3DBCF]/80 bg-ivory p-8 text-center md:p-10" aria-live="polite">
         <h2 className="font-serif text-[1.5rem] font-normal leading-[1.25] text-navy">
           Thank you for reaching out.
         </h2>
         <span className="mx-auto my-4 block h-px w-12 bg-[#E7E0D6]" aria-hidden="true" />
-        <p className="mx-auto max-w-[30rem] font-sans text-sm font-light leading-[1.75] text-[#383431]">
-          Reaching out during uncertain times takes energy. We review every inquiry personally and will be in touch promptly to see how we can ease the way forward.
-        </p>
+        <div className="mx-auto max-w-[30rem] space-y-4 font-sans text-[0.90625rem] font-light leading-[1.8] text-[#383431]">
+          <p>
+            Navigating care decisions and healthcare transitions requires clarity, time, and deliberate coordination. We have received what you shared and are reviewing the details with complete discretion.
+          </p>
+          <p>
+            We will connect with you via your preferred method shortly to discuss how we can assist your family.
+          </p>
+        </div>
       </div>
     );
   }
