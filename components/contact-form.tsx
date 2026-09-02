@@ -49,7 +49,11 @@ function validateForm(formData: FormData) {
   return nextErrors;
 }
 
-export function ContactForm() {
+type ContactFormProps = {
+  onSuccess?: () => void;
+};
+
+export function ContactForm({ onSuccess }: ContactFormProps) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errors, setErrors] = useState<FieldErrors>({});
 
@@ -96,12 +100,15 @@ export function ContactForm() {
         body: JSON.stringify(payload)
       });
 
-      if (!response.ok) {
+      const result = (await response.json().catch(() => null)) as { success?: boolean } | null;
+
+      if (!response.ok || result?.success !== true) {
         throw new Error("Unable to send inquiry");
       }
 
       form.reset();
       setStatus("success");
+      onSuccess?.();
     } catch {
       setStatus("error");
     }
@@ -109,14 +116,17 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="border border-[#E3DBCF]/80 bg-ivory p-8 text-center md:p-10" aria-live="polite">
-        <h2 className="font-serif text-[1.5rem] font-normal leading-[1.25] text-navy">
+      <div className="border border-[#E3DBCF]/80 bg-ivory px-6 py-16 text-center md:px-10 md:py-24" aria-live="polite">
+        <h2 className="font-serif text-2xl font-normal leading-[1.25] text-navy md:text-3xl">
           Thank you for reaching out.
         </h2>
-        <span className="mx-auto my-4 block h-px w-12 bg-[#E7E0D6]" aria-hidden="true" />
-        <p className="mx-auto max-w-[30rem] font-sans text-[0.90625rem] font-light leading-[1.8] text-[#383431]">
-          Navigating care decisions and healthcare transitions requires clarity, time, and deliberate coordination. We have received what you shared and are reviewing the details with complete discretion. We will connect with you via your preferred method shortly to discuss how we can assist your family.
-        </p>
+        <span className="mx-auto my-6 block w-12 border-t border-[#BA8338]/60" aria-hidden="true" />
+        <div className="mx-auto max-w-md space-y-5 font-sans text-[0.9375rem] font-light leading-relaxed text-[#383431]">
+          <p>Navigating care decisions requires clarity and deliberate coordination.</p>
+          <p>
+            We have received your note and are reviewing the details with quiet discretion. We will connect with you via your preferred method shortly to discuss how we can assist your family.
+          </p>
+        </div>
       </div>
     );
   }
