@@ -29,6 +29,46 @@ function formatRow(label: string, value: string) {
     </tr>`;
 }
 
+const acknowledgementHtml = `
+  <div style="display: none; max-height: 0; overflow: hidden; opacity: 0; color: transparent; line-height: 1px;">
+    Your message reached us directly. Take a quiet breath—we are here beside you.
+  </div>
+  <div style="margin: 0; padding: 40px 20px; background: #F4EFEA;">
+    <div style="max-width: 540px; margin: 40px auto; padding: 48px 40px; background: #FAF7F2; border: 1px solid #E3DBCF; box-shadow: 0 4px 20px rgba(12, 29, 51, 0.04);">
+      <div style="text-align: center;">
+        <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; font-weight: 400; letter-spacing: 0.2em; line-height: 1.2; color: #0C1D33; text-transform: uppercase;">
+          ALPHACARE
+        </div>
+        <div style="margin-top: 4px; font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; font-weight: 400; letter-spacing: 0.14em; line-height: 1.4; color: #BA8338; text-transform: uppercase;">
+          CONCIERGE CARE MANAGEMENT
+        </div>
+        <div style="width: 48px; border-top: 1px solid #BA8338; margin: 24px auto;"></div>
+      </div>
+
+      <div style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14.5px; font-weight: 300; line-height: 1.8; color: #383431;">
+        <p style="margin: 0 0 22px;">Hello,</p>
+
+        <p style="margin: 0 0 22px;">Reaching out during a care transition takes emotional energy, especially when you are carrying the weight of keeping everyone safe and informed.</p>
+
+        <p style="margin: 0 0 22px;">Take a quiet breath. Your message has reached our private office directly.</p>
+
+        <p style="margin: 0 0 22px;">We treat every family's circumstances with the utmost discretion and clinical attentiveness. We are reviewing what you shared and will connect with you via your preferred method shortly so you don't have to carry the next steps alone.</p>
+
+        <p style="margin: 0 0 24px;">Warmly,</p>
+
+        <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 16px; font-weight: 500; line-height: 1.3; color: #0C1D33;">
+          AlphaCare Concierge
+        </div>
+        <div style="margin-top: 4px; font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 0.08em; line-height: 1.4; color: #BA8338; text-transform: uppercase;">
+          Private Concierge Care Management
+        </div>
+        <div style="margin-top: 4px; font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 400; line-height: 1.4; color: #706E6B;">
+          Boston &amp; Across Massachusetts
+        </div>
+      </div>
+    </div>
+  </div>`;
+
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
 
@@ -90,6 +130,17 @@ export async function POST(request: Request) {
 
   if (error) {
     return NextResponse.json({ error: "Unable to submit inquiry" }, { status: 502 });
+  }
+
+  const { error: acknowledgementError } = await resend.emails.send({
+    to: [email],
+    from: "AlphaCare Concierge <inquiries@alphacareconcierge.com>",
+    subject: "We have your note | AlphaCare Concierge",
+    html: acknowledgementHtml
+  });
+
+  if (acknowledgementError) {
+    return NextResponse.json({ error: "Unable to send acknowledgement" }, { status: 502 });
   }
 
   return NextResponse.json({ success: true, data });
