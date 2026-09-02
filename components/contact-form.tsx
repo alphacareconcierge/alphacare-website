@@ -204,7 +204,7 @@ export function ContactForm() {
         />
         {errors.message ? <span id="message-error" className="text-xs text-[#A63A3A]">{errors.message}</span> : null}
       </label>
-      <p className="mb-5 mt-2 max-w-[39rem] font-sans text-[0.8125rem] font-normal italic leading-[1.5] text-grayblue/75">
+      <p className="my-3 max-w-[39rem] font-sans text-[0.8125rem] font-normal italic leading-[1.5] text-grayblue/75">
         Your privacy is important to us. A general overview is all that’s needed to begin—we will provide a dedicated, secure channel if clinical details are ever helpful later.
       </p>
       {status === "error" ? (
@@ -215,7 +215,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="type-cta mt-0 inline-flex min-h-11 w-full items-center justify-center gap-3 rounded-[0.1875rem] border border-gold bg-navy px-7 py-3 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] disabled:cursor-wait disabled:opacity-85"
+        className="type-cta mt-0 inline-flex min-h-11 w-full items-center justify-center gap-3 rounded-[0.1875rem] border border-gold bg-navy px-7 py-3.5 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] disabled:cursor-wait disabled:opacity-85"
       >
         {status === "submitting" ? (
           <>

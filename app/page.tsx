@@ -9,13 +9,12 @@ export default function HomePage() {
         <div className="px-6 py-16 sm:px-12 lg:px-0 lg:py-0">
           <div className="lg:ml-[4.1875rem] lg:pt-16 min-[1400px]:pt-[5.25rem]">
             <p className="max-w-[20rem] font-sans text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-gold sm:max-w-none">
-              Private Concierge Care Management
+              PRIVATE CONCIERGE CARE MANAGEMENT
             </p>
             <span className="mt-[1.625rem] block h-px w-[2.8125rem] bg-gold" aria-hidden="true" />
 
-            <h1 className="type-hero mt-[1.25rem] max-w-[21rem] text-[2.375rem] sm:max-w-[39.25rem] lg:text-[2.375rem] min-[1400px]:text-[2.6875rem]">
-              <span className="block">When care becomes</span>
-              <span className="block">complicated,</span>
+            <h1 className="type-hero mt-[1.25rem] max-w-[21rem] text-[clamp(2rem,3.2vw,2.6rem)] font-light sm:max-w-[39.25rem]">
+              <span className="block">When care becomes complicated,</span>
               <em className="block font-serif italic">
                 it helps to have someone beside you.
               </em>
@@ -29,7 +28,7 @@ export default function HomePage() {
 
             <Link
               href="/services"
-              className="type-cta mt-5 inline-flex min-h-11 items-center justify-center gap-5 rounded-[0.1875rem] border border-gold bg-navy px-7 py-3 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold sm:min-w-[18.375rem] min-[1400px]:mt-[2.1875rem]"
+              className="type-cta mt-5 inline-flex min-h-11 items-center justify-center gap-5 rounded-[0.1875rem] border border-gold bg-navy px-7 py-3.5 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold sm:min-w-[18.375rem] min-[1400px]:mt-[2.1875rem]"
             >
               Discover How We Help
               <ArrowRight size={22} strokeWidth={1.5} aria-hidden="true" />
@@ -65,7 +64,7 @@ export default function HomePage() {
         </p>
         <Link
           href="/contact"
-          className="type-cta mt-2 inline-flex min-h-11 items-center justify-center rounded-[0.1875rem] border border-gold bg-navy px-7 py-3 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+          className="type-cta mt-2 inline-flex min-h-11 items-center justify-center rounded-[0.1875rem] border border-gold bg-navy px-7 py-3.5 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
         >
           Start the Conversation
         </Link>

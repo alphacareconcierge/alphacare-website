@@ -75,7 +75,7 @@ export function Header() {
 
         <Link
           href="/contact"
-          className="type-cta hidden shrink-0 items-center justify-center whitespace-nowrap rounded-[0.1875rem] border border-gold bg-navy px-[1.625rem] py-3 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:inline-flex min-[1400px]:px-8 min-[1400px]:py-3.5"
+          className="type-cta hidden shrink-0 items-center justify-center whitespace-nowrap rounded-[0.1875rem] border border-gold bg-navy px-7 py-3.5 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:inline-flex"
         >
           Start the Conversation
         </Link>
