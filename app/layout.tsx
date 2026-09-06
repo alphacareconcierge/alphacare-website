@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     type: "website"
   },
   alternates: {
-    canonical: "/"
+    canonical: "https://alphacareconcierge.com"
   }
 };
 

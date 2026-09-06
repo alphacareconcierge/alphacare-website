@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Privacy practices for AlphaCare Concierge Care Management website inquiries and communications.",
-  alternates: { canonical: "/privacy-policy" }
+  alternates: { canonical: "https://alphacareconcierge.com/privacy" }
 };
 
 export default function PrivacyPolicyPage() {

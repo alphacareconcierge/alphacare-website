@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "About Us | AlphaCare Concierge Care Management",
   description:
     "Learn about AlphaCare’s philosophy of care, healthcare operations expertise, and our commitment to discretion, judgment, and thoughtful advocacy.",
-  alternates: { canonical: "/about" }
+  alternates: { canonical: "https://alphacareconcierge.com/about" }
 };
 
 const values = [

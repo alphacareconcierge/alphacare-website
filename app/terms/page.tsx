@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Terms of Service | AlphaCare Concierge Care Management",
   description:
     "Website terms for AlphaCare Concierge Care Management.",
-  alternates: { canonical: "/terms" }
+  alternates: { canonical: "https://alphacareconcierge.com/terms" }
 };
 
 export default function TermsPage() {

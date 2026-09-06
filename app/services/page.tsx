@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Our Services | AlphaCare Concierge Care Management",
   description:
     "Explore AlphaCare’s bespoke healthcare advocacy, care coordination, transitions support, and family communication services.",
-  alternates: { canonical: "/services" }
+  alternates: { canonical: "https://alphacareconcierge.com/services" }
 };
 
 const helpItems = [
