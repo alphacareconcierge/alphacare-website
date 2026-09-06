@@ -48,15 +48,16 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="px-6 pb-16 sm:px-12 lg:px-[4.1875rem] lg:pb-0 lg:pt-[4.375rem]">
-          <div className="relative min-h-[24rem] overflow-hidden rounded-sm border border-[#E3DBCF]/80 lg:h-[31.25rem] lg:max-h-[31.25rem]">
+          <div className="relative aspect-[4/3] min-h-[24rem] overflow-hidden rounded-sm border border-[#E3DBCF]/70 lg:aspect-auto lg:h-[31.25rem] lg:max-h-[31.25rem]">
             <Image
               src="/brand/alphacare-about-still-life.jpg"
               alt="White hydrangeas in a ceramic vase beside books and a brass dish"
               fill
               priority
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover object-center"
+              className="object-cover object-center brightness-[0.98] contrast-[0.96] saturate-[0.92]"
             />
+            <div className="pointer-events-none absolute inset-0 bg-[#FAF7F2]/10" aria-hidden="true" />
           </div>
         </div>
       </section>

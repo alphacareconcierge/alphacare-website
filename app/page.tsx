@@ -36,15 +36,16 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="relative mx-6 mb-8 aspect-[4/3] min-h-0 overflow-hidden rounded-[0.375rem] sm:mx-12 lg:m-0 lg:aspect-auto lg:min-h-0 lg:rounded-none">
+        <div className="relative mx-6 mb-8 aspect-[4/3] min-h-0 overflow-hidden rounded-sm border border-[#E3DBCF]/70 sm:mx-12 lg:m-0 lg:h-full lg:max-h-[31.25rem] lg:min-h-0 lg:self-center">
           <Image
             src="/brand/alphacare-lighthouse-hero.jpg"
             alt="Lighthouse and coastal home overlooking the water"
             fill
             priority
             sizes="(min-width: 1024px) 55vw, 100vw"
-            className="object-cover"
+            className="object-cover object-center brightness-[0.98] contrast-[0.96] saturate-[0.92]"
           />
+          <div className="pointer-events-none absolute inset-0 bg-[#FAF7F2]/10" aria-hidden="true" />
         </div>
       </section>
 
