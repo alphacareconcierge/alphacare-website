@@ -24,11 +24,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(business.url),
   title: {
-    default: "AlphaCare | Concierge Care Management",
-    template: "%s"
+    default: "AlphaCare Concierge Care Management | Greater Boston",
+    template: "%s | AlphaCare Concierge"
   },
   description:
-    "AlphaCare provides private concierge care management, healthcare advocacy, and family coordination throughout Greater Boston and Massachusetts.",
+    "Private concierge healthcare advocacy and complex care management serving Greater Boston families.",
   keywords: [
     "Healthcare Advocacy",
     "Care Coordination",
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }]
   },
   openGraph: {
-    title: "AlphaCare | Concierge Care Management",
+    title: "AlphaCare Concierge Care Management | Greater Boston",
     description:
-      "AlphaCare provides private concierge care management, healthcare advocacy, and family coordination throughout Greater Boston and Massachusetts.",
+      "Private concierge healthcare advocacy and complex care management serving Greater Boston families.",
     url: business.url,
     siteName: business.name,
     images: [
