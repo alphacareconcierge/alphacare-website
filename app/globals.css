@@ -85,9 +85,20 @@ body {
 }
 
 @layer utilities {
-  .mask-gradient-left {
-    mask-image: linear-gradient(to right, transparent 0%, black 28%, black 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 28%, black 100%);
+  /* Editorial fade on desktop from ivory into the hero image */
+  @media (min-width: 1024px) {
+    .mask-gradient-left {
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 15%, black 35%, black 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 15%, black 35%, black 100%);
+    }
+  }
+
+  /* Soft fade for mobile stacking */
+  @media (max-width: 1023px) {
+    .mask-gradient-left {
+      mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 100%);
+    }
   }
 }
 
