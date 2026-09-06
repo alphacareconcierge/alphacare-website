@@ -84,6 +84,13 @@ body {
   }
 }
 
+@layer utilities {
+  .mask-gradient-left {
+    mask-image: linear-gradient(to right, transparent 0%, black 28%, black 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 28%, black 100%);
+  }
+}
+
 ::selection {
   background: rgba(186, 131, 56, 0.25);
 }
