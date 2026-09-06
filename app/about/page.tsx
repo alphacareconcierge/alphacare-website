@@ -47,15 +47,17 @@ export default function AboutPage() {
             Complex care rarely breaks down in the exam room—it fractures in the quiet spaces between appointments, providers, and family members. Built on years of direct clinical experience, AlphaCare provides the steady coordination and attentive oversight families need to navigate each step with clarity.
           </p>
         </div>
-        <div className="relative min-h-[24rem] lg:min-h-0">
-          <Image
-            src="/brand/alphacare-about-still-life.jpg"
-            alt="White hydrangeas in a ceramic vase beside books and a brass dish"
-            fill
-            priority
-            sizes="(min-width: 1024px) 57vw, 100vw"
-            className="object-cover"
-          />
+        <div className="px-6 pb-16 sm:px-12 lg:px-[4.1875rem] lg:pb-0 lg:pt-[4.375rem]">
+          <div className="relative min-h-[24rem] overflow-hidden rounded-sm border border-[#E3DBCF]/80 lg:h-[31.25rem] lg:max-h-[31.25rem]">
+            <Image
+              src="/brand/alphacare-about-still-life.jpg"
+              alt="White hydrangeas in a ceramic vase beside books and a brass dish"
+              fill
+              priority
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover object-center"
+            />
+          </div>
         </div>
       </section>
 
