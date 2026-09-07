@@ -50,7 +50,7 @@ export function Header() {
 
           <button
             type="button"
-            className="fixed right-5 top-6 z-[60] flex h-11 w-11 shrink-0 items-center justify-center rounded-[0.25rem] border border-gold/60 bg-ivory text-navy transition hover:border-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:hidden"
+            className="relative z-[60] flex h-11 w-11 shrink-0 items-center justify-center rounded-[0.25rem] border border-gold/60 bg-ivory text-navy transition hover:border-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:hidden"
             aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-navigation"
@@ -154,8 +154,7 @@ export function Header() {
 
         <button
           type="button"
-          className="fixed right-5 top-6 z-[60] flex h-11 w-11 shrink-0 items-center justify-center rounded-[0.25rem] border border-gold/60 bg-ivory text-navy transition hover:border-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:hidden"
-          style={{ position: "fixed", right: "1.25rem", top: "1.5rem", zIndex: 60 }}
+          className="relative z-[60] flex h-11 w-11 shrink-0 items-center justify-center rounded-[0.25rem] border border-gold/60 bg-ivory text-navy transition hover:border-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:hidden"
           aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
