@@ -32,14 +32,14 @@ export default function AboutPage() {
     <div className="bg-ivory text-navy">
       <section className="grid border-b border-divider lg:min-h-[36.9375rem] lg:grid-cols-[43.25%_56.75%]">
         <div className="px-6 py-16 sm:px-12 lg:px-[4.1875rem] lg:pb-0 lg:pt-[4.375rem]">
-          <p className="text-xs uppercase tracking-[0.24em] text-[#BA8338] font-medium">
+          <p className="type-eyebrow">
             About Alpha Care
           </p>
-          <h1 className="mt-[2.3125rem] max-w-2xl font-serif text-4xl sm:text-5xl lg:text-[3.25rem] text-[#1C2430] tracking-tight leading-[1.15] font-normal">
+          <h1 className="mt-[2.3125rem] max-w-2xl font-serif text-4xl font-normal leading-[1.15] tracking-tight text-navy sm:text-5xl lg:text-[3.25rem]">
             Care may involve many people.<br />
             <span className="font-serif italic font-normal">Families still experience all of it.</span>
           </h1>
-          <span className="mt-[2.125rem] block h-px w-10 bg-[#BA8338]/60" aria-hidden="true" />
+          <span className="mt-[2.125rem] block h-px w-10 bg-gold/60" aria-hidden="true" />
           <p className="type-body mt-[2rem] max-w-xl text-grayblue">
             Complex care rarely breaks down in the exam room—it fractures in the quiet spaces between appointments, providers, and family members. Built on years of direct clinical experience, AlphaCare provides the steady coordination and attentive oversight families need to navigate each step with clarity.
           </p>
@@ -54,7 +54,7 @@ export default function AboutPage() {
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover object-center brightness-[0.98] contrast-[0.96] saturate-[0.92]"
             />
-            <div className="pointer-events-none absolute inset-0 bg-[#FAF7F2]/10" aria-hidden="true" />
+            <div className="pointer-events-none absolute inset-0 bg-ivory/10" aria-hidden="true" />
           </div>
         </div>
       </section>
@@ -64,7 +64,7 @@ export default function AboutPage() {
           When someone you love needs more care, you shouldn&apos;t have to carry every decision alone.
         </h2>
         <span className="mx-auto my-4 block h-px w-11 bg-gold" aria-hidden="true" />
-        <p className="mx-auto mt-3 max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
+        <p className="type-body mx-auto mt-3 max-w-2xl">
           AlphaCare brings clarity, coordination, and a steady presence when families need it most.
         </p>
       </section>
@@ -85,7 +85,7 @@ export default function AboutPage() {
               <h3 className="font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
                 {value.title}
               </h3>
-              <p className="mt-1.5 max-w-md font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
+              <p className="type-body-sm mt-1.5 max-w-md">
                 {value.copy}
               </p>
             </article>

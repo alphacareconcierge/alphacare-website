@@ -120,8 +120,8 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
         <h2 className="font-serif text-2xl font-normal leading-[1.25] text-navy md:text-3xl">
           Thank you for reaching out.
         </h2>
-        <span className="mx-auto my-6 block w-12 border-t border-[#BA8338]/60" aria-hidden="true" />
-        <div className="mx-auto max-w-md space-y-5 font-sans text-[0.9375rem] font-light leading-relaxed text-[#383431]">
+        <span className="mx-auto my-6 block w-12 border-t border-gold/60" aria-hidden="true" />
+        <div className="type-body-sm mx-auto max-w-md space-y-5">
           <p>Navigating care decisions requires clarity and deliberate coordination.</p>
           <p>
             We have received your note and are reviewing the details with quiet discretion. We will connect with you via your preferred method shortly to discuss how we can assist your family.
@@ -190,7 +190,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
                   delete next.preferredContactMethod;
                   return next;
                 })}
-                className="h-5 w-5 appearance-none rounded-full border border-divider bg-ivory checked:border-gold checked:bg-[radial-gradient(circle_at_center,#BA8338_0_35%,transparent_39%)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+                className="h-5 w-5 appearance-none rounded-full border border-divider bg-ivory checked:border-gold checked:bg-[radial-gradient(circle_at_center,#B48A4A_0_35%,transparent_39%)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
               />
               {method}
             </label>
@@ -214,7 +214,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
         />
         {errors.message ? <span id="message-error" className="text-xs text-[#A63A3A]">{errors.message}</span> : null}
       </label>
-      <p className="my-3 max-w-2xl font-sans text-[0.9375rem] font-light italic leading-[1.85] tracking-[0.015em] text-[#3D3B39]/75">
+      <p className="type-body-sm my-3 max-w-2xl italic text-muted/75">
         Your privacy is important to us. A general overview is all that’s needed to begin—we will provide a dedicated, secure channel if clinical details are ever helpful later.
       </p>
       {status === "error" ? (
@@ -225,7 +225,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="type-cta mt-0 inline-flex min-h-11 w-full items-center justify-center gap-3 rounded-[0.1875rem] border border-gold bg-navy px-7 py-3.5 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] disabled:cursor-wait disabled:opacity-85"
+        className="type-cta mt-0 inline-flex min-h-11 w-full items-center justify-center gap-3 rounded-[0.1875rem] border border-gold bg-navy px-7 py-3.5 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-navy/90 disabled:cursor-wait disabled:opacity-85"
       >
         {status === "submitting" ? (
           <>

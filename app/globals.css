@@ -4,7 +4,11 @@
 
 :root {
   color-scheme: light;
-  background: #faf7f2;
+  --alphacare-navy: #0b2239;
+  --alphacare-ivory: #f7f3ec;
+  --alphacare-gold: #b48a4a;
+  --alphacare-muted: #6e6a63;
+  background: var(--alphacare-ivory);
 }
 
 html {
@@ -13,18 +17,18 @@ html {
 }
 
 body {
-  background: #faf7f2;
-  color: #0c1d33;
+  background: var(--alphacare-ivory);
+  color: var(--alphacare-navy);
   overflow-x: hidden;
 }
 
 @layer components {
   .type-hero {
-    @apply font-serif font-medium leading-[1.22] text-navy;
+    @apply font-serif font-normal leading-[1.22] text-navy;
   }
 
   .type-section {
-    @apply font-serif font-medium leading-[1.22] text-navy;
+    @apply font-serif font-normal leading-[1.22] text-navy;
   }
 
   .type-card {
@@ -32,23 +36,23 @@ body {
   }
 
   .type-editorial {
-    @apply font-serif font-medium leading-[1.25] text-navy;
+    @apply font-serif font-normal leading-[1.25] text-navy;
   }
 
   .type-body {
-    @apply max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39];
+    @apply max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.78] tracking-[0.01em] text-muted;
   }
 
   .type-body-sm {
-    @apply font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39];
+    @apply font-sans text-[0.9375rem] font-light leading-[1.78] tracking-[0.01em] text-muted;
   }
 
   .type-eyebrow {
-    @apply font-sans text-[0.65625rem] font-semibold uppercase tracking-[0.16em] text-gold;
+    @apply font-sans text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-gold;
   }
 
   .type-cta {
-    @apply font-sans text-xs font-semibold uppercase tracking-[0.11em];
+    @apply font-sans text-xs font-medium uppercase tracking-[0.11em];
   }
 
   .type-nav {
@@ -64,7 +68,7 @@ body {
   }
 
   .type-helper {
-    @apply font-sans text-[0.875rem] font-normal italic leading-[1.65] text-[#555];
+    @apply font-sans text-[0.875rem] font-light italic leading-[1.65] text-muted;
   }
 
   .type-meta {
@@ -76,7 +80,7 @@ body {
   }
 
   .type-brand-name {
-    @apply font-serif font-medium uppercase tracking-[0.15em];
+    @apply font-serif font-normal uppercase tracking-[0.15em];
   }
 
   .type-brand-subline {

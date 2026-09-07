@@ -19,7 +19,7 @@ export default function TermsPage() {
       </p>
 
       <div>
-        <p className="mb-4 max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
+        <p className="type-body mb-4 max-w-2xl">
           By using this website, you agree to these terms. The information on this website is provided for general informational purposes about AlphaCare’s private care management, healthcare advocacy, and family coordination services.
         </p>
 
@@ -27,7 +27,7 @@ export default function TermsPage() {
           <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
             No Medical Advice
           </h2>
-          <p className="mb-4 max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
+          <p className="type-body mb-4 max-w-2xl">
             AlphaCare Concierge Care Management is not a medical practice and does not provide diagnosis, treatment, emergency services, or medical advice through this website. For medical concerns, contact a licensed healthcare provider. For emergencies, call emergency services.
           </p>
         </section>
@@ -36,7 +36,7 @@ export default function TermsPage() {
           <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
             Service Scope
           </h2>
-          <p className="mb-4 max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
+          <p className="type-body mb-4 max-w-2xl">
             AlphaCare provides private care management, coordination, and family advocacy. AlphaCare does not provide direct emergency medical response and does not replace the medical diagnosis, clinical judgment, or legal advice of physicians, attorneys, financial advisors, or other licensed professionals.
           </p>
         </section>
@@ -45,7 +45,7 @@ export default function TermsPage() {
           <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
             Website Content
           </h2>
-          <p className="mb-4 max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
+          <p className="type-body mb-4 max-w-2xl">
             Website content may be updated from time to time. Use of this website does not create a client relationship until AlphaCare and the family have mutually agreed to proceed with services.
           </p>
         </section>
@@ -54,7 +54,7 @@ export default function TermsPage() {
           <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
             Website Inquiries
           </h2>
-          <p className="mb-4 max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
+          <p className="type-body mb-4 max-w-2xl">
             Please do not submit detailed medical records, protected health information, or urgent medical requests through this website. If clinical details are ever helpful later, AlphaCare will provide a secure channel for sharing additional information.
           </p>
         </section>
@@ -63,7 +63,7 @@ export default function TermsPage() {
           <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
             Contact
           </h2>
-          <p className="mb-4 max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
+          <p className="type-body mb-4 max-w-2xl">
             Questions about these terms may be sent to{" "}
             <a className="text-navy underline decoration-gold underline-offset-4 transition-colors hover:text-gold" href={`mailto:${business.email}`}>
               {business.email}

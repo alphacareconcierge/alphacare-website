@@ -19,7 +19,7 @@ export default function PrivacyPage() {
       </p>
 
       <div>
-        <p className="mb-4 max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
+        <p className="type-body mb-4 max-w-2xl">
           AlphaCare respects the privacy of families who contact us for healthcare advocacy and care coordination support. This policy explains how information submitted through this website may be used.
         </p>
 
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
           <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
             Information We Collect
           </h2>
-          <p className="mb-4 max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
+          <p className="type-body mb-4 max-w-2xl">
             The consultation form may collect your name, email address, optional phone number, preferred contact method, and a brief description of what brings you to AlphaCare.
           </p>
         </section>
@@ -36,7 +36,7 @@ export default function PrivacyPage() {
           <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
             Protected Health Information
           </h2>
-          <p className="mb-4 max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
+          <p className="type-body mb-4 max-w-2xl">
             Please do not submit detailed medical information, medical records, or protected health information through this website form. A general overview is all that is needed to begin. If additional information is needed, AlphaCare will provide a dedicated, secure way to share it.
           </p>
         </section>
@@ -45,7 +45,7 @@ export default function PrivacyPage() {
           <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
             How We Use Information
           </h2>
-          <p className="mb-4 max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
+          <p className="type-body mb-4 max-w-2xl">
             Information submitted through the website is used to respond to your inquiry, understand the general nature of your request, and coordinate next steps for an initial conversation.
           </p>
         </section>
@@ -54,7 +54,7 @@ export default function PrivacyPage() {
           <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
             Email Communications
           </h2>
-          <p className="mb-4 max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
+          <p className="type-body mb-4 max-w-2xl">
             When you submit an inquiry, AlphaCare may contact you using the email address, phone number, or preferred contact method you provide. Website form submissions are routed to AlphaCare for review and response.
           </p>
         </section>
@@ -63,7 +63,7 @@ export default function PrivacyPage() {
           <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
             Contact
           </h2>
-          <p className="mb-4 max-w-2xl font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
+          <p className="type-body mb-4 max-w-2xl">
             Questions about this privacy policy may be sent to{" "}
             <a className="text-navy underline decoration-gold underline-offset-4 transition-colors hover:text-gold" href={`mailto:${business.email}`}>
               {business.email}

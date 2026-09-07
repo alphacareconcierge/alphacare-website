@@ -1,24 +1,24 @@
 import type { Metadata } from "next";
 import type { Viewport } from "next";
-import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
+import { Newsreader, Source_Sans_3 } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { business } from "@/lib/content";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
+const newsreader = Newsreader({
   subsets: ["latin"],
   variable: "--font-serif",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600"],
   style: ["normal", "italic"]
 });
 
-const sans = Plus_Jakarta_Sans({
+const sans = Source_Sans_3({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
-  weight: ["300", "400", "500"]
+  weight: ["300", "400", "500", "600"]
 });
 
 export const metadata: Metadata = {
@@ -70,13 +70,13 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#FAF7F2"
+  themeColor: "#F7F3EC"
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${cormorant.variable} ${sans.variable} flex min-h-screen flex-col bg-ivory font-serif text-navy antialiased`}>
+      <body className={`${newsreader.variable} ${sans.variable} flex min-h-screen flex-col bg-ivory font-sans text-navy antialiased`}>
         <a
           href="#main-content"
           className="type-nav sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-gold focus:px-4 focus:py-3 focus:text-navy"

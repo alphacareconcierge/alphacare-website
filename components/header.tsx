@@ -23,7 +23,7 @@ export function Header() {
   if (isHome) {
     return (
       <header className="absolute inset-x-0 top-0 z-50 overflow-x-hidden border-b border-[#E3DBCF]/55 bg-transparent">
-        <div className="relative flex h-[7.25rem] w-full max-w-full items-center justify-between gap-8 px-8 lg:px-[6rem]">
+        <div className="relative flex h-[5.75rem] w-full max-w-full items-center justify-between gap-8 px-5 lg:h-[7.25rem] lg:px-[6rem]">
           <Link
             href="/"
             onClick={() => setMenuOpen(false)}
@@ -36,13 +36,13 @@ export function Header() {
               width={88}
               height={107}
               priority
-              className="h-auto w-[4.5rem] object-contain"
+              className="h-auto w-[3.75rem] object-contain lg:w-[4.5rem]"
             />
             <span className="flex min-w-0 flex-col leading-none">
-              <span className="type-brand-name text-[1.625rem] text-navy">
+              <span className="type-brand-name text-[1.125rem] text-navy lg:text-[1.625rem]">
                 Alpha<span className="text-gold">Care</span>
               </span>
-              <span className="type-brand-subline mt-2 text-[0.4375rem] text-navy">
+              <span className="type-brand-subline mt-2 text-[0.375rem] text-navy lg:text-[0.4375rem]">
                 Concierge Care Management
               </span>
             </span>
@@ -71,7 +71,7 @@ export function Header() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`relative pb-3 font-serif text-[1rem] font-normal leading-none transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold ${
+                  className={`relative pb-3 font-sans text-[0.8125rem] font-medium leading-none tracking-[0.06em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold ${
                     isActive
                       ? "text-navy after:absolute after:bottom-0 after:left-0 after:h-px after:w-[3rem] after:bg-gold"
                       : "text-navy hover:text-gold"
@@ -85,7 +85,7 @@ export function Header() {
 
           <Link
             href="/contact"
-            className="hidden h-[2.75rem] min-w-[15.75rem] shrink-0 items-center justify-center gap-6 bg-navy px-7 font-serif text-[1rem] font-normal leading-none text-ivory transition-all duration-300 ease-in-out hover:bg-[#132640] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:inline-flex"
+            className="hidden min-h-11 min-w-[15.75rem] shrink-0 items-center justify-center gap-6 border border-gold bg-navy px-7 py-3.5 font-sans text-xs font-medium uppercase leading-none tracking-[0.11em] text-ivory transition-all duration-300 ease-in-out hover:bg-navy/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:inline-flex"
           >
             Start the Conversation
             <span aria-hidden="true">→</span>
@@ -104,7 +104,7 @@ export function Header() {
                 key={item.label}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className={`flex min-h-11 items-center justify-center border-b border-divider/70 py-3 font-serif text-lg transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold ${
+                className={`flex min-h-11 items-center justify-center border-b border-divider/70 py-3 font-sans text-sm font-medium uppercase tracking-[0.1em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold ${
                   pathname === item.href && item.label !== "Resources" ? "text-gold" : "text-navy hover:text-gold"
                 }`}
               >
@@ -115,7 +115,7 @@ export function Header() {
           <Link
             href="/contact"
             onClick={() => setMenuOpen(false)}
-            className="type-cta mt-8 flex min-h-12 items-center justify-center rounded-[0.1875rem] border border-gold bg-navy px-7 py-3.5 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+            className="type-cta mt-8 flex min-h-12 items-center justify-center rounded-[0.1875rem] border border-gold bg-navy px-7 py-3.5 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-navy/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
           >
             Start the Conversation
           </Link>
@@ -189,7 +189,7 @@ export function Header() {
 
         <Link
           href="/contact"
-          className="type-cta hidden shrink-0 items-center justify-center whitespace-nowrap rounded-[0.1875rem] border border-gold bg-navy px-7 py-3.5 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:inline-flex"
+          className="type-cta hidden shrink-0 items-center justify-center whitespace-nowrap rounded-[0.1875rem] border border-gold bg-navy px-7 py-3.5 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-navy/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:inline-flex"
         >
           Start the Conversation
         </Link>
@@ -217,7 +217,7 @@ export function Header() {
         <Link
           href="/contact"
           onClick={() => setMenuOpen(false)}
-          className="type-cta mt-8 flex min-h-12 items-center justify-center rounded-[0.1875rem] border border-gold bg-navy px-7 py-3.5 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+          className="type-cta mt-8 flex min-h-12 items-center justify-center rounded-[0.1875rem] border border-gold bg-navy px-7 py-3.5 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-navy/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
         >
           Start the Conversation
         </Link>
