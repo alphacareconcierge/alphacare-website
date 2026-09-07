@@ -23,7 +23,7 @@ export default function HomePage() {
         <div className="pointer-events-none absolute inset-0 bg-ivory/45 lg:hidden" />
 
         <div className="relative z-10 flex min-h-[37.125rem] w-full flex-col justify-end px-6 pb-12 pt-[8.875rem] sm:px-10 lg:px-[6.75rem]">
-          <div className="max-w-[36rem]">
+          <div className="w-full max-w-[calc(100vw-3rem)] sm:max-w-[36rem]">
             <div className="mb-5 flex items-center gap-4 lg:gap-7">
               <span className="h-px w-8 bg-gold lg:w-11" aria-hidden="true" />
               <p className="font-sans text-[0.6875rem] font-light uppercase leading-[1.2] tracking-[0.1em] text-navy lg:leading-none lg:tracking-[0.28em]">
@@ -43,7 +43,7 @@ export default function HomePage() {
               </span>
             </h1>
 
-            <p className="mt-5 max-w-[34rem] font-sans text-[1.0625rem] font-light leading-[1.55] text-navy sm:text-[1.125rem] lg:font-normal lg:leading-[1.35]">
+            <p className="mt-5 w-full max-w-[calc(100vw-3rem)] font-sans text-[1.0625rem] font-light leading-[1.55] text-navy sm:max-w-[34rem] sm:text-[1.125rem] lg:font-normal lg:leading-[1.35]">
               AlphaCare works with families to understand what is happening,{" "}<br className="hidden lg:block" />
               keep important information connected, and navigate decisions{" "}<br className="hidden lg:block" />
               as needs change.
@@ -78,12 +78,12 @@ export default function HomePage() {
             </p>
           </div>
 
-          <h2 className="max-w-[39rem] font-serif text-[2.85rem] font-normal leading-[1.05] tracking-[-0.03em] text-navy max-[1200px]:text-[2.5rem] max-md:text-[2.15rem]">
+          <h2 className="w-full max-w-[calc(100vw-3rem)] font-serif text-[2.85rem] font-normal leading-[1.05] tracking-[-0.03em] text-navy sm:max-w-[39rem] max-[1200px]:text-[2.5rem] max-md:text-[2.15rem]">
             There is a great deal to hold<br className="hidden lg:block" />{" "}
             when someone you love needs care.
           </h2>
 
-          <div className="mt-6 max-w-[37rem] space-y-5 font-sans text-[1.0625rem] font-light leading-[1.58] text-navy sm:text-[1.125rem] lg:text-[1.25rem] lg:leading-[1.35]">
+          <div className="mt-6 w-full max-w-[calc(100vw-3rem)] space-y-5 font-sans text-[1.0625rem] font-light leading-[1.58] text-navy sm:max-w-[37rem] sm:text-[1.125rem] lg:text-[1.25rem] lg:leading-[1.35]">
             <p>
               Appointments. Decisions. Questions that arise later.{" "}<br className="hidden lg:block" />
               Information shared with one person but needed by another.{" "}<br className="hidden lg:block" />

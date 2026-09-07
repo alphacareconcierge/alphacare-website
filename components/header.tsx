@@ -15,7 +15,6 @@ export function Header() {
         { href: "/", label: "Home" },
         { href: "/about", label: "About" },
         { href: "/services", label: "Services" },
-        { href: "/services", label: "Resources" },
         { href: "/contact", label: "Contact" }
       ]
     : navItems;
@@ -65,7 +64,7 @@ export function Header() {
 
           <nav className="hidden items-center gap-[2.55rem] lg:flex" aria-label="Primary navigation">
             {displayedNavItems.map((item) => {
-              const isActive = pathname === item.href && item.label !== "Resources";
+              const isActive = pathname === item.href;
 
               return (
                 <Link
@@ -104,7 +103,7 @@ export function Header() {
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
                 className={`flex min-h-11 items-center justify-center border-b border-divider/70 py-3 font-sans text-sm font-medium uppercase tracking-[0.1em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold ${
-                  pathname === item.href && item.label !== "Resources" ? "text-gold" : "text-navy hover:text-gold"
+                  pathname === item.href ? "text-gold" : "text-navy hover:text-gold"
                 }`}
               >
                 {item.label}
