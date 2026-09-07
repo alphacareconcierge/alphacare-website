@@ -7,7 +7,7 @@ export default function HomePage() {
       <section className="relative flex min-h-[40rem] w-full items-center overflow-hidden bg-[#FAF7F2] sm:min-h-[43.75rem] lg:min-h-[47.5rem]">
         <div className="absolute inset-0 h-full w-full">
           <Image
-            src="/brand/alphacare-lighthouse-hero.jpg"
+            src="/hero-coastal-beacon.png"
             alt="Tranquil coastal shoreline with foreground beach roses and distant historic lighthouse on the horizon"
             fill
             priority
