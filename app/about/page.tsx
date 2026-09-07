@@ -35,14 +35,11 @@ export default function AboutPage() {
           <p className="type-eyebrow">
             About Alpha Care
           </p>
-          <span className="mt-5 block h-px w-8 bg-gold" aria-hidden="true" />
-          <h1 className="type-hero mt-[2.3125rem] max-w-[25rem] font-normal tracking-tight text-[#1C2430] text-[2.75rem] sm:text-[3.5rem] lg:text-[2.625rem] min-[1400px]:text-[3.25rem]">
-            <span className="block">Care may involve many people.</span>
-            <em className="block font-serif text-[2.35rem] font-normal italic text-[#1C2430] sm:text-[3rem] lg:text-[2.1875rem] min-[1400px]:text-[2.625rem]">
-              Families still experience all of it.
-            </em>
+          <h1 className="mt-[2.3125rem] max-w-[42rem] font-serif text-4xl font-normal leading-[1.15] tracking-tight text-[#1C2430] sm:text-5xl lg:text-[3.25rem]">
+            Care may involve many people.<br />
+            <span className="font-serif font-normal italic text-[#1C2430]">Families still experience all of it.</span>
           </h1>
-          <span className="mt-[2.125rem] block h-px w-8 bg-gold" aria-hidden="true" />
+          <span className="mt-[2.125rem] block h-px w-10 bg-[#BA8338]/60" aria-hidden="true" />
           <p className="type-body mt-[2rem] max-w-xl text-grayblue">
             Complex care rarely breaks down in the exam room—it fractures in the quiet spaces between appointments, providers, and family members. Built on years of direct clinical experience, AlphaCare provides the steady coordination and attentive oversight families need to navigate each step with clarity.
           </p>
