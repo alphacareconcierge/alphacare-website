@@ -11,7 +11,7 @@ export default function HomePage() {
           fill
           priority
           sizes="100vw"
-          className="origin-[82%_58%] scale-[1.18] object-cover object-[76%_center] brightness-[0.99] contrast-[0.96] saturate-[0.94] sm:scale-110 lg:origin-[100%_65%] lg:scale-[2.75] lg:object-right"
+          className="origin-[82%_58%] scale-[1.18] object-cover object-[76%_center] brightness-[0.99] contrast-[0.96] saturate-[0.94] sm:scale-110 lg:scale-100 lg:object-center"
         />
         <div
           className="pointer-events-none absolute inset-0"
@@ -51,10 +51,9 @@ export default function HomePage() {
 
             <Link
               href="/contact"
-              className="mt-5 inline-flex min-h-11 min-w-[14.625rem] items-center justify-center gap-8 bg-navy px-7 py-3.5 font-sans text-xs font-medium uppercase leading-none tracking-[0.11em] text-ivory transition-colors duration-300 hover:bg-navy/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+              className="mt-5 inline-flex min-h-10 min-w-[12.875rem] items-center justify-center bg-navy px-6 py-3 font-sans text-[0.6875rem] font-medium uppercase leading-none tracking-[0.11em] text-ivory transition-colors duration-300 hover:bg-navy/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
             >
               Start the Conversation
-              <span aria-hidden="true">→</span>
             </Link>
           </div>
 

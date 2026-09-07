@@ -85,10 +85,9 @@ export function Header() {
 
           <Link
             href="/contact"
-            className="hidden min-h-11 min-w-[15.75rem] shrink-0 items-center justify-center gap-6 border border-gold bg-navy px-7 py-3.5 font-sans text-xs font-medium uppercase leading-none tracking-[0.11em] text-ivory transition-all duration-300 ease-in-out hover:bg-navy/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:inline-flex"
+            className="hidden min-h-10 min-w-[12.875rem] shrink-0 items-center justify-center bg-navy px-6 py-3 font-sans text-[0.6875rem] font-medium uppercase leading-none tracking-[0.11em] text-ivory transition-all duration-300 ease-in-out hover:bg-navy/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:inline-flex"
           >
             Start the Conversation
-            <span aria-hidden="true">→</span>
           </Link>
         </div>
 

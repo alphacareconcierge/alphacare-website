@@ -50,15 +50,9 @@ export function Footer() {
             <h2 className="mb-2 font-sans text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-gold">
               Inquiries
             </h2>
-            <p className="mb-2 font-sans text-xs font-normal leading-[1.5] text-ivory/80">
+            <p className="max-w-[15rem] font-sans text-xs font-normal leading-[1.5] text-ivory/80">
               Every conversation begins with where things stand today.
             </p>
-            <Link
-              href="/contact"
-              className="font-sans text-xs font-medium leading-[1.5] text-gold transition hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
-            >
-              Start the conversation →
-            </Link>
           </div>
         </div>
 
