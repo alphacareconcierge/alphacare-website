@@ -18,8 +18,8 @@ const config: Config = {
         ink: "#0C1D33"
       },
       fontFamily: {
-        serif: ["var(--font-cormorant)", "Georgia", "serif"],
-        sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"]
+        serif: ["var(--font-serif)", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"]
       },
       boxShadow: {
         soft: "0 16px 48px rgba(12, 29, 51, 0.06)"

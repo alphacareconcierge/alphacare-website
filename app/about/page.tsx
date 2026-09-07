@@ -36,9 +36,9 @@ export default function AboutPage() {
             About Alpha Care
           </p>
           <span className="mt-5 block h-px w-8 bg-gold" aria-hidden="true" />
-          <h1 className="type-hero mt-[2.3125rem] max-w-[25rem] text-[2.75rem] sm:text-[3.5rem] lg:text-[2.625rem] min-[1400px]:text-[3.25rem]">
+          <h1 className="type-hero mt-[2.3125rem] max-w-[25rem] font-normal tracking-tight text-[#1C2430] text-[2.75rem] sm:text-[3.5rem] lg:text-[2.625rem] min-[1400px]:text-[3.25rem]">
             <span className="block">Care may involve many people.</span>
-            <em className="block font-serif text-[2.35rem] italic sm:text-[3rem] lg:text-[2.1875rem] min-[1400px]:text-[2.625rem]">
+            <em className="block font-serif text-[2.35rem] font-normal italic text-[#1C2430] sm:text-[3rem] lg:text-[2.1875rem] min-[1400px]:text-[2.625rem]">
               Families still experience all of it.
             </em>
           </h1>
