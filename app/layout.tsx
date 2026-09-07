@@ -10,7 +10,7 @@ const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-serif",
   display: "swap",
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"]
 });
 
@@ -76,7 +76,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${cormorant.variable} ${sans.variable} flex min-h-screen flex-col bg-ivory font-sans text-[#1C2430] antialiased`}>
+      <body className={`${cormorant.variable} ${sans.variable} flex min-h-screen flex-col bg-ivory font-serif text-navy antialiased`}>
         <a
           href="#main-content"
           className="type-nav sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-gold focus:px-4 focus:py-3 focus:text-navy"

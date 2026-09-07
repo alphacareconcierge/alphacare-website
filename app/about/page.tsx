@@ -35,9 +35,9 @@ export default function AboutPage() {
           <p className="text-xs uppercase tracking-[0.24em] text-[#BA8338] font-medium">
             About Alpha Care
           </p>
-          <h1 className="mt-[2.3125rem] max-w-2xl font-serif text-4xl font-normal leading-[1.15] tracking-tight text-[#1C2430] sm:text-5xl lg:text-[3.25rem]">
+          <h1 className="mt-[2.3125rem] max-w-2xl font-serif text-4xl sm:text-5xl lg:text-[3.25rem] text-[#1C2430] tracking-tight leading-[1.15] font-normal">
             Care may involve many people.<br />
-            <span className="italic font-normal">Families still experience all of it.</span>
+            <span className="font-serif italic font-normal">Families still experience all of it.</span>
           </h1>
           <span className="mt-[2.125rem] block h-px w-10 bg-[#BA8338]/60" aria-hidden="true" />
           <p className="type-body mt-[2rem] max-w-xl text-grayblue">
