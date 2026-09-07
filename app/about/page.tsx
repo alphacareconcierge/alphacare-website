@@ -47,7 +47,7 @@ export default function AboutPage() {
         <div className="px-6 pb-16 sm:px-12 lg:px-[4.1875rem] lg:pb-0 lg:pt-[4.375rem]">
           <div className="relative aspect-[4/3] min-h-[24rem] overflow-hidden rounded-sm border border-[#E3DBCF]/70 lg:aspect-auto lg:h-[31.25rem] lg:max-h-[31.25rem]">
             <Image
-              src="/brand/alphacare-about-still-life.jpg"
+              src="/about-hero.png"
               alt="White hydrangeas in a ceramic vase beside books and a brass dish"
               fill
               priority
