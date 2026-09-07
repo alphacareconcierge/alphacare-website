@@ -63,10 +63,6 @@ export default function ServicesPage() {
           </p>
         </div>
         <div className="mt-12 lg:mt-0 lg:max-w-[26rem]">
-          <span className="block h-px w-10 bg-gold" aria-hidden="true" />
-          <p className="mt-5 font-sans text-[0.65625rem] font-medium uppercase tracking-[0.16em] text-gold">
-            How We Can Help
-          </p>
           <div className="mt-[1.1875rem]">
             {helpItems.map((item, index) => (
               <article key={item.title} className={`${index > 0 ? "mt-8 border-t border-divider pt-8" : ""}`}>
