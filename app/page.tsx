@@ -3,86 +3,117 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div className="bg-ivory text-navy">
-      <section className="relative flex min-h-[40rem] w-full items-center overflow-hidden bg-[#FAF7F2] sm:min-h-[43.75rem] lg:min-h-[47.5rem]">
-        <div className="absolute inset-0 h-full w-full">
-          <Image
-            src="/hero-coastal-beacon.png"
-            alt="Tranquil coastal shoreline with foreground beach roses and distant historic lighthouse on the horizon"
-            fill
-            priority
-            sizes="100vw"
-            className="mask-gradient-left object-cover object-[78%_center] brightness-[0.98] contrast-[0.96] sm:object-[75%_center] lg:object-[78%_center]"
-          />
-        </div>
-
+    <div className="overflow-x-hidden bg-ivory text-navy">
+      <section className="relative min-h-[37.125rem] overflow-hidden bg-ivory [contain:paint]">
+        <Image
+          src="/hero-coastal-beacon.png"
+          alt="Coastal New England lighthouse above rocky shoreline at golden hour"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-right brightness-[0.99] contrast-[0.96] saturate-[0.94]"
+          style={{ transform: "scale(2.75)", transformOrigin: "100% 65%" }}
+        />
         <div
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(250, 247, 242, 0.94) 0%, rgba(250, 247, 242, 0.85) 30%, rgba(250, 247, 242, 0.45) 55%, transparent 80%)"
+              "linear-gradient(to right, rgba(250, 247, 242, 0.86) 0%, rgba(250, 247, 242, 0.72) 25%, rgba(250, 247, 242, 0.22) 48%, rgba(250, 247, 242, 0) 72%)"
           }}
         />
-        <div className="pointer-events-none absolute inset-0 bg-[#FAF7F2]/40 lg:hidden" />
 
-        <div className="relative z-10 mx-auto flex min-h-[36.25rem] w-full max-w-7xl flex-col justify-between px-6 py-20 sm:min-h-[40rem] sm:px-10 lg:min-h-[43.75rem] lg:px-16 lg:py-24">
-          <div className="max-w-xl space-y-6 pt-4 sm:pt-8 lg:max-w-2xl">
-            <div className="space-y-3">
-              <p className="font-sans text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-gold sm:text-xs">
-                Private Concierge Care Management
+        <div className="relative z-10 flex min-h-[37.125rem] w-full flex-col justify-end px-6 pb-12 pt-[8.875rem] sm:px-10 lg:px-[6.75rem]">
+          <div className="max-w-[36rem]">
+            <div className="mb-5 flex items-center gap-7">
+              <span className="h-px w-11 bg-gold" aria-hidden="true" />
+              <p className="font-sans text-[0.6875rem] font-light uppercase leading-none tracking-[0.36em] text-navy">
+                Exceptional Care. A More Certain Path.
               </p>
-              <div className="h-px w-12 bg-gold/60" aria-hidden="true" />
             </div>
 
-            <h1 className="font-serif text-4xl font-light leading-[1.12] tracking-tight text-[#1C2430] sm:text-5xl lg:text-[3.6rem]">
-              When care becomes complicated,<br />
-              <span className="font-normal italic">it helps to have someone beside you.</span>
+            <h1 className="font-serif text-[3.875rem] font-normal leading-[0.98] tracking-[-0.03em] text-navy max-[1200px]:text-[3.35rem] max-md:text-[2.85rem]">
+              When care becomes<br />
+              complicated, it helps<br />
+              to have someone<br />
+              beside you.
             </h1>
 
-            <p className="max-w-lg pt-1 font-sans text-base font-light leading-relaxed text-[#4A5568] sm:text-lg">
-              AlphaCare works with families to understand what is happening, keep important information connected, and navigate decisions as needs change.
+            <p className="mt-5 max-w-[34rem] font-serif text-[1.25rem] font-normal leading-[1.26] text-navy max-md:text-lg">
+              AlphaCare works with families to understand what is happening,
+              keep important information connected, and navigate decisions
+              as needs change.
             </p>
 
-            <div className="pt-3">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-3 rounded-sm bg-[#0F1E36] px-8 py-4 font-sans text-xs font-medium uppercase tracking-[0.2em] text-[#FAF7F2] shadow-soft transition-colors duration-200 hover:bg-[#1A2E4C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
-              >
-                Start the Conversation
-                <span className="text-sm" aria-hidden="true">→</span>
-              </Link>
-            </div>
+            <Link
+              href="/contact"
+              className="mt-5 inline-flex h-11 min-w-[14.625rem] items-center justify-center gap-8 bg-navy px-6 font-serif text-[1rem] font-normal leading-none text-ivory transition-colors duration-300 hover:bg-[#132640] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+            >
+              Start the Conversation
+              <span aria-hidden="true">→</span>
+            </Link>
           </div>
 
-          <div className="flex items-center gap-3 pt-12 sm:pt-16">
-            <div className="h-5 w-[1.5px] bg-gold" aria-hidden="true" />
-            <span className="font-sans text-[0.625rem] font-medium uppercase tracking-[0.26em] text-[#5A6472] sm:text-[0.6875rem]">
-              Clarity &nbsp;/&nbsp; Coordination &nbsp;/&nbsp; Peace of Mind
-            </span>
+          <div className="absolute bottom-[3.25rem] right-[4.2rem] hidden items-center gap-6 lg:flex">
+            <span className="h-[4.25rem] w-px bg-ivory" aria-hidden="true" />
+            <p className="font-sans text-[0.75rem] font-semibold uppercase leading-[1.55] tracking-[0.34em] text-ivory">
+              Steady<br />
+              Through<br />
+              What<br />
+              Changes
+            </p>
           </div>
         </div>
       </section>
 
-      <section className="border-b border-divider px-6 py-10 text-center sm:px-12 md:py-12">
-        <p className="mx-auto max-w-xl font-serif text-[clamp(1.25rem,2vw,1.5rem)] font-light italic leading-[1.45] text-navy">
-          Good care management is quiet work—bringing order to complexity so your family can simply focus on what matters most.
-        </p>
-        <span className="mx-auto mb-0 mt-4 block h-px w-8 bg-gold" aria-hidden="true" />
-      </section>
+      <section className="grid min-h-[26.875rem] border-t border-[#E3DBCF]/70 bg-ivory lg:grid-cols-[48%_35%_17%]">
+        <div className="px-6 pb-12 pt-8 sm:px-10 lg:px-0 lg:pb-0 lg:pl-[6.75rem] lg:pr-12">
+          <div className="mb-6 flex items-center gap-7">
+            <span className="h-px w-11 bg-gold" aria-hidden="true" />
+            <p className="font-sans text-[0.6875rem] font-light uppercase leading-none tracking-[0.36em] text-navy">
+              Life Doesn&apos;t Come With a Roadmap.
+            </p>
+          </div>
 
-      <section className="px-6 pb-14 pt-8 text-center sm:px-12 md:pb-16 md:pt-10">
-        <h2 className="mb-3 font-serif text-[clamp(1.25rem,1.8vw,1.5rem)] font-normal leading-[1.25] text-navy">
-          A thoughtful partner in navigating care.
-        </h2>
-        <p className="mx-auto mb-6 max-w-md font-sans text-[0.9375rem] font-light leading-[1.85] tracking-[0.015em] text-[#3D3B39]">
-          Whether you are coordinating care from a distance or managing an unexpected transition, we begin by listening to what your family is experiencing.
-        </p>
-        <Link
-          href="/contact"
-          className="type-cta mt-2 inline-flex min-h-11 items-center justify-center rounded-[0.1875rem] border border-gold bg-navy px-7 py-3.5 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
-        >
-          Start the Conversation
-        </Link>
+          <h2 className="max-w-[39rem] font-serif text-[2.85rem] font-normal leading-[1.05] tracking-[-0.03em] text-navy max-[1200px]:text-[2.5rem] max-md:text-[2.15rem]">
+            There is a great deal to hold<br className="hidden lg:block" />
+            when someone you love needs care.
+          </h2>
+
+          <div className="mt-6 max-w-[37rem] space-y-5 font-serif text-[1.25rem] font-normal leading-[1.25] text-navy max-md:text-lg">
+            <p>
+              Appointments. Decisions. Questions that arise later.<br />
+              Information shared with one person but needed by another.<br />
+              Changes that seem small until they are not.
+            </p>
+            <p>
+              AlphaCare brings thoughtful attention to the details,<br />
+              helping families understand what is happening,<br />
+              what needs attention, and what comes next.
+            </p>
+          </div>
+        </div>
+
+        <div className="relative min-h-[22rem] overflow-hidden lg:min-h-full">
+          <Image
+            src="/brand/about page-hero.png"
+            alt="White hydrangeas in a ceramic vase beside books in a quiet coastal interior"
+            fill
+            sizes="(max-width: 1024px) 100vw, 35vw"
+            className="object-cover object-[62%_center] brightness-[0.99] contrast-[0.96] saturate-[0.94]"
+          />
+        </div>
+
+        <aside className="flex items-center bg-ivory px-6 py-12 sm:px-10 lg:px-14">
+          <div>
+            <span className="mb-7 block h-px w-11 bg-gold" aria-hidden="true" />
+            <p className="font-serif text-[1.55rem] font-normal italic leading-[1.22] text-gold">
+              Thoughtful<br />
+              support for<br />
+              what matters<br />
+              most.
+            </p>
+          </div>
+        </aside>
       </section>
     </div>
   );
