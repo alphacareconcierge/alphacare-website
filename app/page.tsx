@@ -1,51 +1,65 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 export default function HomePage() {
   return (
     <div className="bg-ivory text-navy">
-      <section className="grid overflow-hidden border-b border-gold/45 lg:h-[34rem] lg:grid-cols-[45.45%_54.55%] min-[1400px]:h-[35.75rem]">
-        <div className="px-6 py-16 sm:px-12 lg:px-0 lg:py-0">
-          <div className="lg:ml-[4.1875rem] lg:pt-16 min-[1400px]:pt-[5.25rem]">
-            <p className="max-w-[20rem] font-sans text-[0.65625rem] font-medium uppercase tracking-[0.16em] text-gold sm:max-w-none">
-              PRIVATE CONCIERGE CARE MANAGEMENT
-            </p>
-            <span className="mt-[1.625rem] block h-px w-[2.8125rem] bg-gold" aria-hidden="true" />
-
-            <h1 className="type-hero mt-[1.25rem] max-w-[21rem] text-[clamp(2rem,3.2vw,2.6rem)] font-light sm:max-w-[39.25rem]">
-              <span className="block">When care becomes complicated,</span>
-              <em className="block font-serif italic">
-                it helps to have someone beside you.
-              </em>
-            </h1>
-
-            <span className="mt-[1.8125rem] block h-px w-[2.8125rem] bg-gold" aria-hidden="true" />
-
-            <p className="type-body mt-[1.5625rem] max-w-[21rem] sm:max-w-[31.5rem]">
-              When health needs evolve, keeping track of recommendations, appointments, and next steps can quickly become overwhelming. AlphaCare brings clarity and dedicated oversight to the process—helping families stay informed, aligned, and confident in every decision.
-            </p>
-
-            <Link
-              href="/services"
-              className="type-cta mt-5 inline-flex min-h-11 items-center justify-center gap-5 rounded-[0.1875rem] border border-gold bg-navy px-7 py-3.5 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-[#132640] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold sm:min-w-[18.375rem] min-[1400px]:mt-[2.1875rem]"
-            >
-              Discover How We Help
-              <ArrowRight size={22} strokeWidth={1.5} aria-hidden="true" />
-            </Link>
-          </div>
-        </div>
-
-        <div className="relative mx-6 mb-8 aspect-[4/3] min-h-0 overflow-hidden rounded-sm border border-[#E3DBCF]/70 sm:mx-12 lg:m-0 lg:h-full lg:max-h-[31.25rem] lg:min-h-0 lg:self-center">
+      <section className="relative flex min-h-[40rem] w-full items-center overflow-hidden bg-[#FAF7F2] sm:min-h-[43.75rem] lg:min-h-[47.5rem]">
+        <div className="absolute inset-0 h-full w-full">
           <Image
             src="/brand/alphacare-lighthouse-hero.jpg"
-            alt="Lighthouse and coastal home overlooking the water"
+            alt="Tranquil coastal shoreline with foreground beach roses and distant historic lighthouse on the horizon"
             fill
             priority
-            sizes="(min-width: 1024px) 55vw, 100vw"
-            className="object-cover object-center brightness-[0.98] contrast-[0.96] saturate-[0.92]"
+            sizes="100vw"
+            className="mask-gradient-left object-cover object-[78%_center] brightness-[0.98] contrast-[0.96] sm:object-[75%_center] lg:object-[78%_center]"
           />
-          <div className="pointer-events-none absolute inset-0 bg-[#FAF7F2]/10" aria-hidden="true" />
+        </div>
+
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(250, 247, 242, 0.94) 0%, rgba(250, 247, 242, 0.85) 30%, rgba(250, 247, 242, 0.45) 55%, transparent 80%)"
+          }}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-[#FAF7F2]/40 lg:hidden" />
+
+        <div className="relative z-10 mx-auto flex min-h-[36.25rem] w-full max-w-7xl flex-col justify-between px-6 py-20 sm:min-h-[40rem] sm:px-10 lg:min-h-[43.75rem] lg:px-16 lg:py-24">
+          <div className="max-w-xl space-y-6 pt-4 sm:pt-8 lg:max-w-2xl">
+            <div className="space-y-3">
+              <p className="font-sans text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-gold sm:text-xs">
+                Private Concierge Care Management
+              </p>
+              <div className="h-px w-12 bg-gold/60" aria-hidden="true" />
+            </div>
+
+            <h1 className="font-serif text-4xl font-light leading-[1.12] tracking-tight text-[#1C2430] sm:text-5xl lg:text-[3.6rem]">
+              When care becomes complicated,<br />
+              <span className="font-normal italic">it helps to have someone beside you.</span>
+            </h1>
+
+            <p className="max-w-lg pt-1 font-sans text-base font-light leading-relaxed text-[#4A5568] sm:text-lg">
+              AlphaCare works with families to understand what is happening, keep important information connected, and navigate decisions as needs change.
+            </p>
+
+            <div className="pt-3">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-3 rounded-sm bg-[#0F1E36] px-8 py-4 font-sans text-xs font-medium uppercase tracking-[0.2em] text-[#FAF7F2] shadow-soft transition-colors duration-200 hover:bg-[#1A2E4C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+              >
+                Start the Conversation
+                <span className="text-sm" aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3 pt-12 sm:pt-16">
+            <div className="h-5 w-[1.5px] bg-gold" aria-hidden="true" />
+            <span className="font-sans text-[0.625rem] font-medium uppercase tracking-[0.26em] text-[#5A6472] sm:text-[0.6875rem]">
+              Clarity &nbsp;/&nbsp; Coordination &nbsp;/&nbsp; Peace of Mind
+            </span>
+          </div>
         </div>
       </section>
 
