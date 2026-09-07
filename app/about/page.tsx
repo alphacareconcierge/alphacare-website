@@ -32,12 +32,12 @@ export default function AboutPage() {
     <div className="bg-ivory text-navy">
       <section className="grid border-b border-divider lg:min-h-[36.9375rem] lg:grid-cols-[43.25%_56.75%]">
         <div className="px-6 py-16 sm:px-12 lg:px-[4.1875rem] lg:pb-0 lg:pt-[4.375rem]">
-          <p className="type-eyebrow">
+          <p className="text-xs uppercase tracking-[0.24em] text-[#BA8338] font-medium">
             About Alpha Care
           </p>
-          <h1 className="mt-[2.3125rem] max-w-[42rem] font-serif text-4xl font-normal leading-[1.15] tracking-tight text-[#1C2430] sm:text-5xl lg:text-[3.25rem]">
+          <h1 className="mt-[2.3125rem] max-w-2xl font-serif text-4xl font-normal leading-[1.15] tracking-tight text-[#1C2430] sm:text-5xl lg:text-[3.25rem]">
             Care may involve many people.<br />
-            <span className="font-serif font-normal italic text-[#1C2430]">Families still experience all of it.</span>
+            <span className="italic font-normal">Families still experience all of it.</span>
           </h1>
           <span className="mt-[2.125rem] block h-px w-10 bg-[#BA8338]/60" aria-hidden="true" />
           <p className="type-body mt-[2rem] max-w-xl text-grayblue">
