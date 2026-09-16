@@ -69,8 +69,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="grid min-h-[26.875rem] border-t border-[#E3DBCF]/70 bg-ivory lg:grid-cols-[48%_35%_17%]">
-        <div className="px-6 pb-12 pt-8 sm:px-10 lg:px-0 lg:pb-0 lg:pl-[6.75rem] lg:pr-12">
+      <section className="grid grid-cols-1 gap-8 border-t border-[#E3DBCF]/70 bg-ivory px-6 py-12 lg:grid-cols-[minmax(0,3fr)_minmax(0,1fr)] lg:gap-16 lg:px-[6.75rem] lg:py-20">
+        <div className="min-w-0">
           <div className="mb-6 flex items-center gap-7">
             <span className="h-px w-11 bg-gold" aria-hidden="true" />
             <p className="font-sans text-[0.6875rem] font-light uppercase leading-none tracking-[0.16em] text-navy lg:tracking-[0.28em]">
@@ -83,7 +83,7 @@ export default function HomePage() {
             when someone you love needs care.
           </h2>
 
-          <div className="page-body mt-6 w-full max-w-[calc(100vw-3rem)] space-y-5 text-navy sm:max-w-[37rem]">
+          <div className="page-body mt-6 w-full max-w-[60ch] space-y-5 text-navy">
             <p>
               Appointments. Decisions. Questions that arise later.{" "}<br className="hidden lg:block" />
               Information shared with one person but needed by another.{" "}<br className="hidden lg:block" />
@@ -97,17 +97,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="relative min-h-[22rem] overflow-hidden lg:min-h-full">
-          <Image
-            src="/brand/about page-hero.png"
-            alt="White hydrangeas in a ceramic vase beside books in a quiet coastal interior"
-            fill
-            sizes="(max-width: 1024px) 100vw, 35vw"
-            className="object-cover object-[62%_center] brightness-[0.99] contrast-[0.96] saturate-[0.94]"
-          />
-        </div>
-
-        <aside className="flex items-center bg-ivory px-6 py-12 sm:px-10 lg:px-14">
+        <aside className="flex min-w-0 items-center bg-ivory">
           <div>
             <span className="mb-7 block h-px w-11 bg-gold" aria-hidden="true" />
             <p className="page-content-heading italic text-gold">
