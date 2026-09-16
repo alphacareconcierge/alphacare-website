@@ -29,6 +29,7 @@ export function Header() {
             className="flex min-w-0 shrink-0 items-center gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
             aria-label="Alpha Care home"
           >
+            {/* Approved AlphaCare brand asset — do not alter or replace. */}
             <Image
               src="/brand/alphacare-monogram.png"
               alt=""
@@ -131,6 +132,7 @@ export function Header() {
           className="flex min-w-0 shrink items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold sm:gap-5 lg:max-w-none lg:shrink-0 min-[1400px]:gap-7"
           aria-label="Alpha Care home"
         >
+          {/* Approved AlphaCare brand asset — do not alter or replace. */}
           <Image
             src="/brand/alphacare-monogram.png"
             alt=""
