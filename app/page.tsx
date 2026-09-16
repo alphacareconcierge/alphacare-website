@@ -50,11 +50,11 @@ export default function HomePage() {
                 AlphaCare brings thoughtful attention to the details, helping families understand what is happening, what needs attention, and what comes next.
               </p>
             </div>
-            <aside className="ac-narrative-note">
-              <span className="ac-rule" aria-hidden="true" />
-              <p className="ac-editorial italic">Thoughtful support for what matters most.</p>
-            </aside>
           </div>
+          <aside className="ac-narrative-note">
+            <span className="ac-rule" aria-hidden="true" />
+            <p className="ac-editorial italic">Thoughtful support for what matters most.</p>
+          </aside>
         </div>
       </section>
     </div>

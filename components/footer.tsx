@@ -23,14 +23,16 @@ export function Footer() {
           </nav>
         </div>
         <div className="ac-footer-rule" aria-hidden="true" />
-        <p className="ac-footer-scope">
-          AlphaCare provides private care management, coordination, and family advocacy. We do not provide direct emergency medical response or replace the clinical diagnoses of your physicians.
-        </p>
-        <div className="ac-footer-bottom">
-          <p>© 2026 AlphaCare Concierge Care Management. All rights reserved.</p>
-          <div className="ac-footer-links">
-            <Link href="/privacy" className="ac-footer-link ac-focus">Privacy Policy</Link>
-            <Link href="/terms" className="ac-footer-link ac-focus">Terms of Service</Link>
+        <div className="ac-footer-lower">
+          <p className="ac-footer-scope">
+            AlphaCare provides private care management, coordination, and family advocacy. We do not provide direct emergency medical response or replace the clinical diagnoses of your physicians.
+          </p>
+          <div className="ac-footer-bottom">
+            <p>© 2026 AlphaCare Concierge Care Management. All rights reserved.</p>
+            <div className="ac-footer-links">
+              <Link href="/privacy" className="ac-footer-link ac-focus">Privacy Policy</Link>
+              <Link href="/terms" className="ac-footer-link ac-focus">Terms of Service</Link>
+            </div>
           </div>
         </div>
       </div>

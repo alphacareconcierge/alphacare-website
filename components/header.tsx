@@ -49,15 +49,17 @@ export function Header() {
       <div className="ac-shell ac-header-row">
         <Link href="/" onClick={() => setMenuOpen(false)} className="ac-brand-link ac-focus" aria-label="AlphaCare home">
           {/* Approved AlphaCare brand asset — do not alter or replace. */}
-          <Image
-            src="/brand/alphacare-logo.png"
-            alt=""
-            width={1254}
-            height={1254}
-            sizes="240px"
-            priority
-            className="ac-header-logo"
-          />
+          <span className="ac-header-logo-frame">
+            <Image
+              src="/brand/alphacare-logo.png"
+              alt=""
+              width={1254}
+              height={1254}
+              sizes="157px"
+              priority
+              className="ac-header-logo"
+            />
+          </span>
           {/* Approved AlphaCare brand asset — do not alter or replace. */}
           <Image
             src="/brand/alphacare-monogram.png"
