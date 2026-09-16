@@ -16,7 +16,7 @@ export function Footer() {
             <ul className="ac-footer-links">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="ac-footer-link ac-focus">{item.label}</Link>
+                  <Link href={item.href} className="ac-footer-link ac-focus">{item.label.toUpperCase()}</Link>
                 </li>
               ))}
             </ul>

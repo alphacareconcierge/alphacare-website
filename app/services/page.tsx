@@ -51,14 +51,14 @@ export default function ServicesPage() {
     <div className="bg-ivory text-navy">
       <section className="grid px-6 pb-[3.875rem] pt-[3.25rem] sm:px-12 lg:grid-cols-[45%_55%] lg:px-[6.375rem] lg:pb-[0.625rem] lg:pt-[1.625rem]">
         <div className="pt-[2.25rem]">
-          <p className="type-eyebrow mb-4">
+          <p className="ac-eyebrow mb-4">
             How We Can Help
           </p>
-          <h1 className="max-w-[34rem] font-serif text-[clamp(2rem,3.2vw,2.6rem)] font-light leading-[1.25] text-navy">
+          <h1 className="ac-heading-1 max-w-[34rem]">
             Care does not stop<br />
             at the appointment.
           </h1>
-          <p className="type-body mt-[1.5625rem] max-w-md">
+          <p className="ac-body-copy mt-[1.5625rem] max-w-md">
             A single consultation or hospital discharge often sets off a complex sequence of instructions, follow-ups, and daily adjustments. AlphaCare provides attentive oversight and practical coordination to help families navigate each step with clarity.
           </p>
         </div>
@@ -66,16 +66,16 @@ export default function ServicesPage() {
           <div className="mt-[1.1875rem]">
             {helpItems.map((item, index) => (
               <article key={item.title} className={`${index > 0 ? "mt-8 border-t border-divider pt-8" : ""}`}>
-                <h2 className="mb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
+                <h2 className="ac-heading-3 mb-2">
                   {item.title}
                 </h2>
-                <p className="type-body-sm max-w-2xl">
+                <p className="ac-secondary-copy max-w-2xl">
                   {item.copy}
                 </p>
               </article>
             ))}
           </div>
-          <p className="type-body-sm mt-6 max-w-2xl italic">
+          <p className="ac-secondary-copy mt-6 max-w-2xl italic">
             Tailored support shaped around your family&apos;s unique circumstances.
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function ServicesPage() {
       <section className="grid gap-10 px-6 pb-[3.625rem] pt-2 sm:px-12 lg:grid-cols-[38%_30%_32%] lg:gap-0 lg:px-[6.375rem]">
         <div className="lg:pr-[3.125rem]">
           <span className="block h-px w-10 bg-gold" aria-hidden="true" />
-          <h2 className="type-eyebrow mb-6 mt-[1.125rem]">
+          <h2 className="ac-heading-3 mb-6 mt-[1.125rem]">
             The Details Matter
           </h2>
           <div className="grid gap-x-8 gap-y-[1.25rem] md:grid-cols-2">
@@ -92,10 +92,10 @@ export default function ServicesPage() {
               <article key={item.title} className="grid grid-cols-[0.5rem_1fr] gap-4">
                 <span className="mt-[0.5rem] h-1 w-1 rounded-full bg-gold" aria-hidden="true" />
                 <div>
-                  <h3 className="font-sans text-[0.75rem] font-semibold uppercase leading-[1.45] tracking-[0.08em] text-navy">
+                  <h3 className="ac-heading-3">
                     {item.title}
                   </h3>
-                  <p className="type-body-sm mt-2 max-w-2xl">
+                  <p className="ac-secondary-copy mt-2 max-w-2xl">
                     {item.copy}
                   </p>
                 </div>
@@ -105,19 +105,19 @@ export default function ServicesPage() {
         </div>
         <div className="border-divider border-t pt-8 lg:border-l lg:border-t-0 lg:px-[2.375rem] lg:pt-0">
           <span className="block h-px w-10 bg-gold" aria-hidden="true" />
-          <h2 className="type-eyebrow mb-6 mt-[1.125rem]">
+          <h2 className="ac-heading-3 mb-6 mt-[1.125rem]">
             Our Role
           </h2>
-          <p className="type-body-sm max-w-2xl">
+          <p className="ac-secondary-copy max-w-2xl">
             AlphaCare works alongside your family and existing care network. We do not replace the medical diagnosis, clinical judgment, or legal advice of your physicians, attorneys, or financial advisors. Our purpose is to provide dedicated coordination, clear communication, and steady advocacy to support you along the way.
           </p>
         </div>
         <div className="border-divider border-t pt-8 text-center lg:border-l lg:border-t-0 lg:pl-[3.5rem] lg:pt-[1.625rem]">
           <span className="mx-auto block h-px w-14 bg-gold" aria-hidden="true" />
-          <h2 className="mx-auto mt-[2rem] max-w-[23rem] font-serif text-[1.5rem] font-normal leading-[1.25] text-navy">
+          <h2 className="ac-heading-2 mx-auto mt-[2rem] max-w-[23rem]">
             Tell us what your family is navigating.
           </h2>
-          <p className="mb-4 mt-2 font-serif text-[1.125rem] font-normal italic leading-[1.25] text-navy">
+          <p className="ac-editorial mb-4 mt-2 italic">
             We’ll begin by listening.
           </p>
           <Link

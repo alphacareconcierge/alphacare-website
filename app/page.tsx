@@ -15,7 +15,6 @@ export default function HomePage() {
             className="ac-hero-image"
           />
           <div className="ac-hero-wash" aria-hidden="true" />
-          <p className="ac-hero-caption">Steady Through<br />What Changes</p>
         </div>
 
         <div className="ac-shell ac-hero-content">
@@ -51,11 +50,11 @@ export default function HomePage() {
                 AlphaCare brings thoughtful attention to the details, helping families understand what is happening, what needs attention, and what comes next.
               </p>
             </div>
+            <aside className="ac-narrative-note">
+              <span className="ac-rule" aria-hidden="true" />
+              <p className="ac-editorial italic">Thoughtful support for what matters most.</p>
+            </aside>
           </div>
-          <aside className="ac-narrative-note">
-            <span className="ac-rule" aria-hidden="true" />
-            <p className="ac-heading-3 italic">Thoughtful support for what matters most.</p>
-          </aside>
         </div>
       </section>
     </div>

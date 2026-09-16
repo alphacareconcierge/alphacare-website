@@ -50,6 +50,16 @@ export function Header() {
         <Link href="/" onClick={() => setMenuOpen(false)} className="ac-brand-link ac-focus" aria-label="AlphaCare home">
           {/* Approved AlphaCare brand asset — do not alter or replace. */}
           <Image
+            src="/brand/alphacare-logo.png"
+            alt=""
+            width={1254}
+            height={1254}
+            sizes="240px"
+            priority
+            className="ac-header-logo"
+          />
+          {/* Approved AlphaCare brand asset — do not alter or replace. */}
+          <Image
             src="/brand/alphacare-monogram.png"
             alt=""
             width={88}
@@ -67,13 +77,13 @@ export function Header() {
               aria-current={pathname === item.href ? "page" : undefined}
               className="ac-nav-link ac-focus"
             >
-              {item.label}
+              {item.label.toUpperCase()}
             </Link>
           ))}
         </nav>
 
         <Link href="/contact" className="ac-button ac-header-cta">
-          Start the Conversation
+          START THE CONVERSATION
         </Link>
 
         <button
@@ -101,12 +111,12 @@ export function Header() {
                   aria-current={pathname === item.href ? "page" : undefined}
                   className="ac-nav-link ac-focus"
                 >
-                  {item.label}
+                  {item.label.toUpperCase()}
                 </Link>
               ))}
             </nav>
             <Link href="/contact" onClick={() => setMenuOpen(false)} className="ac-button">
-              Start the Conversation
+              START THE CONVERSATION
             </Link>
           </div>
         </div>
