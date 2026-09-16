@@ -88,6 +88,222 @@ body {
   }
 }
 
+/* Phase 1 classes are opt-in so interior page layouts remain unchanged. */
+@layer components {
+  .ac-shell {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1480px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+
+  .ac-heading-1,
+  .ac-home-heading,
+  .ac-heading-2,
+  .ac-heading-3 {
+    font-family: var(--font-serif), "Newsreader", Georgia, serif;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: var(--alphacare-navy);
+    text-wrap: balance;
+  }
+
+  .ac-heading-1,
+  .ac-home-heading {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .ac-heading-2 { font-size: 28px; line-height: 1.25; }
+  .ac-heading-3 { font-size: 22px; line-height: 1.35; }
+
+  .ac-body,
+  .ac-body-secondary {
+    max-width: 62ch;
+    font-family: var(--font-sans), sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0;
+    color: var(--alphacare-navy);
+    text-wrap: pretty;
+  }
+
+  .ac-eyebrow {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: var(--alphacare-navy);
+  }
+
+  .ac-rule { display: block; width: 32px; height: 1px; background: var(--alphacare-gold); }
+
+  .ac-button {
+    display: inline-flex;
+    min-height: 48px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border: 1px solid var(--alphacare-navy);
+    border-radius: 2px;
+    background: var(--alphacare-navy);
+    color: var(--alphacare-ivory);
+    font-family: var(--font-sans), sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0;
+    text-align: center;
+    transition: background-color 180ms ease, border-color 180ms ease;
+  }
+
+  .ac-button:hover { background: #18354d; border-color: #18354d; }
+  .ac-focus:focus-visible,
+  .ac-button:focus-visible {
+    outline: 2px solid var(--alphacare-gold);
+    outline-offset: 5px;
+  }
+
+  .ac-header {
+    position: relative;
+    z-index: 50;
+    border-bottom: 1px solid #e3dbcf;
+    background: var(--alphacare-ivory);
+    color: var(--alphacare-navy);
+  }
+
+  .ac-header-row { display: flex; min-height: 88px; align-items: center; justify-content: space-between; gap: 24px; }
+  .ac-brand-link { display: inline-flex; flex-shrink: 0; align-items: center; }
+  .ac-header-mark { width: 48px; height: auto; object-fit: contain; }
+  .ac-desktop-nav,
+  .ac-header-cta { display: none; }
+
+  .ac-nav-link {
+    position: relative;
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    font-family: var(--font-sans), sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: var(--alphacare-navy);
+    text-underline-offset: 8px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--alphacare-gold);
+  }
+
+  .ac-nav-link:hover,
+  .ac-nav-link[aria-current="page"] { text-decoration-line: underline; }
+  .ac-menu-toggle { display: inline-flex; width: 44px; height: 44px; flex-shrink: 0; align-items: center; justify-content: center; color: var(--alphacare-navy); }
+  .ac-mobile-menu { padding-block: 8px 24px; border-top: 1px solid #e3dbcf; }
+  .ac-mobile-menu nav { display: flex; flex-direction: column; margin-bottom: 20px; }
+  .ac-mobile-menu .ac-nav-link { padding-block: 12px; }
+
+  .ac-home { background: var(--alphacare-ivory); color: var(--alphacare-navy); }
+  .ac-home-hero { position: relative; display: flex; flex-direction: column; }
+  .ac-hero-landscape { position: relative; order: 2; width: 100%; aspect-ratio: 16 / 9; }
+  .ac-hero-image { object-fit: cover; object-position: right center; }
+  .ac-hero-wash { display: none; }
+  .ac-hero-content { position: relative; padding-block: 40px; }
+  .ac-hero-copy { max-width: 600px; }
+  .ac-hero-eyebrow { margin-bottom: 24px; }
+  .ac-hero-body { max-width: 54ch; margin-block: 24px 28px; }
+  .ac-hero-caption {
+    position: absolute;
+    right: 24px;
+    top: 16px;
+    font-family: var(--font-sans), sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: var(--alphacare-navy);
+  }
+
+  .ac-home-narrative { padding-block: 56px 64px; }
+  .ac-narrative-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .ac-narrative-copy { min-width: 0; max-width: 640px; }
+  .ac-narrative-copy .ac-heading-2 { margin-top: 24px; max-width: 34ch; }
+  .ac-narrative-body { margin-top: 28px; }
+  .ac-narrative-body p + p { margin-top: 24px; }
+  .ac-narrative-note { min-width: 0; max-width: 230px; }
+  .ac-narrative-note .ac-rule { margin-bottom: 24px; }
+
+  .ac-footer {
+    padding-block: 40px;
+    background: var(--alphacare-navy);
+    color: var(--alphacare-ivory);
+    font-family: var(--font-sans), sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.65;
+    letter-spacing: 0;
+  }
+
+  .ac-footer-top { display: flex; flex-direction: column; gap: 24px; }
+  .ac-footer-name { display: inline-flex; min-height: 44px; align-items: center; font-family: var(--font-serif), "Newsreader", Georgia, serif; font-size: 22px; line-height: 1.3; }
+  .ac-footer-descriptor { color: var(--alphacare-ivory); }
+  .ac-footer-links { display: flex; flex-wrap: wrap; column-gap: 24px; row-gap: 4px; }
+  .ac-footer-link { display: inline-flex; min-height: 44px; align-items: center; }
+  .ac-footer-link:hover,
+  .ac-footer-name:hover { text-decoration: underline; text-decoration-color: var(--alphacare-gold); text-underline-offset: 5px; }
+  .ac-footer-rule { margin-block: 24px; height: 1px; background: rgb(247 243 236 / 20%); }
+  .ac-footer-scope { max-width: 80ch; color: rgb(247 243 236 / 85%); }
+  .ac-footer-bottom { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 24px; color: rgb(247 243 236 / 85%); }
+
+  @media (min-width: 640px) {
+    .ac-shell { padding-inline: 40px; }
+    .ac-hero-caption { right: 40px; top: 24px; }
+  }
+
+  @media (min-width: 768px) {
+    .ac-heading-1,
+    .ac-home-heading { font-size: 40px; }
+    .ac-heading-2 { font-size: 30px; }
+    .ac-hero-content { padding-block: 48px; }
+    .ac-hero-landscape { aspect-ratio: 16 / 7; }
+    .ac-home-narrative { padding-block: 72px 80px; }
+  }
+
+  @media (min-width: 1024px) {
+    .ac-shell { padding-inline: 64px; }
+    .ac-header-row { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); min-height: 104px; gap: 32px; }
+    .ac-brand-link { justify-self: start; }
+    .ac-header-mark { width: 56px; }
+    .ac-desktop-nav { display: flex; align-items: center; gap: 32px; }
+    .ac-header-cta { display: inline-flex; justify-self: end; }
+    .ac-menu-toggle,
+    .ac-mobile-menu { display: none; }
+    .ac-home-heading { font-size: 48px; line-height: 1.18; }
+    .ac-heading-2 { font-size: 32px; }
+    .ac-body { font-size: 17px; }
+    .ac-home-hero { display: block; }
+    .ac-hero-landscape { position: absolute; inset: 0; aspect-ratio: auto; }
+    .ac-hero-content { display: flex; min-height: 560px; align-items: center; padding-block: 64px; }
+    .ac-hero-copy { max-width: 560px; }
+    .ac-hero-wash { display: block; position: absolute; inset: 0; background: linear-gradient(90deg, rgb(247 243 236 / 96%) 0%, rgb(247 243 236 / 90%) 25%, rgb(247 243 236 / 65%) 42%, rgb(247 243 236 / 0%) 70%); }
+    .ac-hero-caption { right: max(64px, calc((100% - 1480px) / 2 + 64px)); top: 32px; }
+    .ac-home-narrative { padding-block: 88px 96px; }
+    .ac-narrative-layout { grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); align-items: center; column-gap: 80px; }
+    .ac-narrative-note { justify-self: end; }
+    .ac-footer-top,
+    .ac-footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; gap: 32px; }
+  }
+
+  @media (min-width: 1440px) {
+    .ac-shell { padding-inline: 80px; }
+    .ac-hero-caption { right: max(80px, calc((100% - 1480px) / 2 + 80px)); }
+    .ac-narrative-layout { column-gap: 112px; }
+  }
+}
+
 @layer utilities {
   /* Editorial fade on desktop from ivory into the hero image */
   @media (min-width: 1024px) {
