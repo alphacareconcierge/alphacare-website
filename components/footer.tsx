@@ -9,35 +9,29 @@ const footerNav = [
 
 export function Footer() {
   return (
-    <footer className="bg-navy px-6 pb-8 pt-10 text-ivory md:px-12">
-      <div className="mx-auto max-w-6xl">
-        <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr_1fr] md:gap-12">
-          <div>
+    <footer className="bg-navy text-ivory">
+      <div className="mx-auto box-border w-full max-w-[100rem] px-6 py-10 sm:px-10 lg:px-16">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div className="min-w-0">
             <Link
               href="/"
-              className="font-serif text-[0.9375rem] font-normal uppercase tracking-[0.15em] text-ivory transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+              className="inline-flex min-h-11 items-center font-serif text-xl font-normal uppercase leading-7 tracking-[0.15em] text-ivory transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
               aria-label="AlphaCare home"
             >
               AlphaCare
             </Link>
-            <p className="mt-0.5 font-sans text-[0.625rem] font-medium uppercase tracking-[0.12em] text-gold">
+            <p className="mt-0.5 font-sans text-sm font-medium uppercase leading-relaxed tracking-[0.12em] text-gold">
               Private Concierge Care Management
-            </p>
-            <p className="mt-2 max-w-[16.25rem] font-sans text-xs font-normal leading-[1.5] text-ivory/75">
-              Serving families throughout Massachusetts, New England, and coordinating care across state lines.
             </p>
           </div>
 
-          <nav aria-label="Footer navigation">
-            <h2 className="mb-2 font-sans text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-gold">
-              Navigation
-            </h2>
-            <ul className="space-y-1.5">
+          <nav aria-label="Footer navigation" className="min-w-0">
+            <ul className="flex flex-wrap gap-x-6 gap-y-1">
               {footerNav.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="font-sans text-xs font-normal text-ivory/80 transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+                    className="inline-flex min-h-11 items-center font-sans text-sm font-normal leading-relaxed text-ivory transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
                   >
                     {item.label}
                   </Link>
@@ -46,36 +40,28 @@ export function Footer() {
             </ul>
           </nav>
 
-          <div>
-            <h2 className="mb-2 font-sans text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-gold">
-              Inquiries
-            </h2>
-            <p className="max-w-[15rem] font-sans text-xs font-normal leading-[1.5] text-ivory/80">
-              Every conversation begins with where things stand today.
-            </p>
-          </div>
         </div>
 
-        <div className="my-6 border-t border-[#1E2F45]" />
+        <div className="my-6 border-t border-ivory/15" aria-hidden="true" />
 
-        <p className="mx-auto mb-3 max-w-xl text-center font-sans text-[0.65625rem] font-normal leading-[1.5] text-ivory/60">
+        <p className="mb-4 max-w-4xl font-sans text-sm font-normal leading-relaxed text-ivory">
           AlphaCare provides private care management, coordination, and family advocacy. We do not provide direct emergency medical response or replace the clinical diagnoses of your physicians.
         </p>
 
-        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="font-sans text-[0.65625rem] font-normal text-ivory/50">
+        <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-center">
+          <p className="font-sans text-sm font-normal leading-relaxed text-ivory">
             © 2026 AlphaCare Concierge Care Management. All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
             <Link
               href="/privacy"
-              className="font-sans text-[0.65625rem] font-normal text-ivory/50 transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+              className="inline-flex min-h-11 items-center font-sans text-sm font-normal leading-relaxed text-ivory transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="font-sans text-[0.65625rem] font-normal text-ivory/50 transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+              className="inline-flex min-h-11 items-center font-sans text-sm font-normal leading-relaxed text-ivory transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
             >
               Terms of Service
             </Link>
