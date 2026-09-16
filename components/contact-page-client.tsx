@@ -29,8 +29,8 @@ export function ContactPageClient() {
 
   return (
     <div className="bg-ivory text-navy">
-      <section className="grid items-start px-6 pb-[5.75rem] pt-12 sm:px-12 lg:grid-cols-[46%_54%] lg:px-[19.25rem] lg:pb-[5.3125rem] lg:pt-16 min-[2200px]:px-[25.5rem]">
-        <div className="pt-2 lg:pr-[4.5rem] lg:pt-4">
+      <section className="mx-auto box-border grid w-full max-w-[100rem] grid-cols-1 items-start gap-10 px-6 pb-[5.75rem] pt-12 sm:px-10 lg:grid-cols-[minmax(0,44fr)_minmax(0,56fr)] lg:gap-12 lg:px-16 lg:pb-[5.3125rem] lg:pt-16 xl:gap-20">
+        <div className="min-w-0">
           <div>
             <p className="type-eyebrow mb-4">
               Let&apos;s Begin
@@ -44,14 +44,14 @@ export function ContactPageClient() {
             </p>
           </div>
         </div>
-        <div className="border-divider lg:border-l lg:pl-[4.5rem]">
-          <div className="max-w-[52.5rem]">
+        <div className="min-w-0">
+          <div className="w-full min-w-0 max-w-[40rem] [&>form]:mt-0">
             <ContactForm onSuccess={() => setIsSubmitted(true)} />
           </div>
         </div>
       </section>
 
-      <section className="px-6 pb-[5.75rem] text-center sm:px-12">
+      <section className="mx-auto box-border w-full max-w-[100rem] px-6 pb-[5.75rem] text-center sm:px-10 lg:px-16">
         <div className="mx-auto max-w-[48rem]">
           <h2 className="page-section-heading mb-2 text-navy">
             What happens next
