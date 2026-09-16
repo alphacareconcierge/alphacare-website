@@ -54,11 +54,11 @@ export default function ServicesPage() {
           <p className="type-eyebrow mb-4">
             How We Can Help
           </p>
-          <h1 className="max-w-[34rem] font-serif text-[clamp(2rem,3.2vw,2.6rem)] font-light leading-[1.25] text-navy">
+          <h1 className="page-heading max-w-[34rem] text-navy">
             Care does not stop<br />
             at the appointment.
           </h1>
-          <p className="type-body mt-[1.5625rem] max-w-md">
+          <p className="page-body mt-[1.5625rem] max-w-md text-muted">
             A single consultation or hospital discharge often sets off a complex sequence of instructions, follow-ups, and daily adjustments. AlphaCare provides attentive oversight and practical coordination to help families navigate each step with clarity.
           </p>
         </div>
@@ -66,16 +66,16 @@ export default function ServicesPage() {
           <div className="mt-[1.1875rem]">
             {helpItems.map((item, index) => (
               <article key={item.title} className={`${index > 0 ? "mt-8 border-t border-divider pt-8" : ""}`}>
-                <h2 className="mb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
+                <h2 className="page-content-heading mb-2 text-navy">
                   {item.title}
                 </h2>
-                <p className="type-body-sm max-w-2xl">
+                <p className="page-body-secondary max-w-2xl text-muted">
                   {item.copy}
                 </p>
               </article>
             ))}
           </div>
-          <p className="type-body-sm mt-6 max-w-2xl italic">
+          <p className="page-body-secondary mt-6 max-w-2xl italic text-muted">
             Tailored support shaped around your family&apos;s unique circumstances.
           </p>
         </div>
@@ -92,10 +92,10 @@ export default function ServicesPage() {
               <article key={item.title} className="grid grid-cols-[0.5rem_1fr] gap-4">
                 <span className="mt-[0.5rem] h-1 w-1 rounded-full bg-gold" aria-hidden="true" />
                 <div>
-                  <h3 className="font-sans text-[0.75rem] font-semibold uppercase leading-[1.45] tracking-[0.08em] text-navy">
+                  <h3 className="page-content-heading uppercase text-navy">
                     {item.title}
                   </h3>
-                  <p className="type-body-sm mt-2 max-w-2xl">
+                  <p className="page-body-secondary mt-2 max-w-2xl text-muted">
                     {item.copy}
                   </p>
                 </div>
@@ -108,16 +108,16 @@ export default function ServicesPage() {
           <h2 className="type-eyebrow mb-6 mt-[1.125rem]">
             Our Role
           </h2>
-          <p className="type-body-sm max-w-2xl">
+          <p className="page-body-secondary max-w-2xl text-muted">
             AlphaCare works alongside your family and existing care network. We do not replace the medical diagnosis, clinical judgment, or legal advice of your physicians, attorneys, or financial advisors. Our purpose is to provide dedicated coordination, clear communication, and steady advocacy to support you along the way.
           </p>
         </div>
         <div className="border-divider border-t pt-8 text-center lg:border-l lg:border-t-0 lg:pl-[3.5rem] lg:pt-[1.625rem]">
           <span className="mx-auto block h-px w-14 bg-gold" aria-hidden="true" />
-          <h2 className="mx-auto mt-[2rem] max-w-[23rem] font-serif text-[1.5rem] font-normal leading-[1.25] text-navy">
+          <h2 className="page-section-heading mx-auto mt-[2rem] max-w-[23rem] text-navy">
             Tell us what your family is navigating.
           </h2>
-          <p className="mb-4 mt-2 font-serif text-[1.125rem] font-normal italic leading-[1.25] text-navy">
+          <p className="page-content-heading mb-4 mt-2 italic text-navy">
             We’ll begin by listening.
           </p>
           <Link

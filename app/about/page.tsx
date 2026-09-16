@@ -35,12 +35,12 @@ export default function AboutPage() {
           <p className="type-eyebrow">
             About Alpha Care
           </p>
-          <h1 className="mt-[2.3125rem] max-w-2xl font-serif text-4xl font-normal leading-[1.15] tracking-tight text-navy sm:text-5xl lg:text-[3.25rem]">
+          <h1 className="page-heading mt-[2.3125rem] max-w-2xl text-navy">
             Care may involve many people.<br />
-            <span className="font-serif italic font-normal">Families still experience all of it.</span>
+            <span className="italic">Families still experience all of it.</span>
           </h1>
           <span className="mt-[2.125rem] block h-px w-10 bg-gold/60" aria-hidden="true" />
-          <p className="type-body mt-[2rem] max-w-xl text-grayblue">
+          <p className="page-body mt-[2rem] max-w-xl text-grayblue">
             Complex care rarely breaks down in the exam room—it fractures in the quiet spaces between appointments, providers, and family members. Built on years of direct clinical experience, AlphaCare provides the steady coordination and attentive oversight families need to navigate each step with clarity.
           </p>
         </div>
@@ -60,11 +60,11 @@ export default function AboutPage() {
       </section>
 
       <section className="px-6 py-14 text-center sm:px-12 lg:px-[4.3125rem] lg:py-16">
-        <h2 className="mx-auto max-w-3xl font-serif text-[1.375rem] font-light italic leading-[1.35] text-navy sm:text-[1.625rem]">
+        <h2 className="page-section-heading mx-auto max-w-3xl italic text-navy">
           When someone you love needs more care, you shouldn&apos;t have to carry every decision alone.
         </h2>
         <span className="mx-auto my-4 block h-px w-11 bg-gold" aria-hidden="true" />
-        <p className="type-body mx-auto mt-3 max-w-2xl">
+        <p className="page-body-secondary mx-auto mt-3 max-w-2xl text-muted">
           AlphaCare brings clarity, coordination, and a steady presence when families need it most.
         </p>
       </section>
@@ -75,17 +75,17 @@ export default function AboutPage() {
             What Guides Us
           </p>
           <span className="mt-[1.1875rem] block h-px w-8 bg-gold" aria-hidden="true" />
-          <h2 className="type-section mt-8 max-w-[28rem] text-[2rem] font-normal leading-[1.25] text-navy sm:text-[2.5rem]">
+          <h2 className="page-section-heading mt-8 max-w-[28rem] text-navy">
             How we work beside your family <em className="font-serif italic">matters just as much</em> as the logistics we manage.
           </h2>
         </div>
         <div>
           {values.map((value) => (
             <article key={value.title} className="mb-6 border-b border-[#E3DBCF]/50 pb-6 last:mb-0 last:border-b-0 last:pb-0">
-              <h3 className="font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
+              <h3 className="page-content-heading text-navy">
                 {value.title}
               </h3>
-              <p className="type-body-sm mt-1.5 max-w-md">
+              <p className="page-body-secondary mt-1.5 max-w-md text-muted">
                 {value.copy}
               </p>
             </article>

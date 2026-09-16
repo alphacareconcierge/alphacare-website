@@ -31,7 +31,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <h1 className="font-serif text-[2.45rem] font-normal leading-[1.06] tracking-[-0.02em] text-navy sm:text-[3.2rem] lg:text-[3.875rem] lg:leading-[0.98] lg:tracking-[-0.03em] max-[1200px]:lg:text-[3.35rem]">
+            <h1 className="page-home-heading text-navy">
               <span className="lg:hidden">
                 When care becomes complicated, it helps to have someone beside you.
               </span>
@@ -43,7 +43,7 @@ export default function HomePage() {
               </span>
             </h1>
 
-            <p className="mt-5 w-full max-w-[calc(100vw-3rem)] font-sans text-[1.0625rem] font-light leading-[1.55] text-navy sm:max-w-[34rem] sm:text-[1.125rem] lg:font-normal lg:leading-[1.35]">
+            <p className="page-body mt-5 w-full max-w-[calc(100vw-3rem)] text-navy sm:max-w-[34rem]">
               AlphaCare works with families to understand what is happening,{" "}<br className="hidden lg:block" />
               keep important information connected, and navigate decisions{" "}<br className="hidden lg:block" />
               as needs change.
@@ -78,12 +78,12 @@ export default function HomePage() {
             </p>
           </div>
 
-          <h2 className="w-full max-w-[calc(100vw-3rem)] font-serif text-[2.85rem] font-normal leading-[1.05] tracking-[-0.03em] text-navy sm:max-w-[39rem] max-[1200px]:text-[2.5rem] max-md:text-[2.15rem]">
+          <h2 className="page-section-heading w-full max-w-[calc(100vw-3rem)] text-navy sm:max-w-[39rem]">
             There is a great deal to hold<br className="hidden lg:block" />{" "}
             when someone you love needs care.
           </h2>
 
-          <div className="mt-6 w-full max-w-[calc(100vw-3rem)] space-y-5 font-sans text-[1.0625rem] font-light leading-[1.58] text-navy sm:max-w-[37rem] sm:text-[1.125rem] lg:text-[1.25rem] lg:leading-[1.35]">
+          <div className="page-body mt-6 w-full max-w-[calc(100vw-3rem)] space-y-5 text-navy sm:max-w-[37rem]">
             <p>
               Appointments. Decisions. Questions that arise later.{" "}<br className="hidden lg:block" />
               Information shared with one person but needed by another.{" "}<br className="hidden lg:block" />
@@ -110,7 +110,7 @@ export default function HomePage() {
         <aside className="flex items-center bg-ivory px-6 py-12 sm:px-10 lg:px-14">
           <div>
             <span className="mb-7 block h-px w-11 bg-gold" aria-hidden="true" />
-            <p className="font-serif text-[1.55rem] font-normal italic leading-[1.22] text-gold">
+            <p className="page-content-heading italic text-gold">
               Thoughtful<br />
               support for<br />
               what matters<br />
