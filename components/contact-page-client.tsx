@@ -36,8 +36,8 @@ export function ContactPageClient() {
               Let&apos;s Begin
             </p>
             <h1 className="page-heading mb-5 max-w-md text-navy">
-              Tell us what you&apos;re navigating.<br />
-              <em className="italic">We&apos;ll begin by listening.</em>
+              Tell us what’s happening.<br />
+              <em className="italic">We’ll start there.</em>
             </h1>
             <p className="page-body max-w-sm text-muted">
               Every conversation starts with where things stand today. You don’t need to have every detail organized or know exactly what support you need—share what is on your mind, and we can explore how to help.
