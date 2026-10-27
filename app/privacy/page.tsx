@@ -10,62 +10,62 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <section className="mx-auto max-w-3xl bg-ivory px-6 py-20 md:py-24">
-      <h1 className="mb-2 text-center font-serif text-[clamp(2rem,3.5vw,2.75rem)] font-light leading-[1.2] text-navy">
+    <section className="ac-shell ac-section bg-ivory">
+      <h1 className="ac-heading-1 mb-4 text-center">
         Privacy Policy
       </h1>
-      <p className="mb-12 text-center font-sans text-[0.65625rem] font-medium uppercase tracking-[0.16em] text-gold">
+      <p className="type-eyebrow mb-12 text-center">
         Effective 2026
       </p>
 
-      <div>
-        <p className="type-body mb-4 max-w-2xl">
+      <div className="ac-legal-copy">
+        <p>
           AlphaCare respects the privacy of families who contact us for healthcare advocacy and care coordination support. This policy explains how information submitted through this website may be used.
         </p>
 
         <section>
-          <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
+          <h2 className="ac-heading-2 border-b border-[#E7E0D6] pb-2">
             Information We Collect
           </h2>
-          <p className="type-body mb-4 max-w-2xl">
+          <p>
             The consultation form may collect your name, email address, optional phone number, preferred contact method, and a brief description of what brings you to AlphaCare.
           </p>
         </section>
 
         <section>
-          <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
+          <h2 className="ac-heading-2 border-b border-[#E7E0D6] pb-2">
             Protected Health Information
           </h2>
-          <p className="type-body mb-4 max-w-2xl">
+          <p>
             Please do not submit detailed medical information, medical records, or protected health information through this website form. A general overview is all that is needed to begin. If additional information is needed, AlphaCare will provide a dedicated, secure way to share it.
           </p>
         </section>
 
         <section>
-          <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
+          <h2 className="ac-heading-2 border-b border-[#E7E0D6] pb-2">
             How We Use Information
           </h2>
-          <p className="type-body mb-4 max-w-2xl">
+          <p>
             Information submitted through the website is used to respond to your inquiry, understand the general nature of your request, and coordinate next steps for an initial conversation.
           </p>
         </section>
 
         <section>
-          <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
+          <h2 className="ac-heading-2 border-b border-[#E7E0D6] pb-2">
             Email Communications
           </h2>
-          <p className="type-body mb-4 max-w-2xl">
+          <p>
             When you submit an inquiry, AlphaCare may contact you using the email address, phone number, or preferred contact method you provide. Website form submissions are routed to AlphaCare for review and response.
           </p>
         </section>
 
         <section>
-          <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">
+          <h2 className="ac-heading-2 border-b border-[#E7E0D6] pb-2">
             Contact
           </h2>
-          <p className="type-body mb-4 max-w-2xl">
+          <p>
             Questions about this privacy policy may be sent to{" "}
-            <a className="text-navy underline decoration-gold underline-offset-4 transition-colors hover:text-gold" href={`mailto:${business.email}`}>
+            <a className="ac-text-link ac-focus" href={`mailto:${business.email}`}>
               {business.email}
             </a>
             .

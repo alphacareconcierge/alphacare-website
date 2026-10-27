@@ -10,31 +10,31 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <section className="mx-auto max-w-3xl bg-ivory px-6 py-20 md:py-24">
+    <section className="ac-shell ac-section bg-ivory">
       <div>
         <p className="type-eyebrow text-gold">
           AlphaCare Concierge Care Management
         </p>
-        <h1 className="type-hero mt-6 text-[clamp(2rem,3.5vw,2.75rem)] text-navy">
+        <h1 className="type-hero ac-eyebrow-gap">
           Privacy Policy
         </h1>
-        <div className="type-body mt-10 space-y-8">
+        <div className="ac-legal-copy ac-copy-gap ac-paragraphs">
           <p>
             AlphaCare respects the privacy of families who contact us for
             healthcare advocacy and care coordination support. This policy explains
             how information submitted through this website may be used.
           </p>
           <section>
-            <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">Information We Collect</h2>
-            <p className="mt-3">
+            <h2 className="ac-heading-2 border-b border-[#E7E0D6] pb-2">Information We Collect</h2>
+            <p>
               The consultation form may collect your name, email address, optional
               phone number, relationship to the client, preferred contact method,
               and a brief description of your needs.
             </p>
           </section>
           <section>
-            <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">Protected Health Information</h2>
-            <p className="mt-3">
+            <h2 className="ac-heading-2 border-b border-[#E7E0D6] pb-2">Protected Health Information</h2>
+            <p>
               Please do not submit detailed medical information or protected health
               information through this website form. Sensitive information will be
               collected through a secure process after initial contact when
@@ -42,18 +42,18 @@ export default function PrivacyPolicyPage() {
             </p>
           </section>
           <section>
-            <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">How We Use Information</h2>
-            <p className="mt-3">
+            <h2 className="ac-heading-2 border-b border-[#E7E0D6] pb-2">How We Use Information</h2>
+            <p>
               Information submitted through the website is used to respond to your
               inquiry, understand the general nature of your request, and coordinate
               next steps for a consultation.
             </p>
           </section>
           <section>
-            <h2 className="mb-3 mt-10 border-b border-[#E7E0D6] pb-2 font-serif text-[1.375rem] font-normal leading-[1.25] text-navy">Contact</h2>
-            <p className="mt-3">
+            <h2 className="ac-heading-2 border-b border-[#E7E0D6] pb-2">Contact</h2>
+            <p>
               Questions about this privacy policy may be sent to{" "}
-              <a className="text-navy underline decoration-gold underline-offset-4" href={`mailto:${business.email}`}>
+            <a className="ac-text-link ac-focus" href={`mailto:${business.email}`}>
                 {business.email}
               </a>
               .

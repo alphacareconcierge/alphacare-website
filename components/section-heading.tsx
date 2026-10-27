@@ -33,9 +33,9 @@ export function SectionHeading({
       </h2>
       {copy ? (
         <p
-          className={`type-body mt-6 ${
-            inverted ? "text-ivory/72" : "text-grayblue"
-          }`}
+          className={`type-body ac-copy-gap ${
+            inverted ? "text-ivory" : "text-navy"
+          } ${align === "center" ? "mx-auto" : ""}`}
         >
           {copy}
         </p>

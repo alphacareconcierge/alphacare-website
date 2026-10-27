@@ -28,7 +28,7 @@ function validateField(name: FieldName, value: FormDataEntryValue | null) {
   }
 
   if (name === "message" && !text) {
-    return "Please share a brief note about what brings you to Alpha Care.";
+    return "Please share a brief note about what brings you to AlphaCare.";
   }
 
   if (name === "preferredContactMethod" && !text) {
@@ -117,11 +117,11 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
   if (status === "success") {
     return (
       <div className="border border-[#E3DBCF]/80 bg-ivory px-6 py-16 text-center md:px-10 md:py-24" aria-live="polite">
-        <h2 className="font-serif text-2xl font-normal leading-[1.25] text-navy md:text-3xl">
+        <h2 className="ac-heading-2">
           Thank you for reaching out.
         </h2>
         <span className="mx-auto my-6 block w-12 border-t border-gold/60" aria-hidden="true" />
-        <div className="type-body-sm mx-auto max-w-md space-y-5">
+        <div className="ac-body ac-paragraphs mx-auto">
           <p>Navigating care decisions requires clarity and deliberate coordination.</p>
           <p>
             We have received your note and are reviewing the details with quiet discretion. We will connect with you via your preferred method shortly to discuss how we can assist your family.
@@ -132,7 +132,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="mt-8 grid">
+    <form onSubmit={handleSubmit} noValidate className="grid">
       <label className="type-form-label mb-6 grid gap-2 text-navy">
         <span>Your name <span className="text-gold">*</span></span>
         <input
@@ -144,7 +144,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
           onBlur={(event) => handleBlur("name", event.currentTarget.value)}
           className={fieldClass("name", "h-12 px-3")}
         />
-        {errors.name ? <span id="name-error" className="text-xs text-[#A63A3A]">{errors.name}</span> : null}
+        {errors.name ? <span id="name-error" className="type-meta text-[#A63A3A]">{errors.name}</span> : null}
       </label>
       <label className="type-form-label mb-6 grid gap-2 text-navy">
         <span>Email <span className="text-gold">*</span></span>
@@ -158,7 +158,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
           onBlur={(event) => handleBlur("email", event.currentTarget.value)}
           className={fieldClass("email", "h-12 px-3")}
         />
-        {errors.email ? <span id="email-error" className="text-xs text-[#A63A3A]">{errors.email}</span> : null}
+        {errors.email ? <span id="email-error" className="type-meta text-[#A63A3A]">{errors.email}</span> : null}
       </label>
       <label className="type-form-label grid gap-2 text-navy">
         Phone (optional)
@@ -197,10 +197,10 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
           ))}
         </div>
         {errors.preferredContactMethod ? (
-          <p className="mt-2 text-xs text-[#A63A3A]">{errors.preferredContactMethod}</p>
+          <p className="type-meta mt-2 text-[#A63A3A]">{errors.preferredContactMethod}</p>
         ) : null}
       </fieldset>
-      <label className="grid gap-2 font-sans text-sm font-medium text-navy">
+      <label className="type-form-label grid gap-2 text-navy">
         <span>How can we best support your family? <span className="text-gold">*</span></span>
         <textarea
           name="message"
@@ -210,22 +210,22 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
           aria-invalid={errors.message ? "true" : "false"}
           aria-describedby={errors.message ? "message-error" : undefined}
           onBlur={(event) => handleBlur("message", event.currentTarget.value)}
-          className={fieldClass("message", "min-h-[7.5rem] resize-y px-3 py-3 placeholder:text-sm placeholder:text-grayblue/50")}
+          className={fieldClass("message", "min-h-[7.5rem] resize-y px-3 py-3 placeholder:text-muted")}
         />
-        {errors.message ? <span id="message-error" className="text-xs text-[#A63A3A]">{errors.message}</span> : null}
+        {errors.message ? <span id="message-error" className="type-meta text-[#A63A3A]">{errors.message}</span> : null}
       </label>
-      <p className="type-body-sm my-3 max-w-2xl italic text-muted/75">
+      <p className="type-helper mb-8 mt-3">
         Your privacy is important to us. A general overview is all that’s needed to begin—we will provide a dedicated, secure channel if clinical details are ever helpful later.
       </p>
       {status === "error" ? (
-        <div className="mt-6 border border-[#A63A3A]/50 bg-softivory px-4 py-3 text-sm leading-6 text-[#A63A3A]" role="alert">
+        <div className="type-meta mb-6 border border-[#A63A3A]/50 bg-softivory px-4 py-3 text-[#A63A3A]" role="alert">
           Something went wrong while sending your message. Please try again or reach out directly.
         </div>
       ) : null}
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="type-cta mt-0 inline-flex min-h-11 w-full items-center justify-center gap-3 rounded-[0.1875rem] border border-gold bg-navy px-7 py-3.5 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-navy/90 disabled:cursor-wait disabled:opacity-85"
+        className="ac-button w-full gap-3 disabled:cursor-wait disabled:opacity-85"
       >
         {status === "submitting" ? (
           <>

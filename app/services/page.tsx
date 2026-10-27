@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { ClosingInvitation } from "@/components/closing-invitation";
 
 export const metadata: Metadata = {
   title: "Our Services | AlphaCare Concierge Care Management",
@@ -11,19 +11,19 @@ export const metadata: Metadata = {
 const helpItems = [
   {
     title: "Healthcare Advocacy",
-    copy: "Helping you organize priorities, prepare meaningful questions, and clarify complex recommendations so your family can make informed, thoughtful decisions with your providers."
+    copy: "We prepare questions and priorities for appointments, organize relevant concerns, and help communicate them to the appropriate healthcare professionals."
   },
   {
-    title: "Care Coordination & Continuity",
-    copy: "Assisting with follow-up tracking, organizing communication across different clinicians, and helping maintain day-to-day order across your care network."
+    title: "Care Coordination & Follow-Through",
+    copy: "We organize recommendations, referrals, and next steps; follow up with the providers and services involved; and keep outstanding items visible."
   },
   {
-    title: "Care Transitions Support",
-    copy: "Providing an attentive, steady presence when moving from hospital to home or adjusting to new living arrangements, helping your family understand changes and next steps."
+    title: "Care Transitions",
+    copy: "We support the practical coordination around a change in care setting, including communication, planned services, appointments, and unresolved arrangements."
   },
   {
-    title: "Family & Team Alignment",
-    copy: "Facilitating clear, consistent updates so local and long-distance family members share a common understanding of care plans and evolving needs."
+    title: "Family Communication",
+    copy: "We keep designated family members informed about what has changed, what remains outstanding, and what needs a decision, in accordance with the client’s permissions."
   }
 ];
 
@@ -37,10 +37,6 @@ const detailItems = [
     copy: "Capturing what matters most ahead of time so important questions are raised and clarified during clinical visits."
   },
   {
-    title: "The Post-Visit Instruction",
-    copy: "Organizing discharge notes, follow-up recommendations, and next steps into a clear, manageable plan for the family."
-  },
-  {
     title: "The Sibling Three States Away",
     copy: "Keeping everyone informed and aligned from the same page, regardless of distance or time zones."
   }
@@ -49,85 +45,82 @@ const detailItems = [
 export default function ServicesPage() {
   return (
     <div className="bg-ivory text-navy">
-      <section className="grid px-6 pb-[3.875rem] pt-[3.25rem] sm:px-12 lg:grid-cols-[45%_55%] lg:px-[6.375rem] lg:pb-[0.625rem] lg:pt-[1.625rem]">
-        <div className="pt-[2.25rem]">
+      <section className="ac-shell ac-section" aria-labelledby="services-heading">
+        <div className="max-w-3xl">
           <p className="ac-eyebrow mb-4">
             How We Can Help
           </p>
-          <h1 className="ac-heading-1 max-w-[34rem]">
-            Care does not stop<br />
-            at the appointment.
+          <h1 id="services-heading" className="ac-heading-1">
+            Care does not stop at the appointment.
           </h1>
-          <p className="ac-body-copy mt-[1.5625rem] max-w-md">
-            A single consultation or hospital discharge often sets off a complex sequence of instructions, follow-ups, and daily adjustments. AlphaCare provides attentive oversight and practical coordination to help families navigate each step with clarity.
-          </p>
-        </div>
-        <div className="mt-12 lg:mt-0 lg:max-w-[26rem]">
-          <div className="mt-[1.1875rem]">
-            {helpItems.map((item, index) => (
-              <article key={item.title} className={`${index > 0 ? "mt-8 border-t border-divider pt-8" : ""}`}>
-                <h2 className="ac-heading-3 mb-2">
-                  {item.title}
-                </h2>
-                <p className="ac-secondary-copy max-w-2xl">
-                  {item.copy}
-                </p>
-              </article>
-            ))}
-          </div>
-          <p className="ac-secondary-copy mt-6 max-w-2xl italic">
-            Tailored support shaped around your family&apos;s unique circumstances.
+          <p className="ac-body ac-copy-gap">
+            From preparing for appointments to following up afterward, AlphaCare helps keep the next steps organized and the right people informed.
           </p>
         </div>
       </section>
 
-      <section className="grid gap-10 px-6 pb-[3.625rem] pt-2 sm:px-12 lg:grid-cols-[38%_30%_32%] lg:gap-0 lg:px-[6.375rem]">
-        <div className="lg:pr-[3.125rem]">
-          <span className="block h-px w-10 bg-gold" aria-hidden="true" />
-          <h2 className="ac-heading-3 mb-6 mt-[1.125rem]">
-            The Details Matter
-          </h2>
-          <div className="grid gap-x-8 gap-y-[1.25rem] md:grid-cols-2">
-            {detailItems.map((item) => (
-              <article key={item.title} className="grid grid-cols-[0.5rem_1fr] gap-4">
-                <span className="mt-[0.5rem] h-1 w-1 rounded-full bg-gold" aria-hidden="true" />
-                <div>
-                  <h3 className="ac-heading-3">
-                    {item.title}
-                  </h3>
-                  <p className="ac-secondary-copy mt-2 max-w-2xl">
-                    {item.copy}
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
+      <section className="ac-shell ac-section-end" aria-label="Care management services">
+        <div className="ac-grid grid md:grid-cols-2">
+          {helpItems.map((item) => (
+            <article key={item.title}>
+              <h2 className="ac-heading-3">{item.title}</h2>
+              <p className="ac-body ac-copy-gap">{item.copy}</p>
+            </article>
+          ))}
         </div>
-        <div className="border-divider border-t pt-8 lg:border-l lg:border-t-0 lg:px-[2.375rem] lg:pt-0">
-          <span className="block h-px w-10 bg-gold" aria-hidden="true" />
-          <h2 className="ac-heading-3 mb-6 mt-[1.125rem]">
-            Our Role
-          </h2>
-          <p className="ac-secondary-copy max-w-2xl">
-            AlphaCare works alongside your family and existing care network. We do not replace the medical diagnosis, clinical judgment, or legal advice of your physicians, attorneys, or financial advisors. Our purpose is to provide dedicated coordination, clear communication, and steady advocacy to support you along the way.
-          </p>
+        <p className="ac-body ac-cta-gap">
+          Tailored support shaped around your family&apos;s unique circumstances.
+        </p>
+      </section>
+
+      <section className="ac-shell ac-section-end" aria-labelledby="services-examples-heading">
+        <h2 id="services-examples-heading" className="ac-heading-2">
+          What this can look like
+        </h2>
+        <div className="ac-grid ac-cta-gap grid xl:grid-cols-3">
+          {detailItems.map((item) => (
+            <article key={item.title}>
+              <h3 className="ac-heading-3">{item.title}</h3>
+              <p className="ac-body ac-copy-gap">{item.copy}</p>
+            </article>
+          ))}
         </div>
-        <div className="border-divider border-t pt-8 text-center lg:border-l lg:border-t-0 lg:pl-[3.5rem] lg:pt-[1.625rem]">
-          <span className="mx-auto block h-px w-14 bg-gold" aria-hidden="true" />
-          <h2 className="ac-heading-2 mx-auto mt-[2rem] max-w-[23rem]">
-            Tell us what your family is navigating.
-          </h2>
-          <p className="ac-editorial mb-4 mt-2 italic">
-            We’ll begin by listening.
+        <article className="mt-[var(--ac-column-gap)]">
+          <h3 className="ac-heading-3">The Post-Visit Instruction</h3>
+          <p className="ac-body ac-copy-gap">
+            Organizing discharge notes, follow-up recommendations, and next steps into a clear, manageable plan for the family.
           </p>
-          <Link
-            href="/contact"
-            className="type-cta mt-[1.5rem] inline-flex min-h-11 min-w-[14.75rem] items-center justify-center rounded-[0.1875rem] border border-gold bg-navy px-7 py-3.5 text-gold transition-all duration-300 ease-in-out hover:border-gold hover:bg-navy/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
-          >
-            Contact AlphaCare
-          </Link>
+        </article>
+      </section>
+
+      <section className="ac-shell ac-section-end" aria-labelledby="services-process-heading">
+        <h2 id="services-process-heading" className="ac-heading-2">
+          How we begin
+        </h2>
+        <p className="ac-body ac-copy-gap">
+          We begin with a complimentary conversation about your circumstances and whether AlphaCare may be an appropriate fit. If you choose to proceed, a Comprehensive Care Assessment informs an individualized Care Management Plan and Initial Recommendations. You can then decide whether to arrange ongoing support.
+        </p>
+        <p className="ac-body ac-copy-gap">
+          The introductory conversation is not a clinical assessment.
+        </p>
+        <div className="ac-cta-gap">
+          <h3 className="ac-heading-3">In-person support</h3>
+          <p className="ac-body ac-copy-gap">
+            Where appropriate and agreed in advance, support may include appointment accompaniment, care conferences, facility visits, or transition-related visits.
+          </p>
         </div>
       </section>
+
+      <section className="ac-shell ac-section-end" aria-labelledby="services-role-heading">
+        <h2 id="services-role-heading" className="ac-heading-2">
+          Our Role
+        </h2>
+        <p className="ac-body ac-copy-gap">
+          AlphaCare works alongside your family and existing care network. We do not replace the medical diagnosis, clinical judgment, or legal advice of your physicians, attorneys, or financial advisors. Our purpose is to provide dedicated coordination, clear communication, and steady advocacy to support you along the way.
+        </p>
+      </section>
+
+      <ClosingInvitation />
     </div>
   );
 }

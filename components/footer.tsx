@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { navItems } from "@/lib/content";
 
@@ -8,9 +9,22 @@ export function Footer() {
         <div className="ac-footer-top">
           <div>
             <Link href="/" className="ac-footer-name ac-focus" aria-label="AlphaCare home">
-              AlphaCare
+              {/* Approved AlphaCare brand asset - do not alter or replace. */}
+              <Image
+                src="/brand/alphacare-monogram.png"
+                alt=""
+                width={440}
+                height={535}
+                sizes="(min-width: 1024px) 53px, 46px"
+                className="ac-footer-monogram"
+              />
+              <span className="ac-footer-wordmark">
+                <span className="ac-footer-brand-name">
+                  ALPHA<span className="text-gold">CARE</span>
+                </span>
+                <span className="ac-footer-descriptor">CONCIERGE CARE MANAGEMENT</span>
+              </span>
             </Link>
-            <p className="ac-footer-descriptor">Private Concierge Care Management</p>
           </div>
           <nav aria-label="Footer navigation">
             <ul className="ac-footer-links">
@@ -30,8 +44,8 @@ export function Footer() {
           <div className="ac-footer-bottom">
             <p>© 2026 AlphaCare Concierge Care Management. All rights reserved.</p>
             <div className="ac-footer-links">
-              <Link href="/privacy" className="ac-footer-link ac-focus">Privacy Policy</Link>
-              <Link href="/terms" className="ac-footer-link ac-focus">Terms of Service</Link>
+              <Link href="/privacy" className="ac-footer-link ac-text-link ac-focus">Privacy Policy</Link>
+              <Link href="/terms" className="ac-footer-link ac-text-link ac-focus">Terms of Service</Link>
             </div>
           </div>
         </div>

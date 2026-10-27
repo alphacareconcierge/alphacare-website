@@ -49,26 +49,21 @@ export function Header() {
       <div className="ac-shell ac-header-row">
         <Link href="/" onClick={() => setMenuOpen(false)} className="ac-brand-link ac-focus" aria-label="AlphaCare home">
           {/* Approved AlphaCare brand asset — do not alter or replace. */}
-          <span className="ac-header-logo-frame">
-            <Image
-              src="/brand/alphacare-logo.png"
-              alt=""
-              width={1254}
-              height={1254}
-              sizes="157px"
-              priority
-              className="ac-header-logo"
-            />
-          </span>
-          {/* Approved AlphaCare brand asset — do not alter or replace. */}
           <Image
             src="/brand/alphacare-monogram.png"
             alt=""
-            width={88}
-            height={107}
+            width={440}
+            height={535}
+            sizes="(min-width: 1024px) 63px, 42px"
             priority
-            className="ac-header-mark"
+            className="ac-header-monogram"
           />
+          <span className="ac-header-wordmark">
+            <span className="ac-header-brand-name">
+              ALPHA<span className="text-gold">CARE</span>
+            </span>
+            <span className="ac-header-descriptor">CONCIERGE CARE MANAGEMENT</span>
+          </span>
         </Link>
 
         <nav className="ac-desktop-nav" aria-label="Primary navigation">
@@ -79,13 +74,13 @@ export function Header() {
               aria-current={pathname === item.href ? "page" : undefined}
               className="ac-nav-link ac-focus"
             >
-              {item.label.toUpperCase()}
+              {item.label}
             </Link>
           ))}
         </nav>
 
         <Link href="/contact" className="ac-button ac-header-cta">
-          START THE CONVERSATION
+          Start the conversation
         </Link>
 
         <button
@@ -113,12 +108,12 @@ export function Header() {
                   aria-current={pathname === item.href ? "page" : undefined}
                   className="ac-nav-link ac-focus"
                 >
-                  {item.label.toUpperCase()}
+                  {item.label}
                 </Link>
               ))}
             </nav>
             <Link href="/contact" onClick={() => setMenuOpen(false)} className="ac-button">
-              START THE CONVERSATION
+              Start the conversation
             </Link>
           </div>
         </div>
