@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ClosingInvitation } from "@/components/closing-invitation";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About Us | AlphaCare Concierge Care Management",
@@ -9,92 +9,92 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://alphacareconcierge.com/about" }
 };
 
-const values = [
+const principles = [
   {
-    title: "Listen Without Rushing",
-    copy: "Taking the time to understand what matters most to your loved one, what brings comfort, and where your family feels the most strain."
+    title: "The person remains central.",
+    copy: "Care is considered in the context of the individual’s priorities, preferences, and permissions—not only the demands of the system."
   },
   {
-    title: "A Calm, Steady Presence",
-    copy: "Healthcare decisions rarely follow a straight line. We provide a grounded perspective beside you, helping you weigh options and move through difficult moments with clarity."
+    title: "Follow-through is deliberate.",
+    copy: "Attention stays on what was decided, what remains unresolved, and what needs to happen next."
   },
   {
-    title: "Attentive Follow-Through",
-    copy: "From organizing discharge notes to tracking shifting appointments, we handle the administrative friction so you can focus entirely on being family."
-  },
-  {
-    title: "Dignity & Advocacy",
-    copy: "Keeping your loved one’s personal values at the center of every conversation—honoring their autonomy, safeguarding their privacy, and ensuring their wishes lead the way."
+    title: "Communication is purposeful and discreet.",
+    copy: "Information is shared thoughtfully, with the people the individual has chosen to involve and in keeping with the scope of the engagement."
   }
 ];
 
 export default function AboutPage() {
   return (
     <div className="bg-ivory text-navy">
-      <section className="border-b border-divider">
-        <div className="ac-shell ac-section ac-grid grid grid-cols-1 lg:grid-cols-[minmax(0,43.25fr)_minmax(0,56.75fr)]">
-          <div>
-            <p className="ac-eyebrow">
-              About AlphaCare
-            </p>
-            <h1 className="ac-heading-1 ac-eyebrow-gap">
-              Care may involve many people. <em>Families still experience all of it.</em>
-            </h1>
-            <span className="ac-copy-gap block h-px w-10 bg-gold/60" aria-hidden="true" />
-            <p className="ac-body ac-copy-gap">
-              Complex care rarely breaks down in the exam room—it fractures in the quiet spaces between appointments, providers, and family members. Built on years of direct clinical experience, AlphaCare provides the steady coordination and attentive oversight families need to navigate each step with clarity.
-            </p>
-          </div>
-          <div>
-            <div className="relative aspect-[4/3] w-full min-h-[24rem] overflow-hidden rounded-sm border border-[#E3DBCF]/70 lg:aspect-auto lg:h-[31.25rem] lg:max-h-[31.25rem]">
-              <Image
-                src="/about-hero.png?v=lighter-20260922"
-                alt="White hydrangeas in a ceramic vase beside books and a brass dish"
-                fill
-                priority
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover object-[56%_center] brightness-[0.98] contrast-[0.96] saturate-[0.92]"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-ivory/10" aria-hidden="true" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="ac-shell ac-section text-center">
-        <h2 className="ac-heading-2 mx-auto max-w-3xl">
-          When someone you love needs more care, you shouldn&apos;t have to carry every decision alone.
-        </h2>
-        <span className="ac-copy-gap mx-auto block h-px w-11 bg-gold" aria-hidden="true" />
-        <p className="ac-body ac-copy-gap mx-auto">
-          AlphaCare brings clarity, coordination, and a steady presence when families need it most.
-        </p>
-      </section>
-
-      <section className="ac-shell ac-section-end ac-grid grid lg:grid-cols-[minmax(0,42fr)_minmax(0,58fr)]">
-        <div>
-          <p className="ac-eyebrow">
-            What Guides Us
+      <section className="ac-shell py-12 lg:py-16" aria-labelledby="about-heading">
+        <div className="max-w-3xl">
+          <p className="ac-eyebrow">ABOUT ALPHACARE</p>
+          <h1 id="about-heading" className="ac-heading-1 ac-eyebrow-gap">
+            Care may involve many people. <em className="block">Families still experience all of it.</em>
+          </h1>
+          <p className="ac-body ac-copy-gap">
+            Care is not experienced as a series of isolated appointments. It unfolds through decisions, transitions, unanswered questions, and the follow-up in between. AlphaCare exists to bring continuity to that experience—while keeping the person, their priorities, and what comes next clearly in view.
           </p>
-          <span className="ac-eyebrow-gap block h-px w-8 bg-gold" aria-hidden="true" />
-          <h2 className="ac-heading-2 ac-eyebrow-gap">
-            How we work beside your family <em className="font-serif italic">matters just as much</em> as the logistics we manage.
-          </h2>
         </div>
-        <div>
-          {values.map((value) => (
-            <article key={value.title} className="mb-6 border-b border-[#E3DBCF]/50 pb-6 last:mb-0 last:border-b-0 last:pb-0">
-              <h3 className="ac-heading-3">
-                {value.title}
-              </h3>
-              <p className="ac-body ac-copy-gap">
-                {value.copy}
-              </p>
+      </section>
+
+      <section
+        className="ac-shell ac-grid grid items-start pb-14 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:pb-[72px]"
+        aria-labelledby="experience-heading"
+      >
+        <div className="min-w-0">
+          <h2 id="experience-heading" className="ac-eyebrow">
+            EXPERIENCE BEHIND THE PRACTICE
+          </h2>
+          <span className="mt-4 block h-px w-8 bg-gold/40" aria-hidden="true" />
+          <p className="mt-6 max-w-[42ch] font-serif text-[23px] font-light leading-[1.4] lg:text-[26px]">
+            AlphaCare is informed by more than 15 years of experience across healthcare and senior care, including primary care, population health, complex medical and behavioral care, care coordination, and assisted-living leadership.
+          </p>
+          <p className="ac-body mt-5 lg:text-[17px]">
+            That breadth of experience brings a grounded understanding of how care settings operate, where communication can break down, and how much responsibility can fall to individuals and families between appointments.
+          </p>
+        </div>
+        <div className="relative aspect-[4/3] w-full min-w-0 max-w-md overflow-hidden rounded-sm border border-divider/70 lg:max-w-none">
+          <Image
+            src="/about-hero.png?v=lighter-20260922"
+            alt="White hydrangeas in a ceramic vase on books in a sunlit coastal room"
+            fill
+            priority
+            sizes="(min-width: 1200px) 440px, (min-width: 1024px) 40vw, (min-width: 768px) 448px, 100vw"
+            className="object-cover object-center"
+          />
+        </div>
+      </section>
+
+      <section className="ac-shell" aria-labelledby="approach-heading">
+        <p className="ac-eyebrow">OUR APPROACH</p>
+        <h2 id="approach-heading" className="ac-heading-2 ac-eyebrow-gap">
+          How experience shapes the work
+        </h2>
+        <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-3 lg:gap-y-4">
+          {principles.map((principle) => (
+            <article key={principle.title} className="grid min-w-0 gap-y-4 lg:row-span-3 lg:grid-rows-subgrid">
+              <h3 className="ac-heading-3">{principle.title}</h3>
+              <span className="block h-px w-8 bg-gold/40" aria-hidden="true" />
+              <p className="ac-body">{principle.copy}</p>
             </article>
           ))}
         </div>
+        <Link href="/services" className="ac-body ac-text-link mt-6 inline-flex min-h-11 items-center">
+          Explore our services →
+        </Link>
       </section>
-      <ClosingInvitation />
+
+      <section className="ac-shell py-14 lg:py-16" aria-labelledby="about-invitation-heading">
+        <h2 id="about-invitation-heading" className="ac-heading-2">
+          When you’re ready, tell us what’s happening.
+        </h2>
+        <p className="ac-body mt-4"><em>We’ll begin by listening.</em></p>
+        <Link href="/contact" className="ac-button ac-cta-gap">
+          START THE CONVERSATION
+        </Link>
+      </section>
     </div>
   );
 }
