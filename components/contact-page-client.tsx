@@ -29,39 +29,34 @@ export function ContactPageClient() {
 
   return (
     <div className="ac-contact bg-ivory text-navy">
-      <section className="ac-shell ac-section ac-grid grid items-start lg:grid-cols-[minmax(0,46fr)_minmax(0,54fr)]">
-        <div>
-          <div>
-            <p className="ac-eyebrow mb-4">
-              Let&apos;s Begin
-            </p>
-            <h1 className="ac-heading-1">
-              Tell us what you&apos;re navigating. <em>We&apos;ll begin by listening.</em>
-            </h1>
-            <p className="ac-body ac-copy-gap">
-              Every conversation starts with where things stand today. You don’t need to have every detail organized or know exactly what support you need—share what is on your mind, and we can explore how to help.
+      <section className="ac-shell grid items-start gap-y-8 py-12 lg:grid-cols-[minmax(0,46fr)_minmax(0,54fr)] lg:grid-rows-[auto_1fr] lg:gap-x-12 lg:py-16">
+        <div className="min-w-0 lg:col-start-1 lg:row-start-1">
+          <div className="mb-4 flex items-center gap-4">
+            <span className="block h-px w-8 shrink-0 bg-gold/40" aria-hidden="true" />
+            <p className="ac-eyebrow">
+              CONTACT ALPHACARE
             </p>
           </div>
+          <h1 className="ac-heading-1">
+            Tell us what’s happening. <em className="block">We’ll start there.</em>
+          </h1>
+          <p className="ac-body ac-copy-gap">
+            You do not need to know exactly what kind of support you need before reaching out. A brief overview of what is happening is enough to begin.
+          </p>
         </div>
-        <div className="border-divider lg:border-l lg:pl-6">
+        <div className="min-w-0 border-divider lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:border-l lg:pl-6">
           <div className="w-full">
             <ContactForm onSuccess={() => setIsSubmitted(true)} />
           </div>
         </div>
-      </section>
-
-      <section className="ac-shell ac-section-end text-center">
-        <div className="mx-auto max-w-[48rem]">
-          <h2 className="ac-heading-2">
+        <section className="min-w-0 lg:col-start-1 lg:row-start-2" aria-labelledby="contact-next-heading">
+          <h2 id="contact-next-heading" className="ac-heading-2">
             What happens next
           </h2>
-          <p className="ac-body ac-copy-gap mx-auto text-center">
-            We will review what you’ve shared and get in touch via your selected preference. This initial conversation gives us a chance to walk through what you’re facing together and explore the right path forward.
+          <p className="ac-body mt-4">
+            Each inquiry is reviewed thoughtfully. If AlphaCare may be an appropriate fit, we will reach out to arrange a complimentary introductory conversation.
           </p>
-          <p className="ac-body mx-auto mt-[var(--ac-paragraph-gap)] text-center">
-            We frequently collaborate with trusted advisors, physicians, and family representatives. You are welcome to use this form to initiate an introduction on behalf of a client.
-          </p>
-        </div>
+        </section>
       </section>
     </div>
   );

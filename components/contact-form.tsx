@@ -7,8 +7,8 @@ type FieldName = "name" | "email" | "message" | "preferredContactMethod";
 type FieldErrors = Partial<Record<FieldName, string>>;
 
 const baseFieldClass =
-  "type-input border border-divider bg-softivory text-navy outline-none transition focus:border-gold focus:ring-1 focus:ring-gold";
-const errorFieldClass = "border-[#A63A3A] focus:border-[#A63A3A] focus:ring-[#A63A3A]";
+  "type-input border border-navy/30 bg-softivory text-navy outline-none transition focus:border-gold focus:ring-1 focus:ring-gold";
+const errorFieldClass = "!border-[#A63A3A] focus:!border-[#A63A3A] focus:ring-[#A63A3A]";
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function validateField(name: FieldName, value: FormDataEntryValue | null) {
@@ -133,7 +133,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="grid">
-      <label className="type-form-label mb-6 grid gap-2 text-navy">
+      <label className="type-form-label mb-5 grid gap-2 font-medium text-navy">
         <span>Your name <span className="text-gold">*</span></span>
         <input
           name="name"
@@ -146,7 +146,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
         />
         {errors.name ? <span id="name-error" className="type-meta text-[#A63A3A]">{errors.name}</span> : null}
       </label>
-      <label className="type-form-label mb-6 grid gap-2 text-navy">
+      <label className="type-form-label mb-5 grid gap-2 font-medium text-navy">
         <span>Email <span className="text-gold">*</span></span>
         <input
           type="email"
@@ -160,7 +160,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
         />
         {errors.email ? <span id="email-error" className="type-meta text-[#A63A3A]">{errors.email}</span> : null}
       </label>
-      <label className="type-form-label grid gap-2 text-navy">
+      <label className="type-form-label grid gap-2 font-medium text-navy">
         Phone (optional)
         <input
           type="tel"
@@ -169,11 +169,11 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
           className={`${baseFieldClass} h-12 px-3`}
         />
       </label>
-      <fieldset className="my-6">
-        <legend className="type-form-label text-navy">
+      <fieldset className="my-5 min-w-0">
+        <legend className="type-form-label font-medium text-navy">
           How would you prefer we reach you?
         </legend>
-        <div className="mt-3 grid gap-y-4 sm:grid-cols-3 sm:gap-x-8">
+        <div className="mt-2 flex flex-wrap gap-x-6 gap-y-1">
           {contactMethods.map((method) => (
             <label key={method} className="type-form-label flex min-h-11 items-center gap-2 text-navy">
               <input
@@ -190,7 +190,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
                   delete next.preferredContactMethod;
                   return next;
                 })}
-                className="h-5 w-5 appearance-none rounded-full border border-divider bg-ivory checked:border-gold checked:bg-[radial-gradient(circle_at_center,#B48A4A_0_35%,transparent_39%)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+                className="h-5 w-5 shrink-0 appearance-none rounded-full border-[1.5px] border-navy/50 bg-ivory checked:border-gold checked:bg-[radial-gradient(circle_at_center,#B48A4A_0_35%,transparent_39%)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
               />
               {method}
             </label>
@@ -200,8 +200,8 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
           <p className="type-meta mt-2 text-[#A63A3A]">{errors.preferredContactMethod}</p>
         ) : null}
       </fieldset>
-      <label className="type-form-label grid gap-2 text-navy">
-        <span>How can we best support your family? <span className="text-gold">*</span></span>
+      <label className="type-form-label grid gap-2 font-medium text-navy">
+        <span>What would you like help with? <span className="text-gold">*</span></span>
         <textarea
           name="message"
           required
@@ -214,8 +214,8 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
         />
         {errors.message ? <span id="message-error" className="type-meta text-[#A63A3A]">{errors.message}</span> : null}
       </label>
-      <p className="type-helper mb-8 mt-3">
-        Your privacy is important to us. A general overview is all that’s needed to begin—we will provide a dedicated, secure channel if clinical details are ever helpful later.
+      <p className="type-helper mb-6 mt-3 font-normal text-navy">
+        A brief, general description is enough. Please do not include medical records or detailed health information in this form.
       </p>
       {status === "error" ? (
         <div className="type-meta mb-6 border border-[#A63A3A]/50 bg-softivory px-4 py-3 text-[#A63A3A]" role="alert">
@@ -233,7 +233,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
             SENDING...
           </>
         ) : (
-          "Send Message"
+          "SEND INQUIRY"
         )}
       </button>
     </form>
